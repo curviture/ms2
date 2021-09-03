@@ -4,7 +4,8 @@
   "description": "remake of arniko-mebel.ru website",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "compile:scss": "node-sass scss/main.scss css/main.csss -w"
   },
   "repository": {
     "type": "git",
@@ -22,5 +23,8 @@
   "bugs": {
     "url": "https://github.com/curviture/ms2/issues"
   },
-  "homepage": "https://github.com/curviture/ms2#readme"
+  "homepage": "https://github.com/curviture/ms2#readme",
+  "dependencies": {
+    "node-sass": "^6.0.1"
+  }
 }

@@ -1,0 +1,26 @@
+{
+  "name": "simple__website",
+  "version": "0.0.0",
+  "description": "remake of arniko-mebel.ru website",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/curviture/ms2.git"
+  },
+  "keywords": [
+    "landing",
+    "page",
+    "for",
+    "furniture",
+    "store"
+  ],
+  "author": "Gevorg Ghazaryan",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/curviture/ms2/issues"
+  },
+  "homepage": "https://github.com/curviture/ms2#readme"
+}

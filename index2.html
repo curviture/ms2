@@ -1,0 +1,2063 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Arniko - кровати для крепкого сна</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Arniko - кровати для крепкого сна с мягкой обивкой от производителя">
+    <link href="favicon.ico" rel="shortcut icon" type="image/x-icon">
+    <link rel="stylesheet" href="css/stylesheet.css">
+    <link rel="stylesheet" href="css/modaal.min.css">    
+    <link rel="stylesheet" href="css/main.css">
+    <script src="js/jquery-1.7.2.min.js"></script>
+    <script src="js/jquery.maskedinput-1.3.min.js"></script>
+    <script src="js/util.min.js"></script>    
+    <script src="js/modaal.min.js"></script>
+    <!-- <script src="js/parallax.min.js"></script>         -->
+    <script src="js/wb.parallax.min.js"></script>    
+</head>
+<body>
+    <div class='header'>
+        <div class="header__inner container">
+            <a class="hidden--md menu__trigger" id="js-header-trigger">
+                <span class="line"></span>
+                <span class="line"></span>
+                <span class="line"></span>
+            </a>
+            <div class="logo">
+                <a href="" class="logo__link">
+                    <img class="logo__icon" src="img/logo.png" alt="">
+                </a>
+            </div>
+            <ul class="menu menu--header" id="js-header-menu">
+                <li class="menu__item menu__item--closer hidden--md">
+                    <a href="" class="menu__link menu__link--closer" id="js-menu-link-closer">
+                        &#x2716;
+                    </a>
+                </li>
+                <li class="menu__item"><a class="menu__link animated-underline" href="#">Кровати</a></li>
+                <li class="menu__item hidden--md visible--lg"><a class="menu__link animated-underline" href="#">Диваны</a></li>
+                <li class="menu__item"><a class="menu__link animated-underline" href="#">На заказ</a></li>
+                <li class="menu__item"><a class="menu__link animated-underline" href="#">Шоурум</a></li>
+            </ul>
+            <div class="header__socials hidden--md">
+                <a class="header__link header__link--social" href=""><img class="header__icon header__icon--socials" src="img/insta1.png" alt=""></a>
+                <a class="header__link header__link--social" href=""><img class="header__icon header__icon--socials" src="img/whatsapp.jpg" alt=""></a>
+            </div>
+            <div class="header__info">
+                <p class="header__text header__text--small js-move" data-moveto="address-container" data-screen="760">
+                    г. Москва, ул. Тимирязевская, д.2/3
+                    <br>
+                    (ТЦ "Парк 11", 3 этаж)
+                </p>
+                <p class="header__text">
+                    <a  class="header__link header__link--large animated-underline" href="tel:+74951429380">+7 (495) 142-93-80</a>
+                    <input id="call-from-navbar" class="button button--tiny button--header" type="button" value="Заказать звонок" data-toggle="modal" data-target="#js-call-navbar">
+                </p>
+            </div>
+        </div>
+    </div>
+    <div class="main js-parallax" data-parallax="scroll" data-image-src="./img/bg-1.jpg">
+        <div class="container main__inner">
+            <div id="address-container"></div>
+            <div class="main__content col-2 md-col-1">
+                <h1 class="heading heading--larger main__heading">
+                    Кровати на заказ
+                    <br>
+                    по дизайн проектам
+                    <br>
+                    <span>С мягкой обивкой от производителя</span>
+                </h1>
+            </div>
+            <div class="main__content main__content--bordered col-2 md-col-1">
+                <p class="main__text">
+                    Подберем кровать под ваш дизайн, либо изготовим по вашему макету или фото и привезем в срок от 3-х дней
+                </p>
+                <div class="main__icon-container">
+                    <img src="img/bed-icon-small.png" alt="">
+                </div>
+                <div class="main__input--container blink">
+                    <input type="button" class="main__cta button button--attention button" id="js-main__cta" value="Подобрать и рассчитать" />
+                </div>
+            </div>
+            <a href="#gallery" class="button--slidedown">&darr;</a>
+        </div>
+    </div>
+    <div class="container card-container"> 
+        <div class="card md-col-3 col-3 col-sm-1">
+            <div class="card__image">
+                <img src="img/peim1.png" alt="">
+            </div>
+            <div class="card__text">
+                <h2>Минимальные сроки</h2>
+                <p>Минимальный срок изготовления от 3 до 7 дней </p>
+            </div>
+        </div>
+        <div class="card md-col-3 col-3">
+            <div class="card__image">
+                <img src="img/peim2.png" alt="">
+            </div>
+            <div class="card__text">                
+                <h2>Собственное производство</h2>
+                <p>Контроль качества продукции на каждом этапе изготовления</p>
+            </div>
+
+        </div>
+        <div class="card md-col-3 col-3">
+            <div class="card__image">
+                <img src="img/peim3.png" alt="">
+            </div>            
+            <div class="card__text">                
+                <h2>Изготовление на заказ</h2>
+                <p>Изготовим любую модель
+                    кровати или дивана по вашему эскизу</p>
+            </div>
+        </div>
+    </div>
+    <div class="container" id="gallery">
+        <div class="gallery">
+            <div class="gallery__header">
+                <h2 class="heading heading--larger heading--gallery gallery__heading">Популярные модели
+                    <br>
+                    <span>кроватей с мягкой обивкой</span>
+                </h2>
+                <ul class="gallery__type">
+                    <li><a class="button button-transparent active gallery__type-button" href="#" disabled>Кровати</a></li>
+                    <li><a class="button button-transparent gallery__type-button"  href="#">Диваны</a></li>
+                </ul>
+            </div>
+            <ul class="gallery__list">
+                <li class="gallery__item">
+                    <div class="gallery__item-img"><img src="img/1-(2).jpg" alt=""></div>
+                    <div class="gallery__item-content">
+                        <div class="gallery__item-info">
+                            <span class='gallery__item-type'>Кровать</span>
+                            <h4 class="gallery__item-name"> Балу</h4>
+                            <span class="gallery__item-price">58.000 рублей</span>
+                        </div>
+                        <div class="gallery__item-thumbs">
+                            <a href="img/1-(1).jpg" data-group="gallery-20"><img src="img/1-(2).jpg" alt=""></a>
+                            <a href="img/1-(2).jpg" data-group="gallery-20"><img src="img/1-(1).jpg" alt=""></a>
+                        </div>
+                    </div>
+                    <div class="gallery__item-ordering">
+                        <a href="#modal-20" class="button button--transparent button--bordered js-gallery-details" role="button">Подробнее</a>
+                        <a href="#js-gallery-order" class="button button--attention js-gallery-order" data-orderName="Балу" data-price="58.000 рублей" data-item="Кровать">заказать</a>
+                    </div>
+                </li>
+                <li class="gallery__item">
+                    <div class="gallery__item-img"><img src="img/2-(2).jpg" alt=""></div>
+                    <div class="gallery__item-content">
+                        <div class="gallery__item-info">
+                            <span class='gallery__item-type'>Кровать</span>
+                            <h4 class="gallery__item-name">Global</h4>
+                            <span class="gallery__item-price">47.000 рублей</span>
+                        </div>
+                        <div class="gallery__item-thumbs">
+                            <a href="img/2-(1).jpg" data-group="gallery-0"><img src="img/2-(2).jpg" alt=""></a>
+                            <a href="img/2-(2).jpg" data-group="gallery-0"><img src="img/2-(1).jpg" alt=""></a>
+                        </div>
+                    </div>
+                    <div class="gallery__item-ordering">
+                        <a href="#modal-0" class="button button--transparent button--bordered js-gallery-details" role="button">Подробнее</a>
+                        <a href="#js-gallery-order" class="button button--attention js-gallery-order" data-orderName="Global" data-price="47.000 рублей" data-item="Кровать">заказать</a>
+                    </div>
+                </li>
+        
+                <li class="gallery__item">
+                    <div class="gallery__item-img"><img src="img/3-(2).jpg" alt=""></div>
+                    <div class="gallery__item-content">
+                        <div class="gallery__item-info">
+                            <span class='gallery__item-type'>Кровать</span>
+                            <h4 class="gallery__item-name">Шик</h4>
+                            <span class="gallery__item-price">70.000 рублей</span>
+                        </div>
+                        <div class="gallery__item-thumbs">
+                            <a href="img/3-(1).jpg" data-group="gallery-1"><img src="img/3-(2).jpg" alt=""></a>
+                            <a href="img/3-(2).jpg" data-group="gallery-1"><img src="img/3-(1).jpg" alt=""></a>
+                        </div>
+                    </div>
+                    <div class="gallery__item-ordering">
+                        <a href="#modal-1" class="button button--transparent button--bordered js-gallery-details" role="button">Подробнее</a>
+                        <a href="#js-gallery-order" class="button button--attention js-gallery-order" data-orderName="Шик" data-price="70.000 рублей" data-item="Кровать">заказать</a>
+                    </div>
+                </li>
+        
+                <li class="gallery__item">
+                    <div class="gallery__item-img"><img src="img/4-(2).jpg" alt=""></div>
+                    <div class="gallery__item-content">
+                        <div class="gallery__item-info">
+                            <span class='gallery__item-type'>Кровать</span>
+                            <h4 class="gallery__item-name">Milky Way</h4>
+                            <span class="gallery__item-price">50.000 рублей</span>
+                        </div>
+                        <div class="gallery__item-thumbs">
+                            <a href="img/4-(1).jpg" data-group="gallery-2"><img src="img/4-(2).jpg" alt=""></a>
+                            <a href="img/4-(2).jpg" data-group="gallery-2"><img src="img/4-(1).jpg" alt=""></a>
+                        </div>
+                    </div>
+                    <div class="gallery__item-ordering">
+                        <a href="#modal-2" class="button button--transparent button--bordered js-gallery-details" role="button">Подробнее</a>
+                        <a href="#js-gallery-order" class="button button--attention js-gallery-order" data-orderName="Milky Way" data-price="50.000 рублей" data-item="Кровать">заказать</a>
+                    </div>
+                </li>
+        
+                <li class="gallery__item">
+                    <div class="gallery__item-img"><img src="img/5-(2).jpg" alt=""></div>
+                    <div class="gallery__item-content">
+                        <div class="gallery__item-info">
+                            <span class='gallery__item-type'>Кровать</span>
+                            <h4 class="gallery__item-name">Anita</h4>
+                            <span class="gallery__item-price">43.500 рублей</span>
+                        </div>
+                        <div class="gallery__item-thumbs">
+                            <a href="img/5-(1).jpg" data-group="gallery-3"><img src="img/5-(2).jpg" alt=""></a>
+                            <a href="img/5-(2).jpg" data-group="gallery-3"><img src="img/5-(1).jpg" alt=""></a>
+                        </div>
+                    </div>
+                    <div class="gallery__item-ordering">
+                        <a href="#modal-3" class="button button--transparent button--bordered js-gallery-details" role="button">Подробнее</a>
+                        <a href="#js-gallery-order" class="button button--attention js-gallery-order" data-orderName="Anita" data-price="43.500 рублей" data-item="Кровать">заказать</a>
+                    </div>
+                </li>
+        
+                <li class="gallery__item">
+                    <div class="gallery__item-img"><img src="img/6-(2).jpg" alt=""></div>
+                    <div class="gallery__item-content">
+                        <div class="gallery__item-info">
+                            <span class='gallery__item-type'>Кровать</span>
+                            <h4 class="gallery__item-name">Kim</h4>
+                            <span class="gallery__item-price">60.000 рублей</span>
+                        </div>
+                        <div class="gallery__item-thumbs">
+                            <a href="img/6-(1).jpg" data-group="gallery-4"><img src="img/6-(2).jpg" alt=""></a>
+                            <a href="img/6-(2).jpg" data-group="gallery-4"><img src="img/6-(1).jpg" alt=""></a>
+                        </div>
+                    </div>
+                    <div class="gallery__item-ordering">
+                        <a href="#modal-4" class="button button--transparent button--bordered js-gallery-details" role="button">Подробнее</a>
+                        <a href="#js-gallery-order" class="button button--attention js-gallery-order" data-orderName="Kim" data-price="60.000 рублей" data-item="Кровать">заказать</a>
+                    </div>
+                </li>
+        
+                <li class="gallery__item">
+                    <div class="gallery__item-img"><img src="img/9-(2).jpg" alt=""></div>
+                    <div class="gallery__item-content">
+                        <div class="gallery__item-info">
+                            <span class='gallery__item-type'>Кровать</span>
+                            <h4 class="gallery__item-name">Маквин</h4>
+                            <span class="gallery__item-price"> 45.000 рублей</span>
+                        </div>
+                        <div class="gallery__item-thumbs">
+                            <a href="img/9-(1).jpg" data-group="gallery-5"><img src="img/9-(2).jpg" alt=""></a>
+                            <a href="img/9-(2).jpg" data-group="gallery-5"><img src="img/9-(1).jpg" alt=""></a>
+                        </div>
+                    </div>
+                    <div class="gallery__item-ordering">
+                        <a href="#modal-5" class="button button--transparent button--bordered js-gallery-details" role="button">Подробнее</a>
+                        <a href="#js-gallery-order" class="button button--attention js-gallery-order" data-orderName="Кровать" data-price="Маквин" data-item="45.000 рублей">заказать</a>
+                    </div>
+                </li>
+        
+                <li class="gallery__item">
+                    <div class="gallery__item-img"><img src="img/8-(2).jpg" alt=""></div>
+                    <div class="gallery__item-content">
+                        <div class="gallery__item-info">
+                            <span class='gallery__item-type'>Кровать</span>
+                            <h4 class="gallery__item-name"> Tall</h4>
+                            <span class="gallery__item-price">от 60.000 рублей</span>
+                        </div>
+                        <div class="gallery__item-thumbs">
+                            <a href="img/8-(1).jpg" data-group="gallery-6"><img src="img/8-(2).jpg" alt=""></a>
+                            <a href="img/8-(2).jpg" data-group="gallery-6"><img src="img/8-(1).jpg" alt=""></a>
+                        </div>
+                    </div>
+                    <div class="gallery__item-ordering">
+                        <a href="#modal-6" class="button button--transparent button--bordered js-gallery-details" role="button">Подробнее</a>
+                        <a href="#js-gallery-order" class="button button--attention js-gallery-order" data-orderName="Tall" data-price="от 60.000 рублей" data-item="Кровать">заказать</a>
+                    </div>
+                </li>
+        
+                <li class="gallery__item">
+                    <div class="gallery__item-img"><img src="img/7-(2).jpg" alt=""></div>
+                    <div class="gallery__item-content">
+                        <div class="gallery__item-info">
+                            <span class='gallery__item-type'>Кровать</span>
+                            <h4 class="gallery__item-name">Black Wave</h4>
+                            <span class="gallery__item-price">45.000 рублей</span>
+                        </div>
+                        <div class="gallery__item-thumbs">
+                            <a href="img/7-(1).jpg" data-group="gallery-7"><img src="img/7-(2).jpg" alt=""></a>
+                            <a href="img/7-(2).jpg" data-group="gallery-7"><img src="img/7-(1).jpg" alt=""></a>
+                        </div>
+                    </div>
+                    <div class="gallery__item-ordering">
+                        <a href="#modal-7" class="button button--transparent button--bordered js-gallery-details" role="button">Подробнее</a>
+                        <a href="#js-gallery-order" class="button button--attention js-gallery-order" data-orderName="Black Wave" data-price="45.000 рублей" data-item="Кровать">заказать</a>
+                    </div>
+                </li>
+        
+                <li class="gallery__item">
+                    <div class="gallery__item-img"><img src="img/10-(1).jpg" alt=""></div>
+                    <div class="gallery__item-content">
+                        <div class="gallery__item-info">
+                            <span class='gallery__item-type'>Кровать</span>
+                            <h4 class="gallery__item-name">Грейленд</h4>
+                            <span class="gallery__item-price">35.000 рублей</span>
+                        </div>
+                        <div class="gallery__item-thumbs">
+                            <a href="img/10-(2).jpg" data-group="gallery-8"><img src="img/10-(1).jpg" alt=""></a>
+                            <a href="img/10-(1).jpg" data-group="gallery-8"><img src="img/10-(2).jpg" alt=""></a>
+                        </div>
+                    </div>
+                    <div class="gallery__item-ordering">
+                        <a href="#modal-8" class="button button--transparent button--bordered js-gallery-details" role="button">Подробнее</a>
+                        <a href="#js-gallery-order" class="button button--attention js-gallery-order" data-orderName="Грейленд" data-price="35.000 рублей" data-item="Кровать">заказать</a>
+                    </div>
+                </li>
+        
+                <li class="gallery__item">
+                    <div class="gallery__item-img"><img src="img/11-(1).jpg" alt=""></div>
+                    <div class="gallery__item-content">
+                        <div class="gallery__item-info">
+                            <span class='gallery__item-type'>Кровать</span>
+                            <h4 class="gallery__item-name"> Гранд Бахия</h4>
+                            <span class="gallery__item-price">от 70.000 рублей</span>
+                        </div>
+                        <div class="gallery__item-thumbs">
+                            <a href="img/11-(2).jpg" data-group="gallery-9"><img src="img/11-(1).jpg" alt=""></a>
+                            <a href="img/11-(1).jpg" data-group="gallery-9"><img src="img/11-(2).jpg" alt=""></a>
+                        </div>
+                    </div>
+                    <div class="gallery__item-ordering">
+                        <a href="#modal-9" class="button button--transparent button--bordered js-gallery-details" role="button">Подробнее</a>
+                        <a href="#js-gallery-order" class="button button--attention js-gallery-order" data-orderName="Гранд Бахия" data-price="от 70.000 рублей" data-item="Кровать">заказать</a>
+                    </div>
+                </li>
+        
+                <li class="gallery__item">
+                    <div class="gallery__item-img"><img src="img/13-(1).jpg" alt=""></div>
+                    <div class="gallery__item-content">
+                        <div class="gallery__item-info">
+                            <span class='gallery__item-type'>Кровать</span>
+                            <h4 class="gallery__item-name">Elena</h4>
+                            <span class="gallery__item-price">32.000 рублей</span>
+                        </div>
+                        <div class="gallery__item-thumbs">
+                            <a href="img/13-(2).jpg" data-group="gallery-10"><img src="img/13-(1).jpg" alt=""></a>
+                            <a href="img/13-(1).jpg" data-group="gallery-10"><img src="img/13-(2).jpg" alt=""></a>
+                        </div>
+                    </div>
+                    <div class="gallery__item-ordering">
+                        <a href="#modal-10" class="button button--transparent button--bordered js-gallery-details" role="button">Подробнее</a>
+                        <a href="#js-gallery-order" class="button button--attention js-gallery-order" data-orderName="Elena" data-price="32.000 рублей" data-item="Кровать">заказать</a>
+                    </div>
+                </li>
+        
+                <li class="gallery__item">
+                    <div class="gallery__item-img"><img src="img/16-(1).jpg" alt=""></div>
+                    <div class="gallery__item-content">
+                        <div class="gallery__item-info">
+                            <span class='gallery__item-type'>Кровать</span>
+                            <h4 class="gallery__item-name">Брианза</h4>
+                            <span class="gallery__item-price">40.000 рублей</span>
+                        </div>
+                        <div class="gallery__item-thumbs">
+                            <a href="img/16-(2).jpg" data-group="gallery-11"><img src="img/16-(1).jpg" alt=""></a>
+                            <a href="img/16-(1).jpg" data-group="gallery-11"><img src="img/16-(2).jpg" alt=""></a>
+                        </div>
+                    </div>
+                    <div class="gallery__item-ordering">
+                        <a href="#modal-11" class="button button--transparent button--bordered js-gallery-details" role="button">Подробнее</a>
+                        <a href="#js-gallery-order" class="button button--attention js-gallery-order" data-orderName="Брианза" data-price="40.000 рублей" data-item="Кровать">заказать</a>
+                    </div>
+                </li>
+        
+                <li class="gallery__item">
+                    <div class="gallery__item-img"><img src="img/20-(1).jpg" alt=""></div>
+                    <div class="gallery__item-content">
+                        <div class="gallery__item-info">
+                            <span class='gallery__item-type'>Кровать</span>
+                            <h4 class="gallery__item-name"> Феерия</h4>
+                            <span class="gallery__item-price">45.000 рублей</span>
+                        </div>
+                        <div class="gallery__item-thumbs">
+                            <a href="img/20-(2).jpg" data-group="gallery-12"><img src="img/20-(1).jpg" alt=""></a>
+                            <a href="img/20-(1).jpg" data-group="gallery-12"><img src="img/20-(2).jpg" alt=""></a>
+                        </div>
+                    </div>
+                    <div class="gallery__item-ordering">
+                        <a href="#modal-12" class="button button--transparent button--bordered js-gallery-details" role="button">Подробнее</a>
+                        <a href="#js-gallery-order" class="button button--attention js-gallery-order" data-orderName="Феерия" data-price="45.000 рублей" data-item="Кровать">заказать</a>
+                    </div>
+                </li>
+        
+                <li class="gallery__item">
+                    <div class="gallery__item-img"><img src="img/19-(1).jpg" alt=""></div>
+                    <div class="gallery__item-content">
+                        <div class="gallery__item-info">
+                            <span class='gallery__item-type'>Кровать </span>
+                            <h4 class="gallery__item-name">София</h4>
+                            <span class="gallery__item-price">35.000 рублей</span>
+                        </div>
+                        <div class="gallery__item-thumbs">
+                            <a href="img/19-(2).jpg" data-group="gallery-13"><img src="img/19-(1).jpg" alt=""></a>
+                            <a href="img/19-(1).jpg" data-group="gallery-13"><img src="img/19-(2).jpg" alt=""></a>
+                        </div>
+                    </div>
+                    <div class="gallery__item-ordering">
+                        <a href="#modal-13" class="button button--transparent button--bordered js-gallery-details" role="button">Подробнее</a>
+                        <a href="#js-gallery-order" class="button button--attention js-gallery-order" data-orderName="35.000 рублей" data-price="Кровать" data-item="София">заказать</a>
+                    </div>
+                </li>
+        
+                <li class="gallery__item">
+                    <div class="gallery__item-img"><img src="img/21-(1).jpg" alt=""></div>
+                    <div class="gallery__item-content">
+                        <div class="gallery__item-info">
+                            <span class='gallery__item-type'>Детская кровать</span>
+                            <h4 class="gallery__item-name">Диана</h4>
+                            <span class="gallery__item-price">33.000 рублей</span>
+                        </div>
+                        <div class="gallery__item-thumbs">
+                            <a href="img/21-(2).jpg" data-group="gallery-14"><img src="img/21-(1).jpg" alt=""></a>
+                            <a href="img/21-(1).jpg" data-group="gallery-14"><img src="img/21-(2).jpg" alt=""></a>
+                        </div>
+                    </div>
+                    <div class="gallery__item-ordering">
+                        <a href="#modal-14" class="button button--transparent button--bordered js-gallery-details" role="button">Подробнее</a>
+                        <a href="#js-gallery-order" class="button button--attention js-gallery-order" data-orderName="Диана" data-price="33.000 рублей" data-item="Детская кровать">заказать</a>
+                    </div>
+                </li>
+        
+                <li class="gallery__item">
+                    <div class="gallery__item-img"><img src="img/18-(1).jpg" alt=""></div>
+                    <div class="gallery__item-content">
+                        <div class="gallery__item-info">
+                            <span class='gallery__item-type'>Кровать</span>
+                            <h4 class="gallery__item-name">Салото</h4>
+                            <span class="gallery__item-price">35.000 рублей</span>
+                        </div>
+                        <div class="gallery__item-thumbs">
+                            <a href="img/18-(2).jpg" data-group="gallery-15"><img src="img/18-(1).jpg" alt=""></a>
+                            <a href="img/18-(1).jpg" data-group="gallery-15"><img src="img/18-(2).jpg" alt=""></a>
+                        </div>
+                    </div>
+                    <div class="gallery__item-ordering">
+                        <a href="#modal-15" class="button button--transparent button--bordered js-gallery-details" role="button">Подробнее</a>
+                        <a href="#js-gallery-order" class="button button--attention js-gallery-order" data-orderName="Салото" data-price="35.000 рублей" data-item="Кровать">заказать</a>
+                    </div>
+                </li>
+        
+                <li class="gallery__item">
+                    <div class="gallery__item-img"><img src="img/17-(1).jpg" alt=""></div>
+                    <div class="gallery__item-content">
+                        <div class="gallery__item-info">
+                            <span class='gallery__item-type'>Кровать</span>
+                            <h4 class="gallery__item-name">Миа</h4>
+                            <span class="gallery__item-price">40.000 рублей</span>
+                        </div>
+                        <div class="gallery__item-thumbs">
+                            <a href="img/17-(2).jpg" data-group="gallery-16"><img src="img/17-(1).jpg" alt=""></a>
+                            <a href="img/17-(1).jpg" data-group="gallery-16"><img src="img/17-(2).jpg" alt=""></a>
+                        </div>
+                    </div>
+                    <div class="gallery__item-ordering">
+                        <a href="#modal-16" class="button button--transparent button--bordered js-gallery-details" role="button">Подробнее</a>
+                        <a href="#js-gallery-order" class="button button--attention js-gallery-order" data-orderName="Миа" data-price="40.000 рублей" data-item="Кровать">заказать</a>
+                    </div>
+                </li>
+        
+                <li class="gallery__item">
+                    <div class="gallery__item-img"><img src="img/14-(1).jpg" alt=""></div>
+                    <div class="gallery__item-content">
+                        <div class="gallery__item-info">
+                            <span class='gallery__item-type'>Кровать</span>
+                            <h4 class="gallery__item-name">Moment</h4>
+                            <span class="gallery__item-price">39.000 рублей</span>
+                        </div>
+                        <div class="gallery__item-thumbs">
+                            <a href="img/14-(2).jpg" data-group="gallery-17"><img src="img/14-(1).jpg" alt=""></a>
+                            <a href="img/14-(1).jpg" data-group="gallery-17"><img src="img/14-(2).jpg" alt=""></a>
+                        </div>
+                    </div>
+                    <div class="gallery__item-ordering">
+                        <a href="#modal-17" class="button button--transparent button--bordered js-gallery-details" role="button">Подробнее</a>
+                        <a href="#js-gallery-order" class="button button--attention js-gallery-order" data-orderName="Moment" data-price="39.000 рублей" data-item="Кровать">заказать</a>
+                    </div>
+                </li>
+        
+                <li class="gallery__item">
+                    <div class="gallery__item-img"><img src="img/15-(1).jpg" alt=""></div>
+                    <div class="gallery__item-content">
+                        <div class="gallery__item-info">
+                            <span class='gallery__item-type'>Кровать</span>
+                            <h4 class="gallery__item-name">Аква</h4>
+                            <span class="gallery__item-price">40.000 рублей</span>
+                        </div>
+                        <div class="gallery__item-thumbs">
+                            <a href="img/15-(2).jpg" data-group="gallery-18"><img src="img/15-(1).jpg" alt=""></a>
+                            <a href="img/15-(1).jpg" data-group="gallery-18"><img src="img/15-(2).jpg" alt=""></a>
+                        </div>
+                    </div>
+                    <div class="gallery__item-ordering">
+                        <a href="#modal-18" class="button button--transparent button--bordered js-gallery-details" role="button">Подробнее</a>
+                        <a href="#js-gallery-order" class="button button--attention js-gallery-order" data-orderName="Аква" data-price="40.000 рублей" data-item="Кровать">заказать</a>
+                    </div>
+                </li>
+        
+                <li class="gallery__item">
+                    <div class="gallery__item-img"><img src="img/12-(1).jpg" alt=""></div>
+                    <div class="gallery__item-content">
+                        <div class="gallery__item-info">
+                            <span class='gallery__item-type'>Кровать</span>
+                            <h4 class="gallery__item-name">Маэстро</h4>
+                            <span class="gallery__item-price">44.000 рублей</span>
+                        </div>
+                        <div class="gallery__item-thumbs">
+                            <a href="img/12-(2).jpg" data-group="gallery-19"><img src="img/12-(1).jpg" alt=""></a>
+                            <a href="img/12-(1).jpg" data-group="gallery-19"><img src="img/12-(2).jpg" alt=""></a>
+                        </div>
+                    </div>
+                    <div class="gallery__item-ordering">
+                        <a href="#modal-19" class="button button--transparent button--bordered js-gallery-details" role="button">Подробнее</a>
+                        <a href="#js-gallery-order" class="button button--attention js-gallery-order" data-orderName="Маэстро" data-price="44.000 рублей" data-item="Кровать">заказать</a>
+                    </div>
+                </li>        
+            </ul>
+            <div class="gallery__footer">
+                <p>Хотите увидеть еще модели кроватей, тогда вы можете скачать наш полный каталог кроватей, в формате PDF</p>
+                <div class="blink">
+                    <input type="button" class="button button--dark" value="полный каталог">
+                </div>    
+            </div>
+            </div>
+        </div>
+    </div>
+    <div class="looking-for js-parallax" data-parallax="scroll" data-image-src="./img/bg-2.jpg">
+        <div class="looking-for__inner container">
+            <h2 class="heading heading--large looking-for__heading">Не нашли понравившуюся модель <br> кровати в нашем каталоге?</h2>
+            <div class="looking-for__image-container">
+                <p class="col-2 md-col-1 looking-for__text">Нечего страшного, мы изготовим для вас кровать по вашему макету или просто фото.</p>
+                <img class="col-2 md-col-1 looking-for__img" src="img/bed-icon.png" alt="">
+            </div>
+            <div class="looking-for__input-wrapper">
+                <div class="input-container blink">
+                    <input type="button" class="button button--attention looking-for__cta" id="js-looking-for__cta" value="Отправить макет или фото">
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="your-choice">
+        <div class="container">
+            <div class="your-choice__text col-4">                
+                <h2 class="heading heading--larger">Вы можете выбрать</h2>
+                <p>любой вариант комплектации, материала и обивки кровати</p>
+            </div>
+            <ul class="card-container your-choice__card-container">
+                <li>
+                    <img src="img/variant6.jpg" alt="">
+                    <p>Варианты ткани<br>
+                        и обивки</p>
+                </li>
+                <li>
+                    <img src="img/variant5.jpg" alt="">
+                    <p>Ортопедическую<br>
+                        решетку</p>
+                </li>
+                <li>
+                    <img src="img/variant7.jpg" alt="">
+                    <p>Подъемный<br>
+                        механизм</p>
+                </li>
+                <li>
+                    <img src="img/variant8.jpg" alt="">
+                    <p>Фурнитуру и<br>
+                        основание</p>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="matras js-parallax">
+        <div class="container matras__inner">
+            <div class="matras__image-container js-move" data-moveto="matras__image-container-2" data-screen="1200">
+                <img class="" src="img/matras.png" alt="matras">
+            </div>
+            <div class="matras__text-content">
+                <h2 class="heading heading--large">Большой выбор матрасов по высоте  и жесткости со скидкой 10%</h2>
+                <div id="matras__image-container-2"></div>
+                <p>
+                    Выбрали кровать? Теперь предстоит определиться с выбором матраса, ведь от него будет зависеть качество вашего сна!
+                </p>
+                <p>
+                    У нашей компании есть большой выбор матрасов разного размера, высоты и жесткости
+                </p>
+            </div>
+        </div>
+    </div>
+    <div class="showroom">
+        <div class="container showroom__inner">
+            <div id='showroom__heading2' class="hidden--lg">
+
+            </div>
+            <div class="showroom__text-content col-2 col-md-1">
+                <div>
+                    <h2 class="heading heading--large js-move showroom__heading" data-moveto="showroom__heading2" data-screen="1200">Мы ждем вас в нашем Шоуруме</h2>
+                </div>
+                <p class="showroom__text">Где вы сможете в живую увидеть наши модели кроватей, пообщаться с консультантами и выбрать подходящую для вас модель!</p>
+                <div class="showroom__address">
+                    <img class="showroom__address-icon" src="img/map.png" alt="" class="map-icon">
+                    <p class="showroom__text showroom__text--small">Москва, ул. Тимирязевская, д.2/3 <br>
+                        (ТЦ "Парк 11", 3 этаж)</p>
+                </div>
+            </div>
+            <div class="showroom__img-content col-2 col-md-1">
+                <a class="showroom__img-link showroom__img-link--large js-showroom-modaal-trigger" href="">
+                    <img src="img/showroom4.jpg" alt="" class="showroom__img showroom__img--large">
+                </a>
+                <div class="showroom__thumbs">
+                    <a href="img/showroom4.jpg" data-group="showroom" class="js-showroom-modaal"><img class="showroom__img--thumbs" src="img/showroom4.jpg" alt=""></a>
+                    <a href="img/showroom5.jpg" data-group="showroom" class="js-showroom-modaal"><img class="showroom__img--thumbs js-showroom-modaal" src="img/showroom5.jpg" alt=""></a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="manifacturer text-white">
+        <div class="container">
+            <div class="card__img">
+                <img src="img/cog.png" alt="">
+            </div>
+            <div class="text-content">
+                <h2>Мы производители</h2>            
+                <p>Арнико это прямой фабричный производитель мягкой мебели на заказ по любым размерам, эскизам и фото.</p>
+            </div>
+        </div>
+    </div>
+    <div class="designer">
+        <div class="container">
+            <div id="designer__header2">
+
+            </div>
+            <div class="col-2 md-col-2 sm-col-1">
+                <img src="img/dizayn.png" alt="bed-design">
+            </div>
+            <div class="text-content col-2 md-col-2 sm-col-1">
+                <h2 class="heading heading--large js-move designer__heading"  data-moveto="designer__header2" data-screen="760">Вы дизайнер?</h2>
+                <p>В таком случае, у вас есть возможность стать нашим партнёром и получать 10% (вознаграждение) от стоимости кровати за каждого приведённого клиента</p>
+                <div class="text-content__footer">
+                    <img class="designer__icon" src="img/small-bed.png" alt="">
+                    <p>Мы предоставим вам 3D модели всех наших кроватей
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="contact-us js-parallax">
+        <div class="container contact-us__inner">
+            <div class="contact-us__text-content">
+                <h2 class="heading heading--large contact-us__heading">Свяжитесь с нами!</h2>
+                <p class="contact-us__text">
+                    Наши менеджеры подробно проконсультируют вас по выбору кровати и просчитают любое изделие на заказ в течение 15 минут
+                </p>
+            </div>
+            <div class="contact-us__form-container">
+                <form action="" class="contact-us__form">
+                    <h3 class="contact-us__heading--form">Введите свои данные и наш
+                        специалист свяжется с вами</h3>
+                    <input class="contact-us__input contact-us__input--text" type="text" placeholder="Введите свое имя">
+                    <input class="contact-us__input contact-us__input--password" type="text" placeholder="Введите свой телефон">
+                    <div class="blink">
+                        <input type="button" class="button button--attention contact-us__cta" value="Получить консультацию" >
+                    </div>
+                    <label for="check" class="contact-us__label">   
+                        <input type="checkbox" name="check" id="check" clas="contact-us__checkbox">
+                        Нажимая на кнопку "Получить консультацию", я даю согласие на обработку персональных данных и соглашаюсь c условиями политики конфиденциальности                        
+                    </label>
+                </form>
+            </div>
+        </div>
+    </div>
+    <footer class="footer">
+        <div class="container footer__inner">
+            <div class="footer__icon-container">
+                <a href="#" class="footer__icon-link">
+                    <img class="footer__icon-img" src="img/logo.png" alt="">
+                </a>
+            </div>
+            <div class="footer__info">
+                <div class="footer__info-section footer__info-section--brand">
+                    <a class="animated-underline footer__link" href="#">+7 (495) 142-93-80</a>
+                </div>
+                <div class="footer__info-section footer__info-section--socials">
+                    <a class="animated-underline footer__link" href="#">+7 (495) 142-93-80</a>
+                    <a href="#" class="icon footer__link--icon">
+                        <img src="img/viber.jpg" alt="viber">
+                    </a>
+                    <a href="" class="icon footer__link--icon">
+                        <img src="img/whatsapp.jpg" alt="whatsapp">
+                    </a>
+                    <p class="address footer__text footer__text--address">
+                        г. Москва, ул. Тимирязевская, д.2/3 <br> (ТЦ "Парк 11", 3 этаж)                
+                    </p>
+                    <a href="#" class="footer__link footer__link--icon footer__link--block"><img src="img/insta1.png" alt="instagram"></a>
+                </div>
+            </div>
+            <div class="footer__map-container">
+                <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3Abfd18d127c1ae4253d27aaa7cdae43f5a4446af54a0dee7189da9cedd8f25937&amp;width=320&amp;height=240&amp;lang=en_FR&amp;scroll=true"></script>                
+            </div>
+        </div>
+        <div class="footer__copyright container">
+            Copyright © 2020 made by Gevorg Ghazaryan
+        </div>
+    </footer>
+    <div class='header header--fixed header--light-bg'>
+        <div class="header__inner container header__inner-container--fixed">
+            <a class="hidden--lg menu__trigger" id="js-header-trigger--fixed">
+                <span class="line"></span>
+                <span class="line"></span>
+                <span class="line"></span>
+            </a>
+            <div class="logo">
+                <a href="" class="logo__link">
+                    <img class="logo__icon" src="img/logo.png" alt="">
+                </a>
+            </div>
+            <ul class="menu menu--header menu-header--fixed menu--light-bg" id="js-header-menu--fixed">
+                <li class="menu__item menu__item--closer hidden--lg">
+                    <a href="" class="menu__link menu__link--closer" id="js-menu-link-closer--fixed">
+                        &#x2716;
+                    </a>
+                </li>
+                <li class="menu__item"><a class="menu__link animated-underline" href="#">Кровати</a></li>
+                <li class="menu__item"><a class="menu__link animated-underline" href="#">Диваны</a></li>
+                <li class="menu__item"><a class="menu__link animated-underline" href="#">На заказ</a></li>
+                <li class="menu__item"><a class="menu__link animated-underline" href="#">Шоурум</a></li>
+            </ul>
+            <div class="header__socials hidden--md">
+                <a class="header__link header__link--social" href=""><img class="header__icon header__icon--socials" src="img/insta1.png" alt=""></a>
+                <a class="header__link header__link--social" href=""><img class="header__icon header__icon--socials" src="img/whatsapp.jpg" alt=""></a>
+            </div>
+
+            <div class="header__info">
+                <p class="header__text header__text--small">
+                    г. Москва, ул. Тимирязевская, д.2/3
+                    <br>
+                    (ТЦ "Парк 11", 3 этаж)
+                </p>
+                <div class="header__text header__contacts">
+                    <div class="header__contacts-vert">
+                        <a  class="header__link header__link--large animated-underline" href="tel:+74951429380">+7 (495) 142-93-80</a>
+                        <a id="call-from-navbar-fixed" class="header__link header__link--small animated-underline">Заказать звонок</a>
+                    </div>
+                    <div class="header__contacts__social">
+                        <a href="#"><img src="img/viber.jpg" alt="" class="icon header__contacts-icon"></a>
+                        <a href="#"><img src="img/whatsapp.jpg" alt="" class="icon header__contacts-icon"></a>
+                        <a href="#"><img src="img/insta1.png" alt="" class="icon header__contacts-icon"></a>
+                    </div>
+                </div>
+            </div>
+        </div>    
+    </div>    
+        
+        
+    <!-- Modals -->
+    <div class="modal" tabindex="-1" id="js-call-navbar"  style="display:none;">
+        <div class="modal__content">
+            <div class="modal__header">
+              <h5 class="modal__title heading heading--small">Оставьте заявку <br> <span>чтобы мы перезвонили вам</span></h5>
+            </div>
+            <div class="modal__body">
+                <form class="form">
+                    <div class="form__input-wrapper">
+                        <input class="input" type="text" required placeholder="Введите свое имя">
+                    </div>
+                    <div class="form__input-wrapper">
+                        <input class="input" type="password" required placeholder="Введите свой телефон">
+                    </div>
+                    <div class="form__input-wrapper form__input-wrapper--button blink">
+                        <input class="button button--attention" type="button" value="Перезвоните мне">
+                    </div>
+                    <div class="form__input-wrapper">
+                        <input type="checkbox" name="check" id="check">
+                        <label for="check" class="form__checkbox-text">                        
+                            Нажимая на кнопку "Получить консультацию", я даю согласие на обработку персональных данных и соглашаюсь c условиями политики конфиденциальности                        
+                        </label>                    
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <div class="modal" tabindex="-1" id="js-call-looking-for"  style="display:none;">
+        <div class="modal__content">
+            <div class="modal__header">
+              <h5 class="modal__title heading heading--small">Оставьте заявку <br> <span>чтобы мы перезвонили вам</span></h5>
+            </div>
+            <div class="modal__body">
+                <form class="form">
+                    <div class="form__input-wrapper">
+                        <input class="input" type="text" required placeholder="Введите свое имя">
+                    </div>
+                    <div class="form__input-wrapper">
+                        <input class="input" type="password" required placeholder="Введите свой телефон">
+                    </div>
+                    <div class="form__input-wrapper">
+                        <label class="input-label--file">
+                            <input class="input input--file" type="file" id="js-file-input" aria-label="File browser example">
+                            <span class="input-file-custom" id="js-file-input-fake">
+                                Прикрепить макет
+                            </span>
+                        </label>                        
+                    </div>
+
+                    <div class="form__input-wrapper form__input-wrapper--button blink">
+                        <input class="button button--attention" type="button" value="Узнать цену">
+                    </div>
+                    <div class="form__input-wrapper">
+                        <input type="checkbox" name="check" id="check">
+                        <label for="check" class="form__checkbox-text">                        
+                            Нажимая на кнопку "Получить консультацию", я даю согласие на обработку персональных данных и соглашаюсь c условиями политики конфиденциальности                        
+                        </label>                    
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <div class="modal" tabindex="-1" id="js-gallery-order"  style="display:none;">
+        <div class="modal__content">
+            <div class="modal__header">
+              <h5 class="modal__title heading heading--small">Оставьте заявку <br> <span>чтобы заказать кровать</span></h5>
+            </div>
+            <div class="modal__body">
+                <form class="form">
+                    <div class="form__input-wrapper">
+                        <input class="input" type="text" required placeholder="Введите свое имя">
+                    </div>
+                    <div class="form__input-wrapper">
+                        <input class="input" type="password" required placeholder="Введите свой телефон">
+                    </div>
+                    <div class="form__input-wrapper form__input-wrapper--button blink">
+                        <input class="button button--attention" type="button" value="Заказать">
+                    </div>
+                    <div class="form__input-wrapper">
+                        <input type="checkbox" name="check" id="check">
+                        <label for="check" class="form__checkbox-text">                        
+                            Нажимая на кнопку "Получить консультацию", я даю согласие на обработку персональных данных и соглашаюсь c условиями политики конфиденциальности                        
+                        </label>                    
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>    
+    
+    <div class="modal" tabindex="-1" id="modal-0"  style="display:none;">
+        <div class="modal__content modal__content--large item-details__modal-content">
+            <div class="modal__body item-details">
+                <div class="item-details__main item-details--part">
+                    <h3 class="item-details__heading--small">Кровать</h3>
+                    <h2 class="item-details__heading">Global</h2>
+                    <div class="item-details__img-container">
+                        <img src="img/2-(2).jpg" alt="" class="item-details__img">
+                    </div>
+                </div>
+                <div class="item-details--part item-details--info">
+                    <p class="item-details__p">
+                        Огромный выбор обивочных материалов: <b>бархат; велюр; велюр люкс; микровелюр; рогожка, жаккард; шенилл; эко кожа высшего сорта; кожа </b> 
+                    </p>
+                    <p class="item-details__p item-details__p--important">
+                        Возможно изготовление кроватей нестандартного размера и вариантов обивки!
+                    </p>
+                    <p class="item-details__p item-details__p--m-0">Дополнительно возможно:</p>
+                    <ul class="list-styled item-details__list">
+                        <li class="item-details__list-item">Усиленное ортопедическое основание</li>
+                        <li class="item-details__list-item">Подъемный механизм с бельевыми ящиками</li>
+                    </ul>
+                </div>
+                <div class="item-details--part item-details--table-part">
+                    <table class="item-details__table">
+                        <thead class="item-details__table-head">
+                            <tr>
+                                <td>Спальное место:</td>
+                                <td>Габариты кровати:</td>                                
+                            </tr>
+                        </thead>
+                        <tr>
+                            <td class="item-details__table-cell">120/200 см см</td>
+                            <td class="item-details__table-cell">260/220 см см</td>
+                        </tr>
+                        <tr>
+                            <td class="item-details__table-cell">140/200 см см</td>
+                            <td class="item-details__table-cell">280/220 см см</td>
+                        </tr>
+                        <tr>
+                            <td class="item-details__table-cell">160/200 см см</td>
+                            <td class="item-details__table-cell">300/220 см см</td>
+                        </tr>
+                        <tr>
+                            <td class="item-details__table-cell">180/200 см см</td>
+                            <td class="item-details__table-cell">320/220 см см</td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="item-details-order">
+                    <input type="text" class="button button--attention item-details__cta js-item-details" value="Заказать" >
+            </div>
+        </div>
+    </div>
+
+    <div class="modal" tabindex="-1" id="modal-1"  style="display:none;">
+        <div class="modal__content modal__content--large item-details__modal-content">
+            <div class="modal__body item-details">
+                <div class="item-details__main item-details--part">
+                    <h3 class="item-details__heading--small">Кровать</h3>
+                    <h2 class="item-details__heading">Шик</h2>
+                    <div class="item-details__img-container">
+                        <img src="img/3-(2).jpg" alt="" class="item-details__img">
+                    </div>
+                </div>
+                <div class="item-details--part item-details--info">
+                    <p class="item-details__p">
+                        Огромный выбор обивочных материалов: <b>бархат; велюр; велюр люкс; микровелюр; рогожка, жаккард; шенилл; эко кожа высшего сорта; кожа </b> 
+                    </p>
+                    <p class="item-details__p item-details__p--important">
+                        Возможно изготовление кроватей нестандартного размера и вариантов обивки!
+                    </p>
+                    <p class="item-details__p item-details__p--m-0">Дополнительно возможно:</p>
+                    <ul class="list-styled item-details__list">
+                        <li class="item-details__list-item">Усиленное ортопедическое основание</li>
+                        <li class="item-details__list-item">Подъемный механизм с бельевыми ящиками</li>
+                    </ul>
+                </div>
+                <div class="item-details--part item-details--table-part">
+                    <table class="item-details__table">
+                        <thead class="item-details__table-head">
+                            <tr>
+                                <td>Спальное место:</td>
+                                <td>Габариты кровати:</td>                                
+                            </tr>
+                        </thead>
+                        <tr>
+                            <td class="item-details__table-cell">120/200 см см</td>
+                            <td class="item-details__table-cell">260/225 см см</td>
+                        </tr>
+                        <tr>
+                            <td class="item-details__table-cell">140/200 см см</td>
+                            <td class="item-details__table-cell">280/225 см см</td>
+                        </tr>
+                        <tr>
+                            <td class="item-details__table-cell">160/200 см см</td>
+                            <td class="item-details__table-cell">300/225 см см</td>
+                        </tr>
+                        <tr>
+                            <td class="item-details__table-cell">180/200 см см</td>
+                            <td class="item-details__table-cell">320/225 см см</td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="item-details-order">
+                    <input type="text" class="button button--attention item-details__cta js-item-details" value="Заказать" >
+            </div>
+        </div>
+    </div>
+
+    <div class="modal" tabindex="-1" id="modal-2"  style="display:none;">
+        <div class="modal__content modal__content--large item-details__modal-content">
+            <div class="modal__body item-details">
+                <div class="item-details__main item-details--part">
+                    <h3 class="item-details__heading--small">Кровать</h3>
+                    <h2 class="item-details__heading">Milky Way</h2>
+                    <div class="item-details__img-container">
+                        <img src="img/4-(2).jpg" alt="" class="item-details__img">
+                    </div>
+                </div>
+                <div class="item-details--part item-details--info">
+                    <p class="item-details__p">
+                        Огромный выбор обивочных материалов: <b>бархат; велюр; велюр люкс; микровелюр; рогожка, жаккард; шенилл; эко кожа высшего сорта; кожа </b> 
+                    </p>
+                    <p class="item-details__p item-details__p--important">
+                        Возможно изготовление кроватей нестандартного размера и вариантов обивки!
+                    </p>
+                    <p class="item-details__p item-details__p--m-0">Дополнительно возможно:</p>
+                    <ul class="list-styled item-details__list">
+                        <li class="item-details__list-item">Усиленное ортопедическое основание</li>
+                        <li class="item-details__list-item">Подъемный механизм с бельевыми ящиками</li>
+                    </ul>
+                </div>
+                <div class="item-details--part item-details--table-part">
+                    <table class="item-details__table">
+                        <thead class="item-details__table-head">
+                            <tr>
+                                <td>Спальное место:</td>
+                                <td>Габариты кровати:</td>                                
+                            </tr>
+                        </thead>
+                        <tr>
+                            <td class="item-details__table-cell">120/200 см см</td>
+                            <td class="item-details__table-cell">144/220 см см</td>
+                        </tr>
+                        <tr>
+                            <td class="item-details__table-cell">140/200 см см</td>
+                            <td class="item-details__table-cell">164/220 см см</td>
+                        </tr>
+                        <tr>
+                            <td class="item-details__table-cell">160/200 см см</td>
+                            <td class="item-details__table-cell">184/220 см см</td>
+                        </tr>
+                        <tr>
+                            <td class="item-details__table-cell">180/200 см см</td>
+                            <td class="item-details__table-cell">204/220 см см</td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="item-details-order">
+                    <input type="text" class="button button--attention item-details__cta js-item-details" value="Заказать" >
+            </div>
+        </div>
+    </div>
+
+    <div class="modal" tabindex="-1" id="modal-3"  style="display:none;">
+        <div class="modal__content modal__content--large item-details__modal-content">
+            <div class="modal__body item-details">
+                <div class="item-details__main item-details--part">
+                    <h3 class="item-details__heading--small">Кровать</h3>
+                    <h2 class="item-details__heading">Anita</h2>
+                    <div class="item-details__img-container">
+                        <img src="img/5-(2).jpg" alt="" class="item-details__img">
+                    </div>
+                </div>
+                <div class="item-details--part item-details--info">
+                    <p class="item-details__p">
+                        Огромный выбор обивочных материалов: <b>бархат; велюр; велюр люкс; микровелюр; рогожка, жаккард; шенилл; эко кожа высшего сорта; кожа </b> 
+                    </p>
+                    <p class="item-details__p item-details__p--important">
+                        Возможно изготовление кроватей нестандартного размера и вариантов обивки!
+                    </p>
+                    <p class="item-details__p item-details__p--m-0">Дополнительно возможно:</p>
+                    <ul class="list-styled item-details__list">
+                        <li class="item-details__list-item">Усиленное ортопедическое основание</li>
+                        <li class="item-details__list-item">Подъемный механизм с бельевыми ящиками</li>
+                    </ul>
+                </div>
+                <div class="item-details--part item-details--table-part">
+                    <table class="item-details__table">
+                        <thead class="item-details__table-head">
+                            <tr>
+                                <td>Спальное место:</td>
+                                <td>Габариты кровати:</td>                                
+                            </tr>
+                        </thead>
+                        <tr>
+                            <td class="item-details__table-cell">120/200 см см</td>
+                            <td class="item-details__table-cell">132/220 см см</td>
+                        </tr>
+                        <tr>
+                            <td class="item-details__table-cell">140/200 см см</td>
+                            <td class="item-details__table-cell">152/220 см см</td>
+                        </tr>
+                        <tr>
+                            <td class="item-details__table-cell">160/200 см см</td>
+                            <td class="item-details__table-cell">172/220 см см</td>
+                        </tr>
+                        <tr>
+                            <td class="item-details__table-cell">180/200 см см</td>
+                            <td class="item-details__table-cell">192/220 см см</td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="item-details-order">
+                    <input type="text" class="button button--attention item-details__cta js-item-details" value="Заказать" >
+            </div>
+        </div>
+    </div>
+
+    <div class="modal" tabindex="-1" id="modal-4"  style="display:none;">
+        <div class="modal__content modal__content--large item-details__modal-content">
+            <div class="modal__body item-details">
+                <div class="item-details__main item-details--part">
+                    <h3 class="item-details__heading--small">Kim</h3>
+                    <h2 class="item-details__heading">Возможно изготовление кроватей нестандартного размера и вариантов обивки!</h2>
+                    <div class="item-details__img-container">
+                        <img src="img/6-(2).jpg" alt="" class="item-details__img">
+                    </div>
+                </div>
+                <div class="item-details--part item-details--info">
+                    <p class="item-details__p">
+                        Огромный выбор обивочных материалов: <b>бархат; велюр; велюр люкс; микровелюр; рогожка, жаккард; шенилл; эко кожа высшего сорта; кожа </b> 
+                    </p>
+                    <p class="item-details__p item-details__p--important">
+                        Возможно изготовление кроватей нестандартного размера и вариантов обивки!
+                    </p>
+                    <p class="item-details__p item-details__p--m-0">Дополнительно возможно:</p>
+                    <ul class="list-styled item-details__list">
+                        <li class="item-details__list-item">Усиленное ортопедическое основание</li>
+                        <li class="item-details__list-item">Подъемный механизм с бельевыми ящиками</li>
+                    </ul>
+                </div>
+                <div class="item-details--part item-details--table-part">
+                    <table class="item-details__table">
+                        <thead class="item-details__table-head">
+                            <tr>
+                                <td>Спальное место:</td>
+                                <td>Габариты кровати:</td>                                
+                            </tr>
+                        </thead>
+                        <tr>
+                            <td class="item-details__table-cell">undefined см</td>
+                            <td class="item-details__table-cell">120/200 см см</td>
+                        </tr>
+                        <tr>
+                            <td class="item-details__table-cell">undefined см</td>
+                            <td class="item-details__table-cell">140/200 см см</td>
+                        </tr>
+                        <tr>
+                            <td class="item-details__table-cell">undefined см</td>
+                            <td class="item-details__table-cell">160/200 см см</td>
+                        </tr>
+                        <tr>
+                            <td class="item-details__table-cell">undefined см</td>
+                            <td class="item-details__table-cell">180/200 см см</td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="item-details-order">
+                    <input type="text" class="button button--attention item-details__cta js-item-details" value="Заказать" >
+            </div>
+        </div>
+    </div>
+
+    <div class="modal" tabindex="-1" id="modal-5"  style="display:none;">
+        <div class="modal__content modal__content--large item-details__modal-content">
+            <div class="modal__body item-details">
+                <div class="item-details__main item-details--part">
+                    <h3 class="item-details__heading--small">Кровать</h3>
+                    <h2 class="item-details__heading">Маквин</h2>
+                    <div class="item-details__img-container">
+                        <img src="img/9-(2).jpg" alt="" class="item-details__img">
+                    </div>
+                </div>
+                <div class="item-details--part item-details--info">
+                    <p class="item-details__p">
+                        Огромный выбор обивочных материалов: <b>бархат; велюр; велюр люкс; микровелюр; рогожка, жаккард; шенилл; эко кожа высшего сорта; кожа </b> 
+                    </p>
+                    <p class="item-details__p item-details__p--important">
+                        Возможно изготовление кроватей нестандартного размера и вариантов обивки!
+                    </p>
+                    <p class="item-details__p item-details__p--m-0">Дополнительно возможно:</p>
+                    <ul class="list-styled item-details__list">
+                        <li class="item-details__list-item">Усиленное ортопедическое основание</li>
+                        <li class="item-details__list-item">Подъемный механизм с бельевыми ящиками</li>
+                    </ul>
+                </div>
+                <div class="item-details--part item-details--table-part">
+                    <table class="item-details__table">
+                        <thead class="item-details__table-head">
+                            <tr>
+                                <td>Спальное место:</td>
+                                <td>Габариты кровати:</td>                                
+                            </tr>
+                        </thead>
+                        <tr>
+                            <td class="item-details__table-cell">120/200 см см</td>
+                            <td class="item-details__table-cell">145/215 см см</td>
+                        </tr>
+                        <tr>
+                            <td class="item-details__table-cell">140/200 см см</td>
+                            <td class="item-details__table-cell">165/215 см см</td>
+                        </tr>
+                        <tr>
+                            <td class="item-details__table-cell">160/200 см см</td>
+                            <td class="item-details__table-cell">185/215 см см</td>
+                        </tr>
+                        <tr>
+                            <td class="item-details__table-cell">180/200 см см</td>
+                            <td class="item-details__table-cell">205/215 см см</td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="item-details-order">
+                    <input type="text" class="button button--attention item-details__cta js-item-details" value="Заказать" >
+            </div>
+        </div>
+    </div>
+
+    <div class="modal" tabindex="-1" id="modal-6"  style="display:none;">
+        <div class="modal__content modal__content--large item-details__modal-content">
+            <div class="modal__body item-details">
+                <div class="item-details__main item-details--part">
+                    <h3 class="item-details__heading--small">Кровать</h3>
+                    <h2 class="item-details__heading">Tall</h2>
+                    <div class="item-details__img-container">
+                        <img src="img/8-(2).jpg" alt="" class="item-details__img">
+                    </div>
+                </div>
+                <div class="item-details--part item-details--info">
+                    <p class="item-details__p">
+                        Огромный выбор обивочных материалов: <b>бархат; велюр; велюр люкс; микровелюр; рогожка, жаккард; шенилл; эко кожа высшего сорта; кожа </b> 
+                    </p>
+                    <p class="item-details__p item-details__p--important">
+                        Возможно изготовление кроватей нестандартного размера и вариантов обивки!
+                    </p>
+                    <p class="item-details__p item-details__p--m-0">Дополнительно возможно:</p>
+                    <ul class="list-styled item-details__list">
+                        <li class="item-details__list-item">Усиленное ортопедическое основание</li>
+                        <li class="item-details__list-item">Подъемный механизм с бельевыми ящиками</li>
+                    </ul>
+                </div>
+                <div class="item-details--part item-details--table-part">
+                    <table class="item-details__table">
+                        <thead class="item-details__table-head">
+                            <tr>
+                                <td>Спальное место:</td>
+                                <td>Габариты кровати:</td>                                
+                            </tr>
+                        </thead>
+                        <tr>
+                            <td class="item-details__table-cell">120/200 см см</td>
+                            <td class="item-details__table-cell">180/220 см см</td>
+                        </tr>
+                        <tr>
+                            <td class="item-details__table-cell">140/200 см см</td>
+                            <td class="item-details__table-cell">200/220 см см</td>
+                        </tr>
+                        <tr>
+                            <td class="item-details__table-cell">160/200 см см</td>
+                            <td class="item-details__table-cell">220/220 см см</td>
+                        </tr>
+                        <tr>
+                            <td class="item-details__table-cell">180/200 см см</td>
+                            <td class="item-details__table-cell">240/220 см см</td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="item-details-order">
+                    <input type="text" class="button button--attention item-details__cta js-item-details" value="Заказать" >
+            </div>
+        </div>
+    </div>
+
+    <div class="modal" tabindex="-1" id="modal-7"  style="display:none;">
+        <div class="modal__content modal__content--large item-details__modal-content">
+            <div class="modal__body item-details">
+                <div class="item-details__main item-details--part">
+                    <h3 class="item-details__heading--small">Кровать</h3>
+                    <h2 class="item-details__heading">Black Wave</h2>
+                    <div class="item-details__img-container">
+                        <img src="img/7-(2).jpg" alt="" class="item-details__img">
+                    </div>
+                </div>
+                <div class="item-details--part item-details--info">
+                    <p class="item-details__p">
+                        Огромный выбор обивочных материалов: <b>бархат; велюр; велюр люкс; микровелюр; рогожка, жаккард; шенилл; эко кожа высшего сорта; кожа </b> 
+                    </p>
+                    <p class="item-details__p item-details__p--important">
+                        Возможно изготовление кроватей нестандартного размера и вариантов обивки!
+                    </p>
+                    <p class="item-details__p item-details__p--m-0">Дополнительно возможно:</p>
+                    <ul class="list-styled item-details__list">
+                        <li class="item-details__list-item">Усиленное ортопедическое основание</li>
+                        <li class="item-details__list-item">Подъемный механизм с бельевыми ящиками</li>
+                    </ul>
+                </div>
+                <div class="item-details--part item-details--table-part">
+                    <table class="item-details__table">
+                        <thead class="item-details__table-head">
+                            <tr>
+                                <td>Спальное место:</td>
+                                <td>Габариты кровати:</td>                                
+                            </tr>
+                        </thead>
+                        <tr>
+                            <td class="item-details__table-cell">120/200 см см</td>
+                            <td class="item-details__table-cell">165/260 см см</td>
+                        </tr>
+                        <tr>
+                            <td class="item-details__table-cell">140/200 см см</td>
+                            <td class="item-details__table-cell">185/260 см см</td>
+                        </tr>
+                        <tr>
+                            <td class="item-details__table-cell">160/200 см см</td>
+                            <td class="item-details__table-cell">205/260 см см</td>
+                        </tr>
+                        <tr>
+                            <td class="item-details__table-cell">180/200 см см</td>
+                            <td class="item-details__table-cell">225/260 см см</td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="item-details-order">
+                    <input type="text" class="button button--attention item-details__cta js-item-details" value="Заказать" >
+            </div>
+        </div>
+    </div>
+
+    <div class="modal" tabindex="-1" id="modal-8"  style="display:none;">
+        <div class="modal__content modal__content--large item-details__modal-content">
+            <div class="modal__body item-details">
+                <div class="item-details__main item-details--part">
+                    <h3 class="item-details__heading--small">Кровать</h3>
+                    <h2 class="item-details__heading">Грейленд</h2>
+                    <div class="item-details__img-container">
+                        <img src="img/10-(1).jpg" alt="" class="item-details__img">
+                    </div>
+                </div>
+                <div class="item-details--part item-details--info">
+                    <p class="item-details__p">
+                        Огромный выбор обивочных материалов: <b>бархат; велюр; велюр люкс; микровелюр; рогожка, жаккард; шенилл; эко кожа высшего сорта; кожа </b> 
+                    </p>
+                    <p class="item-details__p item-details__p--important">
+                        Возможно изготовление кроватей нестандартного размера и вариантов обивки!
+                    </p>
+                    <p class="item-details__p item-details__p--m-0">Дополнительно возможно:</p>
+                    <ul class="list-styled item-details__list">
+                        <li class="item-details__list-item">Усиленное ортопедическое основание</li>
+                        <li class="item-details__list-item">Подъемный механизм с бельевыми ящиками</li>
+                    </ul>
+                </div>
+                <div class="item-details--part item-details--table-part">
+                    <table class="item-details__table">
+                        <thead class="item-details__table-head">
+                            <tr>
+                                <td>Спальное место:</td>
+                                <td>Габариты кровати:</td>                                
+                            </tr>
+                        </thead>
+                        <tr>
+                            <td class="item-details__table-cell">120/200 см см</td>
+                            <td class="item-details__table-cell">145/215 см см</td>
+                        </tr>
+                        <tr>
+                            <td class="item-details__table-cell">140/200 см см</td>
+                            <td class="item-details__table-cell">165/215 см см</td>
+                        </tr>
+                        <tr>
+                            <td class="item-details__table-cell">160/200 см см</td>
+                            <td class="item-details__table-cell">185/215 см см</td>
+                        </tr>
+                        <tr>
+                            <td class="item-details__table-cell">180/200 см см</td>
+                            <td class="item-details__table-cell">205/215 см см</td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="item-details-order">
+                    <input type="text" class="button button--attention item-details__cta js-item-details" value="Заказать" >
+            </div>
+        </div>
+    </div>
+
+    <div class="modal" tabindex="-1" id="modal-9"  style="display:none;">
+        <div class="modal__content modal__content--large item-details__modal-content">
+            <div class="modal__body item-details">
+                <div class="item-details__main item-details--part">
+                    <h3 class="item-details__heading--small">Кровать</h3>
+                    <h2 class="item-details__heading">Гранд Бахия</h2>
+                    <div class="item-details__img-container">
+                        <img src="img/11-(1).jpg" alt="" class="item-details__img">
+                    </div>
+                </div>
+                <div class="item-details--part item-details--info">
+                    <p class="item-details__p">
+                        Огромный выбор обивочных материалов: <b>бархат; велюр; велюр люкс; микровелюр; рогожка, жаккард; шенилл; эко кожа высшего сорта; кожа </b> 
+                    </p>
+                    <p class="item-details__p item-details__p--important">
+                        Возможно изготовление кроватей нестандартного размера и вариантов обивки!
+                    </p>
+                    <p class="item-details__p item-details__p--m-0">Дополнительно возможно:</p>
+                    <ul class="list-styled item-details__list">
+                        <li class="item-details__list-item">Усиленное ортопедическое основание</li>
+                        <li class="item-details__list-item">Подъемный механизм с бельевыми ящиками</li>
+                    </ul>
+                </div>
+                <div class="item-details--part item-details--table-part">
+                    <table class="item-details__table">
+                        <thead class="item-details__table-head">
+                            <tr>
+                                <td>Спальное место:</td>
+                                <td>Габариты кровати:</td>                                
+                            </tr>
+                        </thead>
+                        <tr>
+                            <td class="item-details__table-cell">120/200 см см</td>
+                            <td class="item-details__table-cell">145/215 см см</td>
+                        </tr>
+                        <tr>
+                            <td class="item-details__table-cell">140/200 см см</td>
+                            <td class="item-details__table-cell">165/215 см см</td>
+                        </tr>
+                        <tr>
+                            <td class="item-details__table-cell">160/200 см см</td>
+                            <td class="item-details__table-cell">185/215 см см</td>
+                        </tr>
+                        <tr>
+                            <td class="item-details__table-cell">180/200 см см</td>
+                            <td class="item-details__table-cell">205/215 см см</td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="item-details-order">
+                    <input type="text" class="button button--attention item-details__cta js-item-details" value="Заказать" >
+            </div>
+        </div>
+    </div>
+
+    <div class="modal" tabindex="-1" id="modal-10"  style="display:none;">
+        <div class="modal__content modal__content--large item-details__modal-content">
+            <div class="modal__body item-details">
+                <div class="item-details__main item-details--part">
+                    <h3 class="item-details__heading--small">Кровать</h3>
+                    <h2 class="item-details__heading">Elena</h2>
+                    <div class="item-details__img-container">
+                        <img src="img/13-(1).jpg" alt="" class="item-details__img">
+                    </div>
+                </div>
+                <div class="item-details--part item-details--info">
+                    <p class="item-details__p">
+                        Огромный выбор обивочных материалов: <b>бархат; велюр; велюр люкс; микровелюр; рогожка, жаккард; шенилл; эко кожа высшего сорта; кожа </b> 
+                    </p>
+                    <p class="item-details__p item-details__p--important">
+                        Возможно изготовление кроватей нестандартного размера и вариантов обивки!
+                    </p>
+                    <p class="item-details__p item-details__p--m-0">Дополнительно возможно:</p>
+                    <ul class="list-styled item-details__list">
+                        <li class="item-details__list-item">Усиленное ортопедическое основание</li>
+                        <li class="item-details__list-item">Подъемный механизм с бельевыми ящиками</li>
+                    </ul>
+                </div>
+                <div class="item-details--part item-details--table-part">
+                    <table class="item-details__table">
+                        <thead class="item-details__table-head">
+                            <tr>
+                                <td>Спальное место:</td>
+                                <td>Габариты кровати:</td>                                
+                            </tr>
+                        </thead>
+                        <tr>
+                            <td class="item-details__table-cell">120/200 см см</td>
+                            <td class="item-details__table-cell">145/215 см см</td>
+                        </tr>
+                        <tr>
+                            <td class="item-details__table-cell">140/200 см см</td>
+                            <td class="item-details__table-cell">165/215 см см</td>
+                        </tr>
+                        <tr>
+                            <td class="item-details__table-cell">160/200 см см</td>
+                            <td class="item-details__table-cell">185/215 см см</td>
+                        </tr>
+                        <tr>
+                            <td class="item-details__table-cell">180/200 см см</td>
+                            <td class="item-details__table-cell">205/215 см см</td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="item-details-order">
+                    <input type="text" class="button button--attention item-details__cta js-item-details" value="Заказать" >
+            </div>
+        </div>
+    </div>
+
+    <div class="modal" tabindex="-1" id="modal-11"  style="display:none;">
+        <div class="modal__content modal__content--large item-details__modal-content">
+            <div class="modal__body item-details">
+                <div class="item-details__main item-details--part">
+                    <h3 class="item-details__heading--small">Кровать</h3>
+                    <h2 class="item-details__heading">Брианза</h2>
+                    <div class="item-details__img-container">
+                        <img src="img/16-(1).jpg" alt="" class="item-details__img">
+                    </div>
+                </div>
+                <div class="item-details--part item-details--info">
+                    <p class="item-details__p">
+                        Огромный выбор обивочных материалов: <b>бархат; велюр; велюр люкс; микровелюр; рогожка, жаккард; шенилл; эко кожа высшего сорта; кожа </b> 
+                    </p>
+                    <p class="item-details__p item-details__p--important">
+                        Возможно изготовление кроватей нестандартного размера и вариантов обивки!
+                    </p>
+                    <p class="item-details__p item-details__p--m-0">Дополнительно возможно:</p>
+                    <ul class="list-styled item-details__list">
+                        <li class="item-details__list-item">Усиленное ортопедическое основание</li>
+                        <li class="item-details__list-item">Подъемный механизм с бельевыми ящиками</li>
+                    </ul>
+                </div>
+                <div class="item-details--part item-details--table-part">
+                    <table class="item-details__table">
+                        <thead class="item-details__table-head">
+                            <tr>
+                                <td>Спальное место:</td>
+                                <td>Габариты кровати:</td>                                
+                            </tr>
+                        </thead>
+                        <tr>
+                            <td class="item-details__table-cell">120/200 см см</td>
+                            <td class="item-details__table-cell">145/215 см см</td>
+                        </tr>
+                        <tr>
+                            <td class="item-details__table-cell">140/200 см см</td>
+                            <td class="item-details__table-cell">165/215 см см</td>
+                        </tr>
+                        <tr>
+                            <td class="item-details__table-cell">160/200 см см</td>
+                            <td class="item-details__table-cell">185/215 см см</td>
+                        </tr>
+                        <tr>
+                            <td class="item-details__table-cell">180/200 см см</td>
+                            <td class="item-details__table-cell">205/215 см см</td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="item-details-order">
+                    <input type="text" class="button button--attention item-details__cta js-item-details" value="Заказать" >
+            </div>
+        </div>
+    </div>
+
+    <div class="modal" tabindex="-1" id="modal-12"  style="display:none;">
+        <div class="modal__content modal__content--large item-details__modal-content">
+            <div class="modal__body item-details">
+                <div class="item-details__main item-details--part">
+                    <h3 class="item-details__heading--small">Кровать</h3>
+                    <h2 class="item-details__heading">Феерия</h2>
+                    <div class="item-details__img-container">
+                        <img src="img/20-(1).jpg" alt="" class="item-details__img">
+                    </div>
+                </div>
+                <div class="item-details--part item-details--info">
+                    <p class="item-details__p">
+                        Огромный выбор обивочных материалов: <b>бархат; велюр; велюр люкс; микровелюр; рогожка, жаккард; шенилл; эко кожа высшего сорта; кожа </b> 
+                    </p>
+                    <p class="item-details__p item-details__p--important">
+                        Возможно изготовление кроватей нестандартного размера и вариантов обивки!
+                    </p>
+                    <p class="item-details__p item-details__p--m-0">Дополнительно возможно:</p>
+                    <ul class="list-styled item-details__list">
+                        <li class="item-details__list-item">Усиленное ортопедическое основание</li>
+                        <li class="item-details__list-item">Подъемный механизм с бельевыми ящиками</li>
+                    </ul>
+                </div>
+                <div class="item-details--part item-details--table-part">
+                    <table class="item-details__table">
+                        <thead class="item-details__table-head">
+                            <tr>
+                                <td>Спальное место:</td>
+                                <td>Габариты кровати:</td>                                
+                            </tr>
+                        </thead>
+                        <tr>
+                            <td class="item-details__table-cell">120/200 см см</td>
+                            <td class="item-details__table-cell">145/215 см см</td>
+                        </tr>
+                        <tr>
+                            <td class="item-details__table-cell">140/200 см см</td>
+                            <td class="item-details__table-cell">165/215 см см</td>
+                        </tr>
+                        <tr>
+                            <td class="item-details__table-cell">160/200 см см</td>
+                            <td class="item-details__table-cell">185/215 см см</td>
+                        </tr>
+                        <tr>
+                            <td class="item-details__table-cell">180/200 см см</td>
+                            <td class="item-details__table-cell">205/215 см см</td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="item-details-order">
+                    <input type="text" class="button button--attention item-details__cta js-item-details" value="Заказать" >
+            </div>
+        </div>
+    </div>
+
+    <div class="modal" tabindex="-1" id="modal-13"  style="display:none;">
+        <div class="modal__content modal__content--large item-details__modal-content">
+            <div class="modal__body item-details">
+                <div class="item-details__main item-details--part">
+                    <h3 class="item-details__heading--small">Кровать</h3>
+                    <h2 class="item-details__heading">София</h2>
+                    <div class="item-details__img-container">
+                        <img src="img/19-(1).jpg" alt="" class="item-details__img">
+                    </div>
+                </div>
+                <div class="item-details--part item-details--info">
+                    <p class="item-details__p">
+                        Огромный выбор обивочных материалов: <b>бархат; велюр; велюр люкс; микровелюр; рогожка, жаккард; шенилл; эко кожа высшего сорта; кожа </b> 
+                    </p>
+                    <p class="item-details__p item-details__p--important">
+                        Возможно изготовление кроватей нестандартного размера и вариантов обивки!
+                    </p>
+                    <p class="item-details__p item-details__p--m-0">Дополнительно возможно:</p>
+                    <ul class="list-styled item-details__list">
+                        <li class="item-details__list-item">Усиленное ортопедическое основание</li>
+                        <li class="item-details__list-item">Подъемный механизм с бельевыми ящиками</li>
+                    </ul>
+                </div>
+                <div class="item-details--part item-details--table-part">
+                    <table class="item-details__table">
+                        <thead class="item-details__table-head">
+                            <tr>
+                                <td>Спальное место:</td>
+                                <td>Габариты кровати:</td>                                
+                            </tr>
+                        </thead>
+                        <tr>
+                            <td class="item-details__table-cell">120/200 см см</td>
+                            <td class="item-details__table-cell">145/215 см см</td>
+                        </tr>
+                        <tr>
+                            <td class="item-details__table-cell">140/200 см см</td>
+                            <td class="item-details__table-cell">165/215 см см</td>
+                        </tr>
+                        <tr>
+                            <td class="item-details__table-cell">160/200 см см</td>
+                            <td class="item-details__table-cell">185/215 см см</td>
+                        </tr>
+                        <tr>
+                            <td class="item-details__table-cell">180/200 см см</td>
+                            <td class="item-details__table-cell">205/215 см см</td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="item-details-order">
+                    <input type="text" class="button button--attention item-details__cta js-item-details" value="Заказать" >
+            </div>
+        </div>
+    </div>
+
+    <div class="modal" tabindex="-1" id="modal-14"  style="display:none;">
+        <div class="modal__content modal__content--large item-details__modal-content">
+            <div class="modal__body item-details">
+                <div class="item-details__main item-details--part">
+                    <h3 class="item-details__heading--small">Кровать</h3>
+                    <h2 class="item-details__heading">Диана</h2>
+                    <div class="item-details__img-container">
+                        <img src="img/21-(1).jpg" alt="" class="item-details__img">
+                    </div>
+                </div>
+                <div class="item-details--part item-details--info">
+                    <p class="item-details__p">
+                        Огромный выбор обивочных материалов: <b>бархат; велюр; велюр люкс; микровелюр; рогожка, жаккард; шенилл; эко кожа высшего сорта; кожа </b> 
+                    </p>
+                    <p class="item-details__p item-details__p--important">
+                        Возможно изготовление кроватей нестандартного размера и вариантов обивки!
+                    </p>
+                    <p class="item-details__p item-details__p--m-0">Дополнительно возможно:</p>
+                    <ul class="list-styled item-details__list">
+                        <li class="item-details__list-item">Усиленное ортопедическое основание</li>
+                        <li class="item-details__list-item">Подъемный механизм с бельевыми ящиками</li>
+                    </ul>
+                </div>
+                <div class="item-details--part item-details--table-part">
+                    <table class="item-details__table">
+                        <thead class="item-details__table-head">
+                            <tr>
+                                <td>Спальное место:</td>
+                                <td>Габариты кровати:</td>                                
+                            </tr>
+                        </thead>
+                        <tr>
+                            <td class="item-details__table-cell">120/200 см см</td>
+                            <td class="item-details__table-cell">145/215 см см</td>
+                        </tr>
+                        <tr>
+                            <td class="item-details__table-cell">140/200 см см</td>
+                            <td class="item-details__table-cell">165/215 см см</td>
+                        </tr>
+                        <tr>
+                            <td class="item-details__table-cell">160/200 см см</td>
+                            <td class="item-details__table-cell">185/215 см см</td>
+                        </tr>
+                        <tr>
+                            <td class="item-details__table-cell">180/200 см см</td>
+                            <td class="item-details__table-cell">205/215 см см</td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="item-details-order">
+                    <input type="text" class="button button--attention item-details__cta js-item-details" value="Заказать" >
+            </div>
+        </div>
+    </div>
+
+    <div class="modal" tabindex="-1" id="modal-15"  style="display:none;">
+        <div class="modal__content modal__content--large item-details__modal-content">
+            <div class="modal__body item-details">
+                <div class="item-details__main item-details--part">
+                    <h3 class="item-details__heading--small">Кровать</h3>
+                    <h2 class="item-details__heading">Салото</h2>
+                    <div class="item-details__img-container">
+                        <img src="img/18-(1).jpg" alt="" class="item-details__img">
+                    </div>
+                </div>
+                <div class="item-details--part item-details--info">
+                    <p class="item-details__p">
+                        Огромный выбор обивочных материалов: <b>бархат; велюр; велюр люкс; микровелюр; рогожка, жаккард; шенилл; эко кожа высшего сорта; кожа </b> 
+                    </p>
+                    <p class="item-details__p item-details__p--important">
+                        Возможно изготовление кроватей нестандартного размера и вариантов обивки!
+                    </p>
+                    <p class="item-details__p item-details__p--m-0">Дополнительно возможно:</p>
+                    <ul class="list-styled item-details__list">
+                        <li class="item-details__list-item">Усиленное ортопедическое основание</li>
+                        <li class="item-details__list-item">Подъемный механизм с бельевыми ящиками</li>
+                    </ul>
+                </div>
+                <div class="item-details--part item-details--table-part">
+                    <table class="item-details__table">
+                        <thead class="item-details__table-head">
+                            <tr>
+                                <td>Спальное место:</td>
+                                <td>Габариты кровати:</td>                                
+                            </tr>
+                        </thead>
+                        <tr>
+                            <td class="item-details__table-cell">120/200 см см</td>
+                            <td class="item-details__table-cell">145/215 см см</td>
+                        </tr>
+                        <tr>
+                            <td class="item-details__table-cell">140/200 см см</td>
+                            <td class="item-details__table-cell">165/215 см см</td>
+                        </tr>
+                        <tr>
+                            <td class="item-details__table-cell">160/200 см см</td>
+                            <td class="item-details__table-cell">185/215 см см</td>
+                        </tr>
+                        <tr>
+                            <td class="item-details__table-cell">180/200 см см</td>
+                            <td class="item-details__table-cell">205/215 см см</td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="item-details-order">
+                    <input type="text" class="button button--attention item-details__cta js-item-details" value="Заказать" >
+            </div>
+        </div>
+    </div>
+
+    <div class="modal" tabindex="-1" id="modal-16"  style="display:none;">
+        <div class="modal__content modal__content--large item-details__modal-content">
+            <div class="modal__body item-details">
+                <div class="item-details__main item-details--part">
+                    <h3 class="item-details__heading--small">Кровать</h3>
+                    <h2 class="item-details__heading">Миа</h2>
+                    <div class="item-details__img-container">
+                        <img src="img/17-(1).jpg" alt="" class="item-details__img">
+                    </div>
+                </div>
+                <div class="item-details--part item-details--info">
+                    <p class="item-details__p">
+                        Огромный выбор обивочных материалов: <b>бархат; велюр; велюр люкс; микровелюр; рогожка, жаккард; шенилл; эко кожа высшего сорта; кожа </b> 
+                    </p>
+                    <p class="item-details__p item-details__p--important">
+                        Возможно изготовление кроватей нестандартного размера и вариантов обивки!
+                    </p>
+                    <p class="item-details__p item-details__p--m-0">Дополнительно возможно:</p>
+                    <ul class="list-styled item-details__list">
+                        <li class="item-details__list-item">Усиленное ортопедическое основание</li>
+                        <li class="item-details__list-item">Подъемный механизм с бельевыми ящиками</li>
+                    </ul>
+                </div>
+                <div class="item-details--part item-details--table-part">
+                    <table class="item-details__table">
+                        <thead class="item-details__table-head">
+                            <tr>
+                                <td>Спальное место:</td>
+                                <td>Габариты кровати:</td>                                
+                            </tr>
+                        </thead>
+                        <tr>
+                            <td class="item-details__table-cell">120/200 см см</td>
+                            <td class="item-details__table-cell">145/215 см см</td>
+                        </tr>
+                        <tr>
+                            <td class="item-details__table-cell">140/200 см см</td>
+                            <td class="item-details__table-cell">165/215 см см</td>
+                        </tr>
+                        <tr>
+                            <td class="item-details__table-cell">160/200 см см</td>
+                            <td class="item-details__table-cell">185/215 см см</td>
+                        </tr>
+                        <tr>
+                            <td class="item-details__table-cell">180/200 см см</td>
+                            <td class="item-details__table-cell">205/215 см см</td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="item-details-order">
+                    <input type="text" class="button button--attention item-details__cta js-item-details" value="Заказать" >
+            </div>
+        </div>
+    </div>
+
+    <div class="modal" tabindex="-1" id="modal-17"  style="display:none;">
+        <div class="modal__content modal__content--large item-details__modal-content">
+            <div class="modal__body item-details">
+                <div class="item-details__main item-details--part">
+                    <h3 class="item-details__heading--small">Кровать</h3>
+                    <h2 class="item-details__heading">Moment</h2>
+                    <div class="item-details__img-container">
+                        <img src="img/14-(1).jpg" alt="" class="item-details__img">
+                    </div>
+                </div>
+                <div class="item-details--part item-details--info">
+                    <p class="item-details__p">
+                        Огромный выбор обивочных материалов: <b>бархат; велюр; велюр люкс; микровелюр; рогожка, жаккард; шенилл; эко кожа высшего сорта; кожа </b> 
+                    </p>
+                    <p class="item-details__p item-details__p--important">
+                        Возможно изготовление кроватей нестандартного размера и вариантов обивки!
+                    </p>
+                    <p class="item-details__p item-details__p--m-0">Дополнительно возможно:</p>
+                    <ul class="list-styled item-details__list">
+                        <li class="item-details__list-item">Усиленное ортопедическое основание</li>
+                        <li class="item-details__list-item">Подъемный механизм с бельевыми ящиками</li>
+                    </ul>
+                </div>
+                <div class="item-details--part item-details--table-part">
+                    <table class="item-details__table">
+                        <thead class="item-details__table-head">
+                            <tr>
+                                <td>Спальное место:</td>
+                                <td>Габариты кровати:</td>                                
+                            </tr>
+                        </thead>
+                        <tr>
+                            <td class="item-details__table-cell">120/200 см см</td>
+                            <td class="item-details__table-cell">145/215 см см</td>
+                        </tr>
+                        <tr>
+                            <td class="item-details__table-cell">140/200 см см</td>
+                            <td class="item-details__table-cell">165/215 см см</td>
+                        </tr>
+                        <tr>
+                            <td class="item-details__table-cell">160/200 см см</td>
+                            <td class="item-details__table-cell">185/215 см см</td>
+                        </tr>
+                        <tr>
+                            <td class="item-details__table-cell">180/200 см см</td>
+                            <td class="item-details__table-cell">205/215 см см</td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="item-details-order">
+                    <input type="text" class="button button--attention item-details__cta js-item-details" value="Заказать" >
+            </div>
+        </div>
+    </div>
+
+    <div class="modal" tabindex="-1" id="modal-18"  style="display:none;">
+        <div class="modal__content modal__content--large item-details__modal-content">
+            <div class="modal__body item-details">
+                <div class="item-details__main item-details--part">
+                    <h3 class="item-details__heading--small">Кровать</h3>
+                    <h2 class="item-details__heading">Аква</h2>
+                    <div class="item-details__img-container">
+                        <img src="img/15-(1).jpg" alt="" class="item-details__img">
+                    </div>
+                </div>
+                <div class="item-details--part item-details--info">
+                    <p class="item-details__p">
+                        Огромный выбор обивочных материалов: <b>бархат; велюр; велюр люкс; микровелюр; рогожка, жаккард; шенилл; эко кожа высшего сорта; кожа </b> 
+                    </p>
+                    <p class="item-details__p item-details__p--important">
+                        Возможно изготовление кроватей нестандартного размера и вариантов обивки!
+                    </p>
+                    <p class="item-details__p item-details__p--m-0">Дополнительно возможно:</p>
+                    <ul class="list-styled item-details__list">
+                        <li class="item-details__list-item">Усиленное ортопедическое основание</li>
+                        <li class="item-details__list-item">Подъемный механизм с бельевыми ящиками</li>
+                    </ul>
+                </div>
+                <div class="item-details--part item-details--table-part">
+                    <table class="item-details__table">
+                        <thead class="item-details__table-head">
+                            <tr>
+                                <td>Спальное место:</td>
+                                <td>Габариты кровати:</td>                                
+                            </tr>
+                        </thead>
+                        <tr>
+                            <td class="item-details__table-cell">120/200 см см</td>
+                            <td class="item-details__table-cell">145/215 см см</td>
+                        </tr>
+                        <tr>
+                            <td class="item-details__table-cell">140/200 см см</td>
+                            <td class="item-details__table-cell">165/215 см см</td>
+                        </tr>
+                        <tr>
+                            <td class="item-details__table-cell">160/200 см см</td>
+                            <td class="item-details__table-cell">185/215 см см</td>
+                        </tr>
+                        <tr>
+                            <td class="item-details__table-cell">180/200 см см</td>
+                            <td class="item-details__table-cell">205/215 см см</td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="item-details-order">
+                    <input type="text" class="button button--attention item-details__cta js-item-details" value="Заказать" >
+            </div>
+        </div>
+    </div>
+
+    <div class="modal" tabindex="-1" id="modal-19"  style="display:none;">
+        <div class="modal__content modal__content--large item-details__modal-content">
+            <div class="modal__body item-details">
+                <div class="item-details__main item-details--part">
+                    <h3 class="item-details__heading--small">Кровать</h3>
+                    <h2 class="item-details__heading">Маэстро</h2>
+                    <div class="item-details__img-container">
+                        <img src="img/12-(1).jpg" alt="" class="item-details__img">
+                    </div>
+                </div>
+                <div class="item-details--part item-details--info">
+                    <p class="item-details__p">
+                        Огромный выбор обивочных материалов: <b>бархат; велюр; велюр люкс; микровелюр; рогожка, жаккард; шенилл; эко кожа высшего сорта; кожа </b> 
+                    </p>
+                    <p class="item-details__p item-details__p--important">
+                        Возможно изготовление кроватей нестандартного размера и вариантов обивки!
+                    </p>
+                    <p class="item-details__p item-details__p--m-0">Дополнительно возможно:</p>
+                    <ul class="list-styled item-details__list">
+                        <li class="item-details__list-item">Усиленное ортопедическое основание</li>
+                        <li class="item-details__list-item">Подъемный механизм с бельевыми ящиками</li>
+                    </ul>
+                </div>
+                <div class="item-details--part item-details--table-part">
+                    <table class="item-details__table">
+                        <thead class="item-details__table-head">
+                            <tr>
+                                <td>Спальное место:</td>
+                                <td>Габариты кровати:</td>                                
+                            </tr>
+                        </thead>
+                        <tr>
+                            <td class="item-details__table-cell">120/200 см см</td>
+                            <td class="item-details__table-cell">145/215 см см</td>
+                        </tr>
+                        <tr>
+                            <td class="item-details__table-cell">140/200 см см</td>
+                            <td class="item-details__table-cell">165/215 см см</td>
+                        </tr>
+                        <tr>
+                            <td class="item-details__table-cell">160/200 см см</td>
+                            <td class="item-details__table-cell">185/215 см см</td>
+                        </tr>
+                        <tr>
+                            <td class="item-details__table-cell">180/200 см см</td>
+                            <td class="item-details__table-cell">205/215 см см</td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="item-details-order">
+                    <input type="text" class="button button--attention item-details__cta js-item-details" value="Заказать" >
+            </div>
+        </div>
+    </div>
+
+    <div class="modal" tabindex="-1" id="modal-20"  style="display:none;">
+        <div class="modal__content modal__content--large item-details__modal-content">
+            <div class="modal__body item-details">
+                <div class="item-details__main item-details--part">
+                    <h3 class="item-details__heading--small">Кровать</h3>
+                    <h2 class="item-details__heading">Балу</h2>
+                    <div class="item-details__img-container">
+                        <img src="img/1-(2).jpg" alt="" class="item-details__img">
+                    </div>
+                </div>
+                <div class="item-details--part item-details--info">
+                    <p class="item-details__p">
+                        Огромный выбор обивочных материалов: <b>бархат; велюр; велюр люкс; микровелюр; рогожка, жаккард; шенилл; эко кожа высшего сорта; кожа </b> 
+                    </p>
+                    <p class="item-details__p item-details__p--important">
+                        Возможно изготовление кроватей нестандартного размера и вариантов обивки!
+                    </p>
+                    <p class="item-details__p item-details__p--m-0">Дополнительно возможно:</p>
+                    <ul class="list-styled item-details__list">
+                        <li class="item-details__list-item">Усиленное ортопедическое основание</li>
+                        <li class="item-details__list-item">Подъемный механизм с бельевыми ящиками</li>
+                    </ul>
+                </div>
+                <div class="item-details--part item-details--table-part">
+                    <table class="item-details__table">
+                        <thead class="item-details__table-head">
+                            <tr>
+                                <td>Спальное место:</td>
+                                <td>Габариты кровати:</td>                                
+                            </tr>
+                        </thead>
+                        <tr>
+                            <td class="item-details__table-cell">120/200 см см</td>
+                            <td class="item-details__table-cell">260/220 см см</td>
+                        </tr>
+                        <tr>
+                            <td class="item-details__table-cell">140/200 см см</td>
+                            <td class="item-details__table-cell">280/220 см см</td>
+                        </tr>
+                        <tr>
+                            <td class="item-details__table-cell">160/200 см см</td>
+                            <td class="item-details__table-cell">300/220 см см</td>
+                        </tr>
+                        <tr>
+                            <td class="item-details__table-cell">180/200 см см</td>
+                            <td class="item-details__table-cell">320/220 см см</td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="item-details-order">
+                    <input type="text" class="button button--attention item-details__cta js-item-details" value="Заказать" >
+            </div>
+        </div>
+    </div>
+
+    <div class="modal" tabindex="-1" id="modal-21"  style="display:none;">
+        <div class="modal__content modal__content--large item-details__modal-content">
+            <div class="modal__body item-details">
+                <div class="item-details__main item-details--part">
+                    <h3 class="item-details__heading--small">Кровать</h3>
+                    <h2 class="item-details__heading">Балу</h2>
+                    <div class="item-details__img-container">
+                        <img src="img/shourum5.jpg" alt="" class="item-details__img">
+                    </div>
+                </div>
+                <div class="item-details--part item-details--info">
+                    <p class="item-details__p">
+                        Огромный выбор обивочных материалов: <b>бархат; велюр; велюр люкс; микровелюр; рогожка, жаккард; шенилл; эко кожа высшего сорта; кожа </b> 
+                    </p>
+                    <p class="item-details__p item-details__p--important">
+                        Возможно изготовление кроватей нестандартного размера и вариантов обивки!
+                    </p>
+                    <p class="item-details__p item-details__p--m-0">Дополнительно возможно:</p>
+                    <ul class="list-styled item-details__list">
+                        <li class="item-details__list-item">Усиленное ортопедическое основание</li>
+                        <li class="item-details__list-item">Подъемный механизм с бельевыми ящиками</li>
+                    </ul>
+                </div>
+                <div class="item-details--part item-details--table-part">
+                    <table class="item-details__table">
+                        <thead class="item-details__table-head">
+                            <tr>
+                                <td>Спальное место:</td>
+                                <td>Габариты кровати:</td>                                
+                            </tr>
+                        </thead>
+                        <tr>
+                            <td class="item-details__table-cell">120/200 см см</td>
+                            <td class="item-details__table-cell">260/220 см см</td>
+                        </tr>
+                        <tr>
+                            <td class="item-details__table-cell">140/200 см см</td>
+                            <td class="item-details__table-cell">280/220 см см</td>
+                        </tr>
+                        <tr>
+                            <td class="item-details__table-cell">160/200 см см</td>
+                            <td class="item-details__table-cell">300/220 см см</td>
+                        </tr>
+                        <tr>
+                            <td class="item-details__table-cell">180/200 см см</td>
+                            <td class="item-details__table-cell">320/220 см см</td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="item-details-order">
+                    <input type="text" class="button button--attention item-details__cta js-item-details" value="Заказать" >
+            </div>
+        </div>
+    </div>
+    <script src='js/index.js'></script>    
+</body>
+</html>

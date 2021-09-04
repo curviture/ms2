@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "compile:scss": "node-sass scss/main.scss css/main.csss -w"
+    "compile:scss": "node-sass scss/main.scss css/main.css -w"
   },
   "repository": {
     "type": "git",

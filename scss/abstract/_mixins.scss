@@ -1,0 +1,14 @@
+@mixin respond($break) {
+    @if($break == phone) {
+        @media(max-width:37.5em) {@content};
+    }    
+    @if($break == tab-port) {
+        @media(max-width:56.25em) {@content};        
+    }
+    @if($break == tab-land) {
+        @media(max-width:75em) {@content};        
+    }
+    @if($break == big-desktop) {
+        @media(max-width:112.5em) {@content};        
+    }
+}

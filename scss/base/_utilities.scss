@@ -1,0 +1,6 @@
+.u-hidden--md {
+    display: none;
+    @include respond(big-desktop) {
+        display: block;
+    }
+}

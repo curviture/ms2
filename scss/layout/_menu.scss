@@ -1,0 +1,32 @@
+.menu {
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    justify-content: center;
+    
+    &__box {        
+        margin-right: auto;
+        margin-left: 5.6rem;
+    }
+
+    &__item {
+        margin: 0;
+
+
+    &:not(:first-child) {
+            margin-left: 3.8rem;
+        }
+
+    }
+
+//    &  &__item:not(:first-child) {
+//          margin-left: 1.8rem;
+//      }
+
+    &__link {
+        font-size: 1.7rem;
+        padding: 1rem 0.2rem;
+        color: #ffffff;
+    }
+
+}

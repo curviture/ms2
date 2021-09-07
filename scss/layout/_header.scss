@@ -3,8 +3,6 @@
     &__inner {
         display: flex;
         flex-flow: row nowrap;
-        padding-left: 1rem;
-        padding-right: 1rem;
         justify-content: space-between;
         align-items: center;
         padding-top: 3rem;
@@ -26,6 +24,12 @@
     }
 
     &__contacts {
-        
+        text-align: right;
+    }
+
+    &__link--primary {
+        font-size: 1.9rem;
+        font-family: "DIN Pro Medium";
+        margin-bottom: 1.4rem;
     }
 }

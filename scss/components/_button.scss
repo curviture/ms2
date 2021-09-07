@@ -1,3 +1,67 @@
 .button {
-    
+    font-family: "DIN Pro";
+    transition: all .2s;
+    font-size: 1.7rem;
+    cursor: pointer;
+}
+
+.button--tiny {
+    border-radius: 0.5rem;
+    font-size: 1.3rem;
+    line-height: 1;
+    padding: .6rem .7rem;
+    letter-spacing: 1px;    
+}
+
+.button--secondary {
+    background-color: $color-primary;
+    color: $text-dark;
+    transition: box-shadow .5s, transform .5s, color .2s, background-color .2s;
+
+    &:hover {
+        background-color: $color-secondary;
+        color: $text-light;
+        box-shadow: 1px 1px 4px 2px rgba($color-dark, .4);
+        transform: translateY(-2px);
+    }
+}
+
+.button--attention {
+    background-color: $color-highlight;
+    color: $text-light;
+
+    &:hover {
+        background-color: #e83c3c;
+    }
+}
+
+.button--large {
+    padding: 1.9rem;
+    border-radius: 1rem;
+}
+
+.button--slidedown {
+    position: absolute;
+    bottom: -6rem;
+    left: 50%;
+    font-size: 2rem;
+    color: #000000;
+    border-radius: 50%;
+    border-color: rgba(255,255,255,0.5);
+    margin-left: -2.5rem;
+    border-width: 2rem;
+    display: block;
+    background-color: #fff;
+    width: 5rem;
+    height: 5rem;
+    text-align: center;
+    transform: translateY(50%);
+    box-shadow: 0 0 0 10px rgba(255,255,255,0.5);
+    z-index: 100;
+    animation: bubble 3s 3s infinite;
+    line-height: 5rem;
+}
+
+.button--slidedown:hover {
+    animation: bubble 0s 0s, pulse-shadow 1s 1s infinite;
 }

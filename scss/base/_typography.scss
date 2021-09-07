@@ -1,6 +1,24 @@
-.header {
+h1,
+h2,
+h3,
+h4 {
+    font-family: "DIN Pro Black";
+}
 
+.heading {
 
+}
+
+.heading--primary {
+    font-size: 5.4rem;
+}
+
+.text-light {
+    color: #ffffff;
+}
+
+.text-dark {
+    color: #000000;
 }
 
 .t-right {

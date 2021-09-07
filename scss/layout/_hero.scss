@@ -1,0 +1,48 @@
+.hero {
+    color: #ffffff;
+
+    &__inner {
+        position: relative;
+        justify-content: space-between;
+        align-items: center;
+    }
+    &__heading {
+        line-height: 1.1;
+        margin-top: 1rem;
+        span {
+            display: block;
+            font-size: .55em;
+            font-family: "DIN Pro";
+            margin-top: 3.4rem;
+            letter-spacing: 1px;
+            word-spacing: 1px;
+        }
+    }
+
+    &__block {
+        border-radius: 1rem;
+        border: 1px solid rgba(#fff, .5);
+        padding: 3.3rem 5rem 3.8rem;
+        width: 53.5rem;
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: space-around;
+        align-items: center;
+    }
+
+    .hero__block-text {
+        margin-bottom: 2rem;
+        flex-basis: 100%;
+        flex-shrink: 0;
+    }
+
+    &__icon-container,
+    &__input-container {
+        display: inline-block;
+    }
+
+    &__icon-container {
+        width: 17.5rem;
+        height: 8.5rem;
+    }
+}

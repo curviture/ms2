@@ -1,7 +1,11 @@
 .main {
     background: #000 url("../img/bg-1.jpg");
-    height: 85vh;
+    height: 70vh;
     background-size: cover;
     background-position: 50% 0;
     background-repeat: no-repeat;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-between;
+    padding-bottom: 6rem;
 }

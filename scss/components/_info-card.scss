@@ -1,0 +1,73 @@
+.info-card {
+    width: 30rem;
+    padding-top: 4.5rem;
+    padding-bottom: 4.5rem;
+    &__img {
+        width: 300px;
+        height: 300px;
+    }
+
+    &__content {
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 1rem;
+    }
+
+    &__thumbs {
+        a {
+            display: inline-block;
+        }
+
+        img {
+            display: inline-block;
+            width: 50px;
+            height: 50px;
+        }
+    }
+
+
+    &__button {
+        
+        &-more {
+            border: 1px solid #000;
+            border-radius: 1rem;
+            font-family: "DIN Pro";
+
+            &:hover {
+                background-color: #000;
+                color: $text-light;
+            }
+        }
+    }
+    
+    &__footer {
+        display: flex;
+        flex-flow: row nowrap;
+        a {
+            padding: 1.4rem 3rem;
+            border-radius: 1rem;
+            font-family: "DIN Pro"!important;
+            text-transform: capitalize;
+            flex-basis: 48%;
+            flex-shrink: 0;
+            font-size: 1.6rem;
+            text-align: center;
+        }
+    }
+
+    &__type {
+        font-family: "DIN Pro Light";
+    }
+
+    &__name {
+        font-family: "DIN Pro Bold";
+        font-size: 2rem;
+        text-transform: capitalize;
+    }
+
+    &__price {
+        font-family: "DIN Pro Medium";
+    }
+}

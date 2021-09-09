@@ -1,0 +1,53 @@
+.card {
+    background-color: #ffffff;
+    border-radius: 10px;
+    flex-basis: 300px;
+    text-align: center;
+    padding: 5.5rem 3rem 4.5rem;
+    min-height: 310px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    flex-flow: column wrap;
+    
+    &__header {
+        margin-bottom: 1.5rem;
+        font-size: 1.7rem;
+    }
+
+    &__image-wrapper {
+        display: block;
+        justify-self: start;
+        margin-bottom: auto;
+        animation-delay: 0;
+        animation-duration: 3s;
+        animation-iteration-count: infinite;
+        animation-timing-function: linear;
+    }
+}
+
+.card:hover {
+    box-shadow: 0 0 13px 3px #d1d1d1;
+    transform: scale(1.02);
+    transition: all 0.3s;
+    perspective: 1000px;
+}
+
+.card__image {
+    display: block;
+    justify-self: start;
+    margin-bottom: auto;
+}
+
+.card-container .card:nth-child(2) img {
+    animation: rotate 4s 0s infinite linear;
+
+}
+
+.card-container .card:nth-child(1) img {
+    animation: squeeze 3s 0s infinite linear;
+}
+
+.card-container .card:nth-child(3) img {
+    animation: stretch 3s 0s infinite linear;
+}

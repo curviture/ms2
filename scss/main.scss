@@ -6,13 +6,20 @@
 @import "base/base";
 @import "base/utilities";
 @import "base/animations";
+@import "base/utility-animations";
 @import "base/transitions";
 
 @import "components/logo";
 @import "components/button";
 @import "components/card";
+@import "components/info-card";
+@import "components/std-blck";
 
 @import "layout/header";
 @import "layout/menu";
 @import "layout/main";
 @import "layout/hero";
+@import "layout/gallery";
+@import "layout/looking-for";
+@import "layout/your-choice";
+@import "layout/_matras";

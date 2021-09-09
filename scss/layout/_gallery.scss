@@ -1,0 +1,43 @@
+.gallery {
+    width: 100%;
+
+    &__list-inner {
+        display: flex;
+        flex-flow: row wrap;
+        margin: -4.5rem;        
+        overflow: hidden;
+    }
+
+    &__header {
+        display: flex;
+        align-items: flex-end;
+        width: 100%;
+        margin-bottom: 8.4rem;
+    }
+
+    &__type {
+        display: flex;
+        flex-flow: row nowrap;
+    }
+
+    &__type-button {
+        color: $text-dark;
+        font-size: 2rem;
+        padding: .9rem 3rem;
+        border-radius: 10px;
+
+        &.active {
+            color: $text-highlight;
+            border: 1px solid #A5A5A5;
+        }
+    }
+
+    &__list {
+        display: flex;
+        flex-flow: row wrap;
+    }
+
+    &__item {
+        
+    }
+}

@@ -11,6 +11,16 @@ h4 {
 
 .heading--primary {
     font-size: 5.4rem;
+    line-height: 1;
+
+    span {
+        font-size: 0.55em;
+        font-family: "DIN Pro";
+    }
+}
+
+.heading--secondary {
+    font-size: 4.3rem;
 }
 
 .text-light {

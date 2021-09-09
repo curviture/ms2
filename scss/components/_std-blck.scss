@@ -1,0 +1,31 @@
+.std-blck {
+    padding: 9rem 0;
+    color: $text-dark;
+
+    &__inner {
+        width: 112rem;
+        display: flex;
+        flex-flow: row wrap;
+        margin: 0 auto;
+    }
+
+    &__left,
+    &__right {
+        flex-basis: 50%;
+    }
+
+    &__full {
+        flex-basis: 100%;
+        margin-bottom: 5rem;
+    }
+
+    &--fxbg {
+       color: $text-light;
+       background: #000; 
+       background-size: 100% auto;
+    }
+
+    &__left {
+        padding-right: 2rem;
+    }
+}

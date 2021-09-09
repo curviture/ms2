@@ -6,12 +6,31 @@
 }
 
 .u-pt {
+    padding-top: 4.5rem;
     &--large {
         padding-top: 11.5rem;
     }
 }
 
+.u-pb {
+    padding-bottom: 4.5rem;
+}
+
 .container {
     display: flex;
-    flex: row nowrap;
+    flex-flow: row nowrap;
+}
+
+.u-jc {
+    &--center {
+        justify-content: center;
+    }
+
+    &--space-around {
+        justify-content: space-around;
+    }
+
+    &--space-between {
+        justify-content: space-between;
+    }
 }

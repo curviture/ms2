@@ -1,0 +1,26 @@
+.your-choice {
+    padding: 9rem 0;
+    font-size: 2.4rem;
+    font-family: "DIN Pro Light";
+
+    .heading {
+        margin-bottom: 2rem;
+    }
+
+    &__content {
+        flex-basis: 380px;
+    }
+
+    &__card-container {
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: space-between;
+        flex-grow: 2;
+        font-size: 1.7rem;
+        font-family: "Din Pro";
+    }
+
+    &__image-box {
+        margin-bottom: 1rem;
+    }
+}

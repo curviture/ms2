@@ -40,7 +40,14 @@ h4 {
   font-family: "DIN Pro Black"; }
 
 .heading--primary {
-  font-size: 5.4rem; }
+  font-size: 5.4rem;
+  line-height: 1; }
+  .heading--primary span {
+    font-size: 0.55em;
+    font-family: "DIN Pro"; }
+
+.heading--secondary {
+  font-size: 4.3rem; }
 
 .text-light {
   color: #ffffff; }
@@ -69,12 +76,26 @@ body {
     .u-hidden--md {
       display: block; } }
 
-.u-pt--large {
-  padding-top: 11.5rem; }
+.u-pt {
+  padding-top: 4.5rem; }
+  .u-pt--large {
+    padding-top: 11.5rem; }
+
+.u-pb {
+  padding-bottom: 4.5rem; }
 
 .container {
   display: flex;
-  flex: row nowrap; }
+  flex-flow: row nowrap; }
+
+.u-jc--center {
+  justify-content: center; }
+
+.u-jc--space-around {
+  justify-content: space-around; }
+
+.u-jc--space-between {
+  justify-content: space-between; }
 
 @keyframes bubble {
   0% {
@@ -85,6 +106,77 @@ body {
     transform: translateY(35%); }
   75% {
     transform: translateY(15%); } }
+
+@keyframes slideLeft {
+  0% {
+    left: -80px; }
+  50% {
+    left: 280px; }
+  100% {
+    left: 350px; } }
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0); }
+  25% {
+    transform: rotate(90deg); }
+  50% {
+    transform: rotate(180deg); }
+  75% {
+    transform: rotate(270deg); }
+  100% {
+    transform: rotate(360deg); } }
+
+@keyframes pulse-shadow {
+  0% {
+    box-shadow: 0 0 0 10px rgba(255, 255, 255, 0.5); }
+  25% {
+    box-shadow: 0 3px 3px 14px rgba(255, 255, 255, 0.5); }
+  50% {
+    box-shadow: 0 0 0 10px rgba(255, 255, 255, 0.5); }
+  75% {
+    box-shadow: 0 0 0 6px rgba(255, 255, 255, 0.5); } }
+
+@keyframes squeeze {
+  0% {
+    transform: translateX(-15px); }
+  10% {
+    transform: translateX(15px); }
+  15% {
+    transform: translateX(-15px); }
+  20% {
+    transform: translateX(15px); }
+  25% {
+    transform: translateX(0); }
+  45% {
+    transform: translateX(0); }
+  50% {
+    transform: translateX(-15px); }
+  60% {
+    transform: translateX(15px); }
+  65% {
+    transform: translateX(-15px); }
+  70% {
+    transform: translateX(15px); }
+  75% {
+    transform: translateX(0); } }
+
+@keyframes stretch {
+  0% {
+    transform: scaleX(1); }
+  10% {
+    transform: scaleX(1.2); }
+  20% {
+    transform: scaleX(0.8); } }
+
+.a-rotate {
+  animation-name: rotate; }
+
+.a-squeeze {
+  animation-name: squeeze; }
+
+.a-stretch {
+  animation-name: stretch; }
 
 .animated-underline {
   display: block;
@@ -116,10 +208,12 @@ body {
 
 .button--tiny {
   border-radius: 0.5rem;
-  font-size: 1.3rem;
+  font-size: 1.2rem;
   line-height: 1;
-  padding: .6rem .7rem;
-  letter-spacing: 1px; }
+  padding: .6rem 1rem;
+  letter-spacing: 1px;
+  font-family: "DIN Pro";
+  letter-spacing: .7px; }
 
 .button--secondary {
   background-color: #ffffff;
@@ -136,6 +230,16 @@ body {
   color: #ffffff; }
   .button--attention:hover {
     background-color: #e83c3c; }
+
+.button--transparent {
+  background-color: transparent;
+  font-family: "DIN Pro Black";
+  color: #000000; }
+  .button--transparent.acitve {
+    color: #EE1919; }
+
+.button--bordered {
+  border: 1px solid #000; }
 
 .button--large {
   padding: 1.9rem;
@@ -164,6 +268,116 @@ body {
 
 .button--slidedown:hover {
   animation: bubble 0s 0s, pulse-shadow 1s 1s infinite; }
+
+.card {
+  background-color: #ffffff;
+  border-radius: 10px;
+  flex-basis: 300px;
+  text-align: center;
+  padding: 5.5rem 3rem 4.5rem;
+  min-height: 310px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  flex-flow: column wrap; }
+  .card__header {
+    margin-bottom: 1.5rem;
+    font-size: 1.7rem; }
+  .card__image-wrapper {
+    display: block;
+    justify-self: start;
+    margin-bottom: auto;
+    animation-delay: 0;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear; }
+
+.card:hover {
+  box-shadow: 0 0 13px 3px #d1d1d1;
+  transform: scale(1.02);
+  transition: all 0.3s;
+  perspective: 1000px; }
+
+.card__image {
+  display: block;
+  justify-self: start;
+  margin-bottom: auto; }
+
+.card-container .card:nth-child(2) img {
+  animation: rotate 4s 0s infinite linear; }
+
+.card-container .card:nth-child(1) img {
+  animation: squeeze 3s 0s infinite linear; }
+
+.card-container .card:nth-child(3) img {
+  animation: stretch 3s 0s infinite linear; }
+
+.info-card {
+  width: 30rem;
+  padding-top: 4.5rem;
+  padding-bottom: 4.5rem; }
+  .info-card__img {
+    width: 300px;
+    height: 300px; }
+  .info-card__content {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem; }
+  .info-card__thumbs a {
+    display: inline-block; }
+  .info-card__thumbs img {
+    display: inline-block;
+    width: 50px;
+    height: 50px; }
+  .info-card__button-more {
+    border: 1px solid #000;
+    border-radius: 1rem;
+    font-family: "DIN Pro"; }
+    .info-card__button-more:hover {
+      background-color: #000;
+      color: #ffffff; }
+  .info-card__footer {
+    display: flex;
+    flex-flow: row nowrap; }
+    .info-card__footer a {
+      padding: 1.4rem 3rem;
+      border-radius: 1rem;
+      font-family: "DIN Pro" !important;
+      text-transform: capitalize;
+      flex-basis: 48%;
+      flex-shrink: 0;
+      font-size: 1.6rem;
+      text-align: center; }
+  .info-card__type {
+    font-family: "DIN Pro Light"; }
+  .info-card__name {
+    font-family: "DIN Pro Bold";
+    font-size: 2rem;
+    text-transform: capitalize; }
+  .info-card__price {
+    font-family: "DIN Pro Medium"; }
+
+.std-blck {
+  padding: 9rem 0;
+  color: #000000; }
+  .std-blck__inner {
+    width: 112rem;
+    display: flex;
+    flex-flow: row wrap;
+    margin: 0 auto; }
+  .std-blck__left, .std-blck__right {
+    flex-basis: 50%; }
+  .std-blck__full {
+    flex-basis: 100%;
+    margin-bottom: 5rem; }
+  .std-blck--fxbg {
+    color: #ffffff;
+    background: #000;
+    background-size: 100% auto; }
+  .std-blck__left {
+    padding-right: 2rem; }
 
 .header {
   font-size: 1.7rem; }
@@ -251,3 +465,57 @@ body {
   .hero__icon-container {
     width: 17.5rem;
     height: 8.5rem; }
+
+.gallery {
+  width: 100%; }
+  .gallery__list-inner {
+    display: flex;
+    flex-flow: row wrap;
+    margin: -4.5rem;
+    overflow: hidden; }
+  .gallery__header {
+    display: flex;
+    align-items: flex-end;
+    width: 100%;
+    margin-bottom: 8.4rem; }
+  .gallery__type {
+    display: flex;
+    flex-flow: row nowrap; }
+  .gallery__type-button {
+    color: #000000;
+    font-size: 2rem;
+    padding: .9rem 3rem;
+    border-radius: 10px; }
+    .gallery__type-button.active {
+      color: #EE1919;
+      border: 1px solid #A5A5A5; }
+  .gallery__list {
+    display: flex;
+    flex-flow: row wrap; }
+
+.looking-for {
+  background: #000 url("../img/bg-2.jpg");
+  font-size: 2.4rem;
+  font-family: "DIn Pro Light"; }
+  .looking-for__content {
+    display: flex;
+    flex-flow: column;
+    justify-content: space-between; }
+
+.your-choice {
+  padding: 9rem 0;
+  font-size: 2.4rem;
+  font-family: "DIN Pro Light"; }
+  .your-choice .heading {
+    margin-bottom: 2rem; }
+  .your-choice__content {
+    flex-basis: 380px; }
+  .your-choice__card-container {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    flex-grow: 2;
+    font-size: 1.7rem;
+    font-family: "Din Pro"; }
+  .your-choice__image-box {
+    margin-bottom: 1rem; }

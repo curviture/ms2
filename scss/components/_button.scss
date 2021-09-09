@@ -7,10 +7,12 @@
 
 .button--tiny {
     border-radius: 0.5rem;
-    font-size: 1.3rem;
+    font-size: 1.2rem;
     line-height: 1;
-    padding: .6rem .7rem;
-    letter-spacing: 1px;    
+    padding: .6rem 1rem;
+    letter-spacing: 1px;
+    font-family: "DIN Pro";
+    letter-spacing: .7px;
 }
 
 .button--secondary {
@@ -33,6 +35,20 @@
     &:hover {
         background-color: #e83c3c;
     }
+}
+
+.button--transparent {
+    background-color: transparent;
+    font-family: "DIN Pro Black";
+    color: $text-dark;
+
+    &.acitve {
+        color: $text-highlight;
+    }
+}
+
+.button--bordered {
+    border: 1px solid #000;
 }
 
 .button--large {

@@ -39,6 +39,12 @@ h3,
 h4 {
   font-family: "DIN Pro Black"; }
 
+p {
+  margin-bottom: 2rem; }
+
+.heading {
+  margin-bottom: 2rem; }
+
 .heading--primary {
   font-size: 5.4rem;
   line-height: 1; }
@@ -50,13 +56,19 @@ h4 {
   font-size: 4.3rem; }
 
 .text-light {
-  color: #ffffff; }
+  color: #ffffff !important; }
 
 .text-dark {
-  color: #000000; }
+  color: #000000 !important; }
+
+.text-slim {
+  font-family: "DIN Pro Light"; }
 
 .t-right {
   text-align: right; }
+
+.text-small {
+  font-size: 1.9rem; }
 
 html {
   font-size: 62.5%; }
@@ -96,6 +108,12 @@ body {
 
 .u-jc--space-between {
   justify-content: space-between; }
+
+.u-fl {
+  float: left; }
+
+.u-fr {
+  float: right; }
 
 @keyframes bubble {
   0% {
@@ -361,7 +379,8 @@ body {
 
 .std-blck {
   padding: 9rem 0;
-  color: #000000; }
+  color: #000000;
+  font-size: 2.4rem; }
   .std-blck__inner {
     width: 112rem;
     display: flex;
@@ -377,7 +396,7 @@ body {
     background: #000;
     background-size: 100% auto; }
   .std-blck__left {
-    padding-right: 2rem; }
+    padding-right: 4rem; }
 
 .header {
   font-size: 1.7rem; }
@@ -519,3 +538,67 @@ body {
     font-family: "Din Pro"; }
   .your-choice__image-box {
     margin-bottom: 1rem; }
+
+.matras {
+  background: url("../img/bg-3.jpg"); }
+  .matras .std-blck__inner {
+    align-items: center; }
+  .matras .heading {
+    margin-bottom: 3rem; }
+  .matras__par:not(:last-child) {
+    font-family: "DIN Pro Light";
+    margin-bottom: 3rem; }
+
+.showroom {
+  font-family: "DIN Pro Light"; }
+  .showroom__inner {
+    align-items: center; }
+  .showroom__heading {
+    margin-bottom: 3rem; }
+  .showroom__img-link {
+    display: block; }
+  .showroom__img-link--large {
+    width: 42rem;
+    height: 36rem;
+    flex-shrink: 0; }
+  .showroom__thumbs {
+    margin-left: 2rem; }
+    .showroom__thumbs img {
+      width: 12.9rem;
+      height: 9.8rem; }
+  .showroom__text {
+    margin-bottom: 2rem; }
+  .showroom__address {
+    font-size: 1.9rem; }
+  .showroom__address-icon {
+    float: left;
+    margin-right: 2.5rem; }
+  .showroom__img-content {
+    display: flex;
+    flex-flow: row nowrap; }
+
+.manufacturer {
+  background: #000 url("../img/bg-4.jpg") repeat;
+  background-attachment: fixed;
+  background-size: 100% auto;
+  padding-top: 4rem;
+  padding-bottom: 4rem; }
+  .manufacturer__inner {
+    justify-content: center;
+    align-items: center; }
+  .manufacturer__img-box {
+    margin-right: 3rem;
+    position: relative;
+    animation: rotate 8s infinite linear; }
+  .manufacturer .heading {
+    margin-bottom: 1rem; }
+
+.designer {
+  align-items: center; }
+  .designer .container {
+    align-items: center; }
+  .designer__icon {
+    margin-right: 2rem; }
+
+.contact-us {
+  background: url("../img/bg-7.jpg"); }

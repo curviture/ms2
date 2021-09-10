@@ -1,0 +1,48 @@
+.showroom {
+    font-family: "DIN Pro Light";
+
+    &__inner {
+        align-items: center;
+    }
+
+    &__heading {
+        margin-bottom: 3rem;
+    }
+
+    &__img-link {
+        display: block;
+    }
+
+    &__img-link--large {
+
+        width: 42rem;
+        height: 36rem;
+        flex-shrink: 0;
+    }
+
+    &__thumbs {
+        margin-left: 2rem;
+        img {
+            width: 12.9rem;
+            height: 9.8rem;
+        }
+    }
+
+    &__text {
+        margin-bottom: 2rem;
+    }
+
+    &__address {
+        font-size: 1.9rem;
+    }
+
+    &__address-icon {
+        float: left;
+        margin-right: 2.5rem;
+    }
+
+    &__img-content {
+        display: flex;
+        flex-flow: row nowrap;
+    }
+}

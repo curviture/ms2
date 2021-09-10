@@ -1,0 +1,23 @@
+.manufacturer {
+    background: #000 url("../img/bg-4.jpg") repeat;
+    background-attachment: fixed;
+    background-size: 100% auto;
+    // background-position: 50% center;
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+
+    &__inner {
+        justify-content: center;
+        align-items: center;
+    }
+
+    &__img-box {
+        margin-right: 3rem;
+        position: relative;
+        animation: rotate 8s infinite linear;
+    }
+
+    .heading {
+        margin-bottom: 1rem;
+    }
+}

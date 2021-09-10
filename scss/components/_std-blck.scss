@@ -1,6 +1,7 @@
 .std-blck {
     padding: 9rem 0;
     color: $text-dark;
+    font-size: 2.4rem;
 
     &__inner {
         width: 112rem;
@@ -26,6 +27,6 @@
     }
 
     &__left {
-        padding-right: 2rem;
+        padding-right: 4rem;
     }
 }

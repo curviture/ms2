@@ -5,8 +5,12 @@ h4 {
     font-family: "DIN Pro Black";
 }
 
-.heading {
+p {
+    margin-bottom: 2rem;
+}
 
+.heading {
+    margin-bottom: 2rem;
 }
 
 .heading--primary {
@@ -24,13 +28,21 @@ h4 {
 }
 
 .text-light {
-    color: #ffffff;
+    color: #ffffff!important;
 }
 
 .text-dark {
-    color: #000000;
+    color: #000000!important;
+}
+
+.text-slim {
+    font-family: "DIN Pro Light";
 }
 
 .t-right {
     text-align: right;
+}
+
+.text-small {
+    font-size: 1.9rem;
 }

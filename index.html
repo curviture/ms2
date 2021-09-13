@@ -424,23 +424,27 @@
             </div>
         </div>
         <div class="std-blck std-blck--fxbg contact-us js-parallax">
-            <div class="container contact-us__inner">
+            <div class="container contact-us__inner u-jc--space-around">
                 <div class="contact-us__text-content">
                     <h2 class="heading heading--large contact-us__heading">Свяжитесь с нами!</h2>
                     <p class="contact-us__text">
-                        Наши менеджеры подробно проконсультируют вас по выбору кровати и просчитают любое изделие на заказ в течение 15 минут
+                        Наши менеджеры подробно<br> проконсультируют вас по выбору<br> кровати и просчитают любое изделие<br> на заказ в течение 15 минут
                     </p>
                 </div>
-                <div class="contact-us__form-container">
-                    <form action="" class="contact-us__form">
-                        <h3 class="contact-us__heading--form">Введите свои данные и наш
-                            специалист свяжется с вами</h3>
-                        <input class="contact-us__input contact-us__input--text" type="text" placeholder="Введите свое имя">
-                        <input class="contact-us__input contact-us__input--password" type="text" placeholder="Введите свой телефон">
-                        <div class="blink">
-                            <input type="button" class="button button--attention contact-us__cta" value="Получить консультацию" >
+                <div class="contact-us form__container">
+                    <form action="" class="contact-us__form form">
+                        <legend class="form__legend">Введите свои данные и наш<br>
+                            специалист свяжется с вами</legend>
+                        <div class="input__group">
+                            <input class="contact-us__input contact-us__input--text input" type="text" placeholder="Введите свое имя">
                         </div>
-                        <label for="check" class="contact-us__label">   
+                        <div class="input__group">
+                            <input class="contact-us__input contact-us__input--password input" type="text" placeholder="Введите свой телефон">
+                        </div>
+                        <div class="input__group blink">
+                            <input type="button" class="button button--attention button--block contact-us__cta" value="Получить консультацию" >
+                        </div>
+                        <label for="check" class="contact-us__label  form__agreement">   
                             <input type="checkbox" name="check" id="check" clas="contact-us__checkbox">
                             Нажимая на кнопку "Получить консультацию", я даю согласие на обработку персональных данных и соглашаюсь c условиями политики конфиденциальности                        
                         </label>
@@ -448,5 +452,40 @@
                 </div>
             </div>
         </div>
+        <footer class="footer u-pt u-pb">
+            <div class="footer__inner">
+                <div class="footer__icon-container">
+                    <a href="#" class="footer__icon-link">
+                        <img class="footer__icon-img" src="img/logo.png" alt="">
+                    </a>
+                </div>
+                <div class="footer__info">
+                    <div class="footer__info-line">
+                        <a class="animated-underline footer__link" href="#">+7 (495) 142-93-80</a>
+                    </div>
+                    <div class="footer__info-line info-section--socials">
+                        <a class="animated-underline footer__link" href="#">+7 (495) 142-93-80</a>
+                        <a href="#" class="icon footer__link--icon">
+                            <img src="img/viber.jpg" alt="viber">
+                        </a>
+                        <a href="" class="icon footer__link--icon">
+                            <img src="img/whatsapp.jpg" alt="whatsapp">
+                        </a>
+                    </div>
+                    <div class="footer__info-line">
+                        <p class="address footer__text footer__text--address">
+                            г. Москва, ул. Тимирязевская, д.2/3 <br> (ТЦ "Парк 11", 3 этаж)                
+                        </p>
+                        <a href="#" class="footer__link footer__link--icon footer__link--block"><img src="img/insta1.png" alt="instagram"></a>
+                    </div>
+                </div>
+                <div class="footer__map-container">
+                    <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3Abfd18d127c1ae4253d27aaa7cdae43f5a4446af54a0dee7189da9cedd8f25937&amp;width=320&amp;height=240&amp;lang=en_FR&amp;scroll=true"></script>                
+                </div>
+                <div class="footer__copyright">
+                    Copyright © 2020 made by Gevorg Ghazaryan
+                </div>
+            </div>
+        </footer>
     </body>
 </html

@@ -12,14 +12,20 @@
     &__info {
         margin-left: auto;
     }
+    
+    &__contacts {
+        margin-left: auto;
+        margin-right: 2rem;
+    }
 
     &__copyright {
         flex-basis: 100%;
+        text-align: left;
     }
 
     &__info-line {
         line-height: 3.5rem;
-        vertical-align: middle;
+        margin-bottom: 1rem;
     }
 
     &__link {
@@ -32,6 +38,15 @@
         &--icon {
             display: inline-block;
             line-height: 3.5rem;
+            vertical-align: middle;
         }
+    }
+
+    &__copyright {
+        font-size: 12px;
+    }
+
+    &__text {
+        line-height: 1.2;
     }
 }

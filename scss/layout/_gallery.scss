@@ -12,7 +12,11 @@
         display: flex;
         align-items: flex-end;
         width: 100%;
-        margin-bottom: 8.4rem;
+        margin-bottom: 6.4rem;
+    }
+
+    .heading {
+        margin-bottom: 0;
     }
 
     &__type {

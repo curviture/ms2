@@ -1,4 +1,5 @@
 .main {
+    position: relative;
     background: #000 url("../img/bg-1.jpg");
     height: 70vh;
     background-size: cover;
@@ -8,4 +9,5 @@
     flex-flow: column nowrap;
     justify-content: space-between;
     padding-bottom: 6rem;
+    z-index: 3;
 }

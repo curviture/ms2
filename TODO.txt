@@ -1,9 +1,4 @@
-TODO: fix allignment on checkbox
-TODO: fix all forms
-TODO: fix contact heading padding issue on middle screens
-TODO: fix height issue and element arrangment in main
-TODO: fix slight mismatch between original and made by myself of navbars order call buttn
-TODO: main div: set min height so it will render normal when heigth is not enough to contain div on small screen
-TODO: fix button on main cra, order call looking for modal forms
-TODO: fix item details modal
-TODO: fix backgound not being rendered properly on contact us form on large screen
+1:fix contact-us form inputs missalignment
+2:fix fixed navbar's "order call" button
+3:fix fixed navbar's instagram button
+4:fix popular models padding/margin buttom

@@ -444,22 +444,24 @@
                         <div class="input__group blink">
                             <input type="button" class="button button--attention button--block contact-us__cta" value="Получить консультацию" >
                         </div>
-                        <label for="check" class="contact-us__label  form__agreement">   
-                            <input type="checkbox" name="check" id="check" clas="contact-us__checkbox">
-                            Нажимая на кнопку "Получить консультацию", я даю согласие на обработку персональных данных и соглашаюсь c условиями политики конфиденциальности                        
-                        </label>
+                        <div class="input__group">
+                            <input type="checkbox" name="check" id="check" class="contact-us__checkbox form__agreement" value="hello" placeholder="hello" checked>
+                            <label for="check" class="contact-us__label  form__agreement-label">   
+                                Нажимая на кнопку "Получить консультацию", я даю согласие на обработку персональных данных и соглашаюсь c условиями политики конфиденциальности                        
+                            </label>
+                        </div>
                     </form>
                 </div>
             </div>
         </div>
-        <footer class="footer u-pt u-pb">
+        <footer class="footer u-pt">
             <div class="footer__inner">
                 <div class="footer__icon-container">
                     <a href="#" class="footer__icon-link">
                         <img class="footer__icon-img" src="img/logo.png" alt="">
                     </a>
                 </div>
-                <div class="footer__info">
+                <div class="footer__contacts">
                     <div class="footer__info-line">
                         <a class="animated-underline footer__link" href="#">+7 (495) 142-93-80</a>
                     </div>
@@ -487,5 +489,49 @@
                 </div>
             </div>
         </footer>
+        <div class="header header--fixed">
+            <div class="header__inner container">
+                <a href="#" class="hidden--md menu__trigger u-hidden--md">
+                    <span class="line"></span>
+                    <span class="line"></span>
+                    <span class="line"></span>
+                </a>
+                <div class="logo">
+                    <a href="#" class="logo__link">
+                        <img src="img/logo.png" alt="brand icon image" class="logo__icon">
+                    </a>
+                </div>
+                <div class="menu__box">
+                    <a href="#" class="menu__closer u-hidden--md">
+                        &#x2716;
+                    </a>
+                    <ul class="menu menu--header">
+                        <li class="menu__item"><a class="menu__link animated-underline" href="#">Кровати</a></li>
+                        <li class="menu__item u-hidden--md visible--lg"><a class="menu__link animated-underline" href="#">Диваны</a></li>
+                        <li class="menu__item"><a class="menu__link animated-underline" href="#">На заказ</a></li>
+                        <li class="menu__item"><a class="menu__link animated-underline" href="#">Шоурум</a></li>
+                    </ul>
+                </div>
+                <div class="header__socials u-hidden--md">
+                    <a class="header__link header__link--social" href=""><img class="header__icon header__icon--socials" src="img/insta1.png" alt=""></a>
+                    <a class="header__link header__link--social" href=""><img class="header__icon header__icon--socials" src="img/whatsapp.jpg" alt=""></a>
+                </div>
+                <div class="header__aside">
+                    г. Москва, ул. Тимирязевская, д.2/3
+                    <br/>
+                    (ТЦ "Парк 11", 3 этаж)
+                </div>
+                <div class="header__aside">
+                    <a  class="header__link header__link--primary animated-underline" href="tel:+74951429380">+7 (495) 142-93-80</a>
+                    <a class="header__link header__link--secondary animated-underline ">Заказать звонок</a>
+                </div>
+                <div class="header__contacts">
+
+                        <a href="#"><img src="img/viber.jpg" alt="" class="icon header__contacts-icon"></a>
+                        <a href="#"><img src="img/whatsapp.jpg" alt="" class="icon header__contacts-icon"></a>
+                        <a href="#"><img src="img/insta1.png" alt="" class="icon header__contacts-icon"></a>
+                </div>
+            </div>
+            </div>
     </body>
 </html

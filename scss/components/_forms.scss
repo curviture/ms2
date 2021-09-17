@@ -80,6 +80,15 @@
 
 }
 
+input[type='text'],
+input[type='password'] {
+    &:focus {
+        border-color: #EE1919;
+        box-shadow: inset 0px 1px 1px rgb(0, 0, 0 / 8%), 0px 0px 8px rgb(238, 25, 25 / 60%);
+        outline: 0;
+    }
+}
+
 .input--button {
     border: none;
 }

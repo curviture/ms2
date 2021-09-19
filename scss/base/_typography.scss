@@ -27,6 +27,15 @@ p {
     font-size: 4.3rem;
 }
 
+.heading--tertiary {
+    font-size: 3.2rem;
+    line-height: 1;
+    span {
+        font-size: 0.625em;
+        font-family: "DIN Pro"; 
+    }
+}
+
 .text-light {
     color: #ffffff!important;
 }

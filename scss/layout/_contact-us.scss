@@ -15,4 +15,9 @@
     &__inner {
         align-items: center;
     }
+
+    &__checkbox {
+        // display: none;
+        display: block;
+    }
 }

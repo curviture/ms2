@@ -15,10 +15,47 @@
         margin-bottom: 2.2rem;
     }
 
+    &__heading {
+        text-align: center;
+    }
+
     &__agreement {
-        font-size: .9rem;
-        line-height: 1;
-        text-align: left;
+
+        
+
+        &:checked + &-label:before {
+            content: "\2714";
+            font-size: 2rem;
+            color: #000;
+            border-color: green;
+            background-color: lime;
+        }
+
+        &-label {
+            font-size: .9rem;
+            line-height: 1;
+            text-align: left;
+            position: relative;
+            line-height: 1rem;
+            display: inline-block;
+            padding-left: 2rem;
+
+            &:hover {
+                text-decoration: underline;
+            }
+
+
+            &:before {
+                content: '';
+                position: absolute;
+                left: 0;
+                top: 0;
+                width: 15px;
+                height: 15px;
+                border: 1px solid #9a9a9a;
+                border-radius: 4px;
+            }
+        }
     }
 }
 
@@ -32,7 +69,7 @@
    font-size: 1.7rem;
    text-align: center;
 
-   width: 28rem;
+   width: 100%;
 
    &::placeholder {
     color: #696969;
@@ -47,6 +84,72 @@
 
 }
 
+input[type='text'],
+input[type='password'] {
+    &:focus {
+        border-color: #EE1919;
+        box-shadow: inset 0px 1px 1px rgb(0, 0, 0 / 8%), 0px 0px 8px rgb(238, 25, 25 / 60%);
+        outline: 0;
+    }
+}
+
 .input--button {
     border: none;
+}
+
+.input--file {
+    opacity: 0;
+    width: 100%;
+}
+
+.input-label--file {
+    position: relative;
+    border: 1px solid #A9A9A9;
+    border-radius: 1rem;
+    width: 100%;
+    display: block;
+    padding-right: 12rem;    
+}
+
+.input-file-custom {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding-right: 12rem;
+    overflow: hidden;
+    padding-left: 3rem;
+    line-height: 6rem;
+    text-overflow: ellipsis;    
+    vertical-align: middle;
+    cursor: pointer;
+}
+
+/* .input-file-custom:before {
+    content: 'Прикрепить макет';
+    border: 1px solid #A9A9A9;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    border-radius: 1rem 0 0 1rem;
+} */
+
+.input-file-custom:after {
+    content: 'Прикрепить';
+    border: 1px solid #A9A9A9;
+    background-color: #000;
+    color: #ffffff;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    border-radius: 0 1rem 1rem 0;
+    padding: 0 1rem;
+}
+
+.input-file--fake {
+    text-align: left;
+
 }

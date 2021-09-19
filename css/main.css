@@ -633,11 +633,8 @@ body {
     text-align: center;
     font-size: 1.7rem;
     margin-bottom: 2.2rem; }
-<<<<<<< HEAD
   .form__heading {
     text-align: center; }
-=======
->>>>>>> af6fe21ffcf316eb0eefaf50c1eed40664107c68
   .form__agreement:checked + .form__agreement-label:before {
     content: "\2714";
     font-size: 2rem;

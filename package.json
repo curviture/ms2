@@ -26,7 +26,10 @@
   },
   "homepage": "https://github.com/curviture/ms2#readme",
   "dependencies": {
-    "node-sass": "^6.0.1"
+    "fslightbox": "^3.3.0-2",
+    "imask": "^6.2.2",
+    "node-sass": "^6.0.1",
+    "parallax-vanilla": "^1.2.3"
   },
   "devDependencies": {
     "critical": "^4.0.1",

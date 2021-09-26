@@ -60,7 +60,7 @@ p {
   font-size: 3.2rem;
   line-height: 1; }
   .heading--tertiary span {
-    font-size: 0.625em;
+    font-size: 0.575em;
     font-family: "DIN Pro"; }
 
 .text-light {
@@ -245,6 +245,9 @@ body {
   background: rgba(0, 0, 0, 0.6);
   opacity: 0;
   /* cursor: url("data:image/svg+xml,%3Csvg width='19' height='19' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M15.514.535l-6.42 6.42L2.677.536a1.517 1.517 0 00-2.14 0 1.517 1.517 0 000 2.14l6.42 6.419-6.42 6.419a1.517 1.517 0 000 2.14 1.517 1.517 0 002.14 0l6.419-6.42 6.419 6.42a1.517 1.517 0 002.14 0 1.517 1.517 0 000-2.14l-6.42-6.42 6.42-6.418a1.517 1.517 0 000-2.14 1.516 1.516 0 00-2.14 0z' fill='%23FFF' fill-rule='nonzero'/%3E%3C/svg%3E"), auto; */ }
+  .tingle-modal__title {
+    padding-left: 2.5rem;
+    padding-right: 2.5rem; }
 
 @supports (backdrop-filter: blur(12px)) {
   .tingle-modal {
@@ -295,9 +298,6 @@ body {
   opacity: 1;
   cursor: auto;
   will-change: transform, opacity; }
-
-.tingle-modal-box__content {
-  padding: 3rem 3rem; }
 
 .tingle-modal-box__footer {
   padding: 1.5rem 2rem;
@@ -429,6 +429,69 @@ body {
   100% {
     opacity: 1;
     transform: scale(1); } }
+
+.pv-container {
+  overflow: hidden; }
+
+.pv-container .pv-block {
+  will-change: transform;
+  background-repeat: no-repeat;
+  background-position: 51%;
+  background-size: cover; }
+
+.pv-container .pv-block video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  object-fit: cover; }
+
+.pv-container .audio-icon {
+  height: 30px;
+  width: 30px;
+  position: absolute;
+  top: 10px;
+  left: 10px; }
+
+.pv-container .audio-icon span {
+  display: block;
+  width: 8px;
+  height: 8px;
+  background: #fff;
+  margin: 11px 0 0 2px; }
+
+.pv-container .audio-icon span:after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 0;
+  border-color: transparent #fff transparent transparent;
+  border-style: solid;
+  border-width: 10px 14px 10px 15px;
+  left: -13px;
+  top: 5px; }
+
+.pv-container .audio-icon span:before {
+  transform: rotate(45deg);
+  border-radius: 0 50px 0 0;
+  content: "";
+  position: absolute;
+  width: 13px;
+  height: 13px;
+  border-color: #fff;
+  border-style: double;
+  border-width: 7px 7px 0 0;
+  left: 18px;
+  top: 9px;
+  transition: all .2s ease-out; }
+
+.pv-container .audio-icon:hover span:before {
+  transform: scale(0.8) translate(-3px) rotate(42deg); }
+
+.pv-container .audio-icon.mute span:before {
+  transform: scale(0.6) translate(-15px) rotate(36deg);
+  opacity: 0; }
 
 .logo__link {
   display: block; }
@@ -601,7 +664,8 @@ body {
 .std-blck {
   padding: 9rem 0;
   color: #000000;
-  font-size: 2.4rem; }
+  font-size: 2.4rem;
+  background-size: cover; }
   .std-blck__inner {
     width: 112rem;
     display: flex;
@@ -614,24 +678,28 @@ body {
     margin-bottom: 5rem; }
   .std-blck--fxbg {
     color: #ffffff;
-    background: #000;
-    background-size: 100% auto; }
+    background-color: #000;
+    background-attachment: fixed; }
   .std-blck__left {
     padding-right: 4rem; }
 
 .form {
-  background-color: #fff;
-  color: #000000;
   display: flex;
   flex-flow: column nowrap;
   justify-content: center;
-  align-items: center;
-  padding-top: 3.5rem;
-  padding-bottom: 6rem;
-  border-radius: 1rem; }
+  align-items: center; }
+  .form__container {
+    background-color: #fff;
+    color: #000000;
+    padding-top: 3.5rem;
+    padding-bottom: 6rem;
+    border-radius: 1rem;
+    width: 39rem; }
+    .form__container_-container--small {
+      width: 33rem; }
   .form__legend {
     text-align: center;
-    font-size: 1.7rem;
+    font-size: 1.6rem;
     margin-bottom: 2.2rem; }
   .form__heading {
     text-align: center; }
@@ -666,16 +734,16 @@ body {
   border: 1px solid rgba(0, 0, 0, 0.45);
   padding: 2rem 3rem;
   background: transparent;
-  margin-bottom: 1rem;
-  font-size: 1.7rem;
+  font-size: 1.6rem;
   text-align: center;
   width: 100%; }
   .input::placeholder {
     color: #696969;
     font-family: "DIN Pro Light"; }
   .input__group {
-    padding-left: 4.5rem;
-    padding-right: 4.5rem;
+    padding-left: 4rem;
+    padding-right: 4rem;
+    margin-bottom: 1rem;
     width: 100%; }
 
 input[type='text']:focus,
@@ -687,31 +755,45 @@ input[type='password']:focus {
 .input--button {
   border: none; }
 
-.input--file {
+.file-input {
   opacity: 0;
-  width: 100%; }
-
-.input-label--file {
-  position: relative;
-  border: 1px solid #A9A9A9;
-  border-radius: 1rem;
   width: 100%;
-  display: block;
-  padding-right: 12rem; }
-
-.input-file-custom {
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  padding-right: 12rem;
-  overflow: hidden;
-  padding-left: 3rem;
-  line-height: 6rem;
-  text-overflow: ellipsis;
-  vertical-align: middle;
-  cursor: pointer; }
+  margin-bottom: 0;
+  height: 6rem; }
+  .file-input__label {
+    position: relative;
+    border: 1px solid #A9A9A9;
+    border-radius: 1rem;
+    width: 100%;
+    display: block;
+    padding-right: 12rem;
+    text-align: center; }
+  .file-input__custom {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding-right: 12rem;
+    overflow: hidden;
+    padding-left: 3rem;
+    line-height: 6rem;
+    text-overflow: ellipsis;
+    vertical-align: middle;
+    cursor: pointer; }
+    .file-input__custom:after {
+      content: 'Прикрепить';
+      border: 1px solid #A9A9A9;
+      background-color: #000;
+      color: #ffffff;
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      border-radius: 0 1rem 1rem 0;
+      padding: 0 1rem; }
+  .file-input__fake {
+    text-align: left; }
 
 /* .input-file-custom:before {
     content: 'Прикрепить макет';
@@ -722,21 +804,6 @@ input[type='password']:focus {
     bottom: 0;
     border-radius: 1rem 0 0 1rem;
 } */
-.input-file-custom:after {
-  content: 'Прикрепить';
-  border: 1px solid #A9A9A9;
-  background-color: #000;
-  color: #ffffff;
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  border-radius: 0 1rem 1rem 0;
-  padding: 0 1rem; }
-
-.input-file--fake {
-  text-align: left; }
-
 .header {
   font-size: 1.7rem; }
   .header__inner {
@@ -884,8 +951,9 @@ input[type='password']:focus {
     flex-flow: row wrap; }
 
 .looking-for {
-  background: #000 url("../img/bg-2.jpg");
+  background-image: url("../img/bg-2.jpg");
   font-size: 2.4rem;
+  background-attachment: fixed;
   font-family: "DIn Pro Light"; }
   .looking-for__content {
     display: flex;
@@ -911,7 +979,7 @@ input[type='password']:focus {
     margin-bottom: 1rem; }
 
 .matras {
-  background: url("../img/bg-3.jpg"); }
+  background-image: url("../img/bg-3.jpg"); }
   .matras .std-blck__inner {
     align-items: center; }
   .matras .heading {
@@ -972,7 +1040,7 @@ input[type='password']:focus {
     margin-right: 2rem; }
 
 .contact-us {
-  background: url("../img/bg-7.jpg");
+  background-image: url("../img/bg-7.jpg");
   font-family: "DIN Pro Light";
   font-size: 2.9rem; }
   .contact-us__cta {

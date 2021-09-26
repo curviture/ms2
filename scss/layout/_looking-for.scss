@@ -1,6 +1,7 @@
 .looking-for {
-    background: #000 url("../img/bg-2.jpg");
+    background-image:url("../img/bg-2.jpg");
     font-size: 2.4rem;
+    background-attachment: fixed;
     font-family: "DIn Pro Light";
 
     &__content {

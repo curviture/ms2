@@ -5,7 +5,7 @@ var modal = new tingle.modal({
     stickyFooter: false,
     closeMethods: ['overlay', 'button', 'escape'],
     closeLabel: "Close",
-    cssClass: ['custom-class-1', 'custom-class-2'],
+    // cssClass: ['custom-class-1'],
     onOpen: function() {
         console.log('modal open');
     },
@@ -21,8 +21,7 @@ var modal = new tingle.modal({
 });
 
 // set content
-// modal.setContent(document.getElementById('js-navbar-order'));
-modal.setContent(document.getElementById('js-navbar-order-modal').innerHTML)
+modal.setContent(document.getElementById('js-navbar-order-modal'))
 
 
 const cB = document.getElementById('call-from-navbar');
@@ -41,12 +40,12 @@ const modal2 = new tingle.modal({
     stickyFooter: false,
     closeMethods: ['overlay', 'button', 'escape'],
     closeLabel: "Close",
-    cssClass: ['custom-class-1', 'custom-class-2'],
+    // cssClass: [],
     onOpen: function() {
-        console.log('modal open');
+        console.log('modal open modal 2');
     },
     onClose: function() {
-        console.log('modal closed');
+        console.log('modal close modal 2');
     },
     beforeClose: function() {
         // here's goes some logic
@@ -56,10 +55,24 @@ const modal2 = new tingle.modal({
     }
 });
 
-modal2.setContent(document.getElementById('js-call-looking-for-modal').innerHTML)
+modal2.setContent(document.getElementById('js-call-looking-for-modal'));
 
 const heroCta = document.getElementById('js-main__cta');
+const lookingForCta = document.getElementById('js-looking-for__cta')
 
 heroCta.addEventListener('click', function() {
     modal2.open();
 })
+
+
+lookingForCta.addEventListener('click', function() {
+    modal2.open();
+})
+
+$('.js-parallax').parallax();
+const phoneInputs = document.getElementsByClassName('js-phone__input');
+Array.prototype.forEach.call(phoneInputs, (item) => {
+    let maskItem = IMask(item,  {mask: '+{7}(000)000-00-00'})
+})
+
+// fsLightbox.open()

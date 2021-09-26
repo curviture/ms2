@@ -2,6 +2,7 @@
     padding: 9rem 0;
     color: $text-dark;
     font-size: 2.4rem;
+    background-size: cover;
 
     &__inner {
         width: 112rem;
@@ -22,8 +23,8 @@
 
     &--fxbg {
        color: $text-light;
-       background: #000; 
-       background-size: 100% auto;
+       background-color: #000;
+       background-attachment: fixed;
     }
 
     &__left {

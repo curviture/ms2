@@ -1,17 +1,26 @@
 .form {
-    background-color: #fff;
-    color: $text-dark;
+
+    &__container {
+        background-color: #fff;
+        color: $text-dark;
+        padding-top: 3.5rem;
+        padding-bottom: 6rem;
+        border-radius: 1rem;
+        width: 39rem;
+
+        &_-container--small {
+            width: 33rem;
+        }
+    }
+
     display: flex;
     flex-flow: column nowrap;
     justify-content: center;
     align-items: center;
-    padding-top: 3.5rem;
-    padding-bottom: 6rem;
-    border-radius: 1rem;
 
     &__legend {
         text-align: center;
-        font-size: 1.7rem;
+        font-size: 1.6rem;
         margin-bottom: 2.2rem;
     }
 
@@ -65,10 +74,8 @@
    border: 1px solid rgba(#000, .45);
    padding: 2rem 3rem;
    background: transparent;
-   margin-bottom: 1rem;
-   font-size: 1.7rem;
+   font-size: 1.6rem;
    text-align: center;
-
    width: 100%;
 
    &::placeholder {
@@ -77,8 +84,9 @@
    }
 
    &__group {
-       padding-left: 4.5rem;
-       padding-right: 4.5rem;
+       padding-left: 4rem;
+       padding-right: 4rem;
+       margin-bottom: 1rem;
        width: 100%;
    }
 
@@ -97,33 +105,53 @@ input[type='password'] {
     border: none;
 }
 
-.input--file {
+.file-input {
     opacity: 0;
     width: 100%;
-}
+    margin-bottom: 0;
+    height: 6rem;
 
-.input-label--file {
-    position: relative;
-    border: 1px solid #A9A9A9;
-    border-radius: 1rem;
-    width: 100%;
-    display: block;
-    padding-right: 12rem;    
-}
+    &__label {
+        position: relative;
+        border: 1px solid #A9A9A9;
+        border-radius: 1rem;
+        width: 100%;
+        display: block;
+        padding-right: 12rem;
+        text-align: center;    
+    }
 
-.input-file-custom {
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    padding-right: 12rem;
-    overflow: hidden;
-    padding-left: 3rem;
-    line-height: 6rem;
-    text-overflow: ellipsis;    
-    vertical-align: middle;
-    cursor: pointer;
+    &__custom {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        padding-right: 12rem;
+        overflow: hidden;
+        padding-left: 3rem;
+        line-height: 6rem;
+        text-overflow: ellipsis;    
+        vertical-align: middle;
+        cursor: pointer;
+         
+        &:after {
+            content: 'Прикрепить';
+            border: 1px solid #A9A9A9;
+            background-color: #000;
+            color: #ffffff;
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            border-radius: 0 1rem 1rem 0;
+            padding: 0 1rem;
+        }
+    }
+
+    &__fake {
+        text-align: left;
+    }
 }
 
 /* .input-file-custom:before {
@@ -135,21 +163,3 @@ input[type='password'] {
     bottom: 0;
     border-radius: 1rem 0 0 1rem;
 } */
-
-.input-file-custom:after {
-    content: 'Прикрепить';
-    border: 1px solid #A9A9A9;
-    background-color: #000;
-    color: #ffffff;
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    border-radius: 0 1rem 1rem 0;
-    padding: 0 1rem;
-}
-
-.input-file--fake {
-    text-align: left;
-
-}

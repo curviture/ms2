@@ -10,4 +10,14 @@
     justify-content: space-between;
     padding-bottom: 6rem;
     z-index: 3;
+
+    @include respond(tab-land) {
+        // min-height: 75rem;
+        
+    }
+
+    @include respond(phone) {
+        padding-top: 9rem;
+        height: auto;
+    }
 }

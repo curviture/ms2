@@ -1,6 +1,6 @@
 @mixin respond($break) {
     @if($break == phone) {
-        @media(max-width:37.5em) {@content};
+        @media(max-width:48rem) {@content};
     }    
     @if($break == tab-port) {
         @media(max-width:56.25em) {@content};        

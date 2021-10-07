@@ -7,15 +7,35 @@
         flex-flow: row wrap;
         justify-content: start;
         margin: 0 auto;
+
+        @include respond(tab-land) {
+            width: 70rem;
+            flex-wrap: wrap;
+        }
+
+        @include respond(phone) {
+            width: 30rem;
+            flex-flow: column wrap;
+            text-align: center;
+        }
     }
 
     &__info {
         margin-left: auto;
+
+        @include respond(tab-land) {
+            margin-left: 0;
+        }
     }
     
     &__contacts {
         margin-left: auto;
         margin-right: 2rem;
+
+        @include respond(tab-land) {
+            margin-left: 1.5rem;
+            margin-right: 1.5rem;
+        }
     }
 
     &__copyright {
@@ -34,6 +54,10 @@
         font-size: 2.4rem;
         line-height: 3.5rem;
         font-family: "DIN Pro Medium";
+
+        @include respond(tab-land) {
+            font-size: 2rem;
+        }
 
         &--icon {
             display: inline-block;

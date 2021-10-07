@@ -1,7 +1,43 @@
-.u-hidden--md {
-    display: none;
-    @include respond(big-desktop) {
+.u-hidden--tp {
+    display: none!important;
+    @include respond(tab-port) {
         display: block;
+    }
+}
+
+.u-hidden--tl {
+    display: none;
+    @include respond(tab-land) {
+        display: block;
+    }
+}
+
+.u-hidden {
+    display: none!important;
+
+    &--tp {
+        @include respond(tab-port) {
+            display: block;
+        }
+    }
+
+    &--tl {
+        @include respond(tab-land) {
+            display: block;
+        }
+    }
+
+    &--p {
+        @include respond(phone) {
+            display: block;
+        }
+    }
+}
+
+.u-visible--p {
+    display: block;
+    @include respond(phone) {
+        display: none!important;
     }
 }
 
@@ -9,16 +45,15 @@
     padding-top: 4.5rem;
     &--large {
         padding-top: 11.5rem;
+
+        @include respond(phone) {
+            padding-top: 4rem;
+        }
     }
 }
 
 .u-pb {
     padding-bottom: 4.5rem;
-}
-
-.container {
-    display: flex;
-    flex-flow: row nowrap;
 }
 
 .u-jc {
@@ -41,4 +76,14 @@
 
 .u-fr {
     float: right;
+}
+
+.u-map__container {
+    width: 320px;
+    height: 240px;
+
+    @include respond(tab-land) {
+        width: 300px;
+        height: 210px;
+    }
 }

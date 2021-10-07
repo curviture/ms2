@@ -25,7 +25,7 @@
         <div class="main js-parallax"  data-parallax="scroll" data-image-src="./img/bg-1.jpg">
             <div class="header">
                 <div class="header__inner container">
-                    <a href="#" class="hidden--md menu__trigger u-hidden--md">
+                    <a href="#" class="hidden--md menu__trigger u-hidden--tp">
                         <span class="line"></span>
                         <span class="line"></span>
                         <span class="line"></span>
@@ -35,8 +35,8 @@
                             <img src="img/logo.png" alt="brand icon image" class="logo__icon">
                         </a>
                     </div>
-                    <div class="menu__box">
-                        <a href="#" class="menu__closer u-hidden--md">
+                    <div class="header__menu-wrapper">
+                        <a href="#" class="menu__closer u-hidden--tp">
                             &#x2716;
                         </a>
                         <ul class="menu menu--header">
@@ -46,7 +46,7 @@
                             <li class="menu__item"><a class="menu__link animated-underline" href="#">Шоурум</a></li>
                         </ul>
                     </div>
-                    <div class="header__socials u-hidden--md">
+                    <div class="header__socials u-hidden--tp">
                         <a class="header__link header__link--social" href=""><img class="header__icon header__icon--socials" src="img/insta1.png" alt=""></a>
                         <a class="header__link header__link--social" href=""><img class="header__icon header__icon--socials" src="img/whatsapp.jpg" alt=""></a>
                     </div>
@@ -63,7 +63,11 @@
             </div>
             <div class="hero">
                 <div class="container hero__inner">
-                    <div id="address-container"></div>
+                    <div class="hero__address u-hidden u-hidden--p">
+                        г. Москва, ул. Тимирязевская, д.2/3
+                        <br>
+                        (ТЦ "Парк 11", 3 этаж)   
+                    </div>                     
                     <div class="hero__content col-2 md-col-1">
                         <h1 class="heading heading--primary hero__heading text-light">
                             Кровати на заказ
@@ -84,14 +88,14 @@
                             <input type="button" class="hero__cta button button--attention button--large" id="js-main__cta" value="Подобрать и рассчитать" />
                         </div>
                     </div>
-                    <a href="#gallery" class="button--slidedown">&darr;</a>
                 </div>
+                <a href="#gallery" class="button--slidedown">&darr;</a>
             </div>
         </div>
-        <div class="container u-pt--large u-pb u-jc--space-around"> 
+        <div class="container u-pt--large u-pb u-jc--space-around features"> 
             <div class="card md-col-3 col-3 col-sm-1">
-                <div class="card__image-wrapper a-squeeze">
-                    <img src="img/peim1.png" alt="">
+                <div class="card__image-wrapper">
+                    <img class="card__image a-squeeze a-std" src="img/peim1.png" alt="">
                 </div>
                 <div class="card__text">
                     <h2 class="card__header">Минимальные сроки</h2>
@@ -99,8 +103,8 @@
                 </div>
             </div>
             <div class="card md-col-3 col-3">
-                <div class="card__image-wrapper a-rotate">
-                    <img src="img/peim2.png" alt="">
+                <div class="card__image-wrapper">
+                    <img  class="card__image a-rotate a-std" src="img/peim2.png" alt="">
                 </div>
                 <div class="card__text">                
                     <h2 class="card__header">Собственное производство</h2>
@@ -109,8 +113,8 @@
     
             </div>
             <div class="card md-col-3 col-3">
-                <div class="card__image-wrapper a-stretch">
-                    <img src="img/peim3.png" alt="">
+                <div class="card__image-wrapper">
+                    <img class="card__image a-stretch a-std" src="img/peim3.png" alt="">
                 </div>            
                 <div class="card__text">                
                     <h2 class="card__header">Изготовление на заказ</h2>
@@ -300,16 +304,24 @@
         <div class="looking-for js-parallax std-blck std-blck--fxbg js-parallax" data-parallax="scroll" data-image-src="./img/bg-2.jpg">
             <div class="std-blck__inner u-jc--space-between">
                 <div class="std-blck__full">
-                    <h2 class="heading heading--secondary looking-for__heading">Не нашли понравившуюся модель <br> кровати в нашем каталоге?</h2>
+                    <h2 class="heading heading--secondary looking-for__heading">
+                        Не нашли понравившуюся модель
+                        кровати в нашем каталоге?
+                    </h2>
                 </div>
                 <div class="std-blck__left looking-for__content">
                     <p class="col-2 md-col-1 looking-for__text">Нечего страшного, мы изготовим для вас <br> кровать по вашему макету или просто фото.</p>
+                        <div class="looking-for__img-box u-hidden--p">
+                          <img class="col-2 md-col-1 looking-for__img" src="img/bed-icon.png" alt="">
+                        </div>
                     <div class="input-container blink">
                         <input type="button" class="button button--attention button--large looking-for__cta" id="js-looking-for__cta" value="Отправить макет или фото">
                     </div>                    
                 </div>
                 <div class="std-blck__right">
-                    <img class="col-2 md-col-1 looking-for__img" src="img/bed-icon.png" alt="">
+                    <div class="looking-for__img-box u-visible--p">
+                        <img class="col-2 md-col-1 looking-for__img" src="img/bed-icon.png" alt="">
+                    </div>
                 </div>
             </div>
         </div>
@@ -355,13 +367,15 @@
         <div class="matras std-blck std-blck--fxbg js-parallax" data-parallax="scroll" data-image-src="./img/bg/bg-3.jpg">
             <div class="std-blck__inner">
                 <div class="std-blck__left">
-                    <div class="matras__image-container js-move" data-moveto="matras__image-container-2" data-screen="1200">
+                    <div class="matras__image-container u-visible--p js-move" data-moveto="matras__image-container-2" data-screen="1200">
                         <img class="" src="img/matras.png" alt="matras">
                     </div>
                 </div>
                 <div class="std-blck__right matras__text-content">
                     <h2 class="heading heading--secondary">Большой выбор матрасов по высоте  и жесткости со скидкой 10%</h2>
-                    <div id="matras__image-container-2"></div>
+                    <div class="matras__image-container u-hidden--p js-move" data-moveto="matras__image-container-2" data-screen="1200">
+                        <img class="" src="img/matras.png" alt="matras">
+                    </div>
                     <p class="matras__par">
                         Выбрали кровать? Теперь предстоит определиться с выбором матраса, ведь от него будет зависеть качество вашего сна!
                     </p>
@@ -381,7 +395,7 @@
                         <h2 class="heading heading--secondary js-move showroom__heading" data-moveto="showroom__heading2" data-screen="1200">Мы ждем вас в нашем Шоуруме</h2>
                     </div>
                     <p class="showroom__text">Где вы сможете в живую увидеть наши модели кроватей, пообщаться с консультантами и выбрать подходящую для вас модель!</p>
-                    <div class="showroom__address">
+                    <div class="showroom__address u-visible--p">
                         <img class="showroom__address-icon" src="img/map.png" alt="" class="map-icon">
                         <p class="showroom__text showroom__text--small">Москва, ул. Тимирязевская, д.2/3 <br>
                             (ТЦ "Парк 11", 3 этаж)</p>
@@ -396,6 +410,11 @@
                         <a href="img/showroom5.jpg" data-fslightbox="gallery" class="js-showroom-modaal"><img class="showroom__img--thumbs js-showroom-modaal" src="img/showroom5.jpg" alt=""></a>
                     </div>
                 </div>
+                <div class="showroom__address u-hidden--p">
+                    <img class="showroom__address-icon" src="img/map.png" alt="" class="map-icon">
+                    <p class="showroom__text showroom__text--small">Москва, ул. Тимирязевская, д.2/3 <br>
+                        (ТЦ "Парк 11", 3 этаж)</p>
+                </div>                
             </div>
         </div>
         <div class="manufacturer text-light js-parallax" data-parallax="scroll" data-image-src="./img/bg-4.jpg">
@@ -411,18 +430,17 @@
         </div>
         <div class="designer std-blck">
             <div class="container">
-                <div id="designer__header2">
-
-                </div>
+                <h2 class="heading heading--secondary designer__heading u-hidden--p">Вы дизайнер?</h2>
                 <div class="std-blck__left">
                     <img src="img/dizayn.png" alt="bed-design">
                 </div>
                 <div class="std-blck__right">
-                    <h2 class="heading heading--secondary js-move designer__heading"  data-moveto="designer__header2" data-screen="760">Вы дизайнер?</h2>
+                    <h2 class="heading heading--secondary designer__heading u-visible--p">Вы дизайнер?</h2>
                     <p class="">В таком случае, у вас есть возможность стать нашим партнёром и получать 10% (вознаграждение) от стоимости кровати за каждого приведённого клиента</p>
                     <div class="designer__footer">
                         <img class="designer__icon u-fl" src="img/small-bed.png" alt="">
-                        <p class="text-small">Мы предоставим вам 3D <br> модели всех наших кроватей
+                        <p class="text-small">
+                            Мы предоставим вам 3D <br> модели всех наших кроватей
                         </p>
                     </div>
                 </div>
@@ -431,7 +449,7 @@
         <div class="std-blck std-blck--fxbg contact-us js-parallax" data-parallax="scroll" data-image-src="./img/bg-7.jpg">
             <div class="container contact-us__inner u-jc--space-around">
                 <div class="contact-us__text-content">
-                    <h2 class="heading heading--large contact-us__heading">Свяжитесь с нами!</h2>
+                    <h2 class="heading heading--primary contact-us__heading">Свяжитесь с нами!</h2>
                     <p class="contact-us__text">
                         Наши менеджеры подробно<br> проконсультируют вас по выбору<br> кровати и просчитают любое изделие<br> на заказ в течение 15 минут
                     </p>
@@ -486,17 +504,19 @@
                         <a href="#" class="footer__link footer__link--icon footer__link--block"><img src="img/insta1.png" alt="instagram"></a>
                     </div>
                 </div>
-                <div class="footer__map-container">
-                    <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3Abfd18d127c1ae4253d27aaa7cdae43f5a4446af54a0dee7189da9cedd8f25937&amp;width=320&amp;height=240&amp;lang=en_FR&amp;scroll=true"></script>                
+                <div class="footer__map-container u-map__container">
+                    <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3Abfd18d127c1ae4253d27aaa7cdae43f5a4446af54a0dee7189da9cedd8f25937&amp;lang=en_FR&amp;scroll=true"></script>                
+
                 </div>
                 <div class="footer__copyright">
                     Copyright © 2020 made by Gevorg Ghazaryan
                 </div>
             </div>
         </footer>
+        <!--fixed header-->
         <div class="header header--fixed">
             <div class="header__inner container">
-                <a href="#" class="hidden--md menu__trigger u-hidden--md">
+                <a href="#" class="hidden--md menu__trigger u-hidden--tl">
                     <span class="line"></span>
                     <span class="line"></span>
                     <span class="line"></span>
@@ -507,21 +527,21 @@
                     </a>
                 </div>
                 <div class="menu__box">
-                    <a href="#" class="menu__closer u-hidden--md">
+                    <a href="#" class="menu__closer u-hidden--tp">
                         &#x2716;
                     </a>
                     <ul class="menu menu--header">
                         <li class="menu__item"><a class="menu__link animated-underline" href="#">Кровати</a></li>
-                        <li class="menu__item u-hidden--md visible--lg"><a class="menu__link animated-underline" href="#">Диваны</a></li>
+                        <li class="menu__item u-hidden--tp visible--lg"><a class="menu__link animated-underline" href="#">Диваны</a></li>
                         <li class="menu__item"><a class="menu__link animated-underline" href="#">На заказ</a></li>
                         <li class="menu__item"><a class="menu__link animated-underline" href="#">Шоурум</a></li>
                     </ul>
                 </div>
-                <div class="header__socials u-hidden--md">
+                <!-- <div class="header__socials u-hidden--tp">
                     <a class="header__link header__link--social" href=""><img class="header__icon header__icon--socials" src="img/insta1.png" alt=""></a>
                     <a class="header__link header__link--social" href=""><img class="header__icon header__icon--socials" src="img/whatsapp.jpg" alt=""></a>
-                </div>
-                <div class="header__aside">
+                </div> -->
+                <div class="header__aside header__address u-visible--p">
                     г. Москва, ул. Тимирязевская, д.2/3
                     <br/>
                     (ТЦ "Парк 11", 3 этаж)
@@ -532,7 +552,7 @@
                 </div>
                 <div class="header__contacts">
 
-                        <a href="#"><img src="img/viber.jpg" alt="" class="icon header__contacts-icon"></a>
+                        <a href="#" class="u-visible--p"><img src="img/viber.jpg" alt="" class="icon header__contacts-icon"></a>
                         <a href="#"><img src="img/whatsapp.jpg" alt="" class="icon header__contacts-icon"></a>
                         <a href="#"><img src="img/insta1.png" alt="" class="icon header__contacts-icon"></a>
                 </div>

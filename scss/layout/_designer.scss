@@ -1,5 +1,9 @@
 .designer {
 
+    @include respond(phone) {
+        font-size: 1.5rem;
+    }
+
     .container {
         align-items: center;
     }
@@ -10,5 +14,29 @@
 
     &__icon {
         margin-right: 2rem;
+
+        @include respond(phone) {
+            width: 3.5rem;
+            height: 3.5rem;
+        }
+    }
+
+    &__footer {
+        @include respond(tab-land) {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .text-small {
+            @include respond(tab-land) {
+                margin-bottom: 0;
+            }
+
+            @include respond(phone) {
+                font-size: 1.3rem;
+                text-align: left;
+            }
+        }
     }
 }

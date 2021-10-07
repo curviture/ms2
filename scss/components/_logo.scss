@@ -2,4 +2,8 @@
     &__link {
         display: block;
     }
+
+    @include respond(tab-land) {
+        
+    }
 }

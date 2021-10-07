@@ -6,6 +6,10 @@
     padding-top: 4rem;
     padding-bottom: 4rem;
 
+    @include respond(phone) {
+        font-size: 1.3rem;
+    }
+
     &__inner {
         justify-content: center;
         align-items: center;
@@ -15,9 +19,20 @@
         margin-right: 3rem;
         position: relative;
         animation: rotate 8s infinite linear;
+
+        @include respond(phone) {
+            width: 8.5rem;
+            height: 8.5rem;
+            margin-right: 0;
+            margin-bottom: 2rem;
+        }
     }
 
     .heading {
         margin-bottom: 1rem;
+
+        @include respond(phone) {
+            font-size: 1.9rem;
+        }
     }
 }

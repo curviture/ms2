@@ -1,5 +1,10 @@
 .header {
     font-size: 1.7rem;
+
+    @include respond(phone) {
+        display: none;
+    }
+
     &__inner {
         display: flex;
         flex-flow: row nowrap;
@@ -25,12 +30,27 @@
 
     &__contacts {
         text-align: right;
+
+        @include respond(phone) {
+            order: -1;
+        }
+
+        &-icon {
+            @include respond(phone) {
+                width: 2.5rem;
+                height: 2.5rem;
+            }
+        }
     }
 
     &__link--primary {
         font-size: 1.9rem;
         font-family: "DIN Pro Medium";
         margin-bottom: 1.4rem;
+
+        @include respond(phone) {
+            font-size: 1.5rem;
+        }
     }
 
     &--fixed {
@@ -41,12 +61,31 @@
         z-index: 1;
         background-color: #ffffff;
         box-shadow: 0px 0px 40px 0px rgba(0,0,0,0.15);
+        overflow: visible;
+        flex-wrap: wrap;
+        @include respond(phone) {
+            z-index: 3;
+            display: block;
+        }
         
 
         .header__inner {
             padding-top: 1rem;
             padding-bottom: 1rem;
             color: #000000;
+
+            @include respond(tab-land) {
+                flex-wrap: nowrap;
+                justify-content: space-between;
+            }
+
+            @include respond(phone) {
+                width: 30rem;
+                padding-top: 0.5rem;
+                padding-bottom: 0.5rem;
+                max-height: 6rem;
+                flex-wrap: wrap;
+            }
         }
 
         .header__link {
@@ -54,9 +93,23 @@
             margin-bottom: 0.5rem;
             margin-top: 0.5rem;
 
+            @include respond(phone) {
+                margin-top: 0;
+            }
+
+
             &--secondary {
                 display: inline-block;
                 cursor: pointer;
+
+                @include respond(phone) {
+                    background-color: $color-highlight;
+                    color: $color-primary;
+                    font-size: 1.3rem;
+                    padding: 0.3rem 1rem;
+                    border-radius: .5rem;
+
+                }
             }
         }
 
@@ -71,10 +124,73 @@
             }
         }
 
+        // .header__address {
+        //     @include respond(phone) {
+        //         flex-basis: 100%;
+        //         order: 1;
+        //         color: $color-primary;
+        //         text-align: center;
+        //         margin-top: 3rem;
+        //         font-size: 1.3rem;
+        //         position: absolute;
+        //         top: 50px;
+        //     }
+        // }
+
+        .header__aside {
+            @include respond(tab-land) {
+                margin-right: 1rem;
+                font-size: 1.6rem;
+            }
+            @include respond(phone) {
+                margin-right: 0;
+            }
+        }
+
         .menu {
             .menu__link {
                 color: #000000;
             }
+        }
+
+        .menu__box {
+            @include respond(tab-land) {
+                display: none;
+            }
+        }
+
+        .menu__trigger {
+            @include respond(phone) {
+                order: -3;
+                padding: 1.2rem;
+            }
+        }        
+
+        .logo {
+            @include respond(tab-land) {
+                width: 7.6rem;
+                height: 4rem;
+            }
+            @include respond(phone) {
+                width: 5.8rem;
+                height: 3.2rem;
+                order: -2;
+            }
+        }
+    }
+
+    @include respond(tab-land) {
+        &__inner {
+            width: 70rem;
+        } 
+        &__inner {
+            flex-wrap: wrap;
+        }
+
+        &__menu-wrapper {
+            order: 4;
+            flex-basis: 100%;
+            margin-top: 2rem;
         }
     }
 }

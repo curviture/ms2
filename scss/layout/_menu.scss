@@ -29,4 +29,27 @@
         color: #ffffff;
     }
 
+    &__trigger {
+
+        @include respond(tab-land) {
+            padding: 1.5rem;
+        }
+
+        @include respond(phone) {
+            padding: 1.4rem;
+        }
+        
+    }
+
+}
+
+.line {
+    display: block;
+    height: 5px;
+    width: 25px;
+    background-color: #000;
+
+    &:not(:last-child) {
+        margin-bottom: 5px;
+    }
 }

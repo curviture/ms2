@@ -8,6 +8,10 @@
         border-radius: 1rem;
         width: 39rem;
 
+        @include respond(phone) {
+            padding-bottom: 3rem;
+        }
+
         &_-container--small {
             width: 33rem;
         }
@@ -78,6 +82,10 @@
    text-align: center;
    width: 100%;
 
+   @include respond(phone) {
+       padding: 1.5rem 2rem;
+   }
+
    &::placeholder {
     color: #696969;
     font-family: "DIN Pro Light";
@@ -88,6 +96,11 @@
        padding-right: 4rem;
        margin-bottom: 1rem;
        width: 100%;
+
+       @include respond(phone) {
+           padding-left: 2rem;
+           padding-right: 2rem;
+       }
    }
 
 }

@@ -1,11 +1,26 @@
 .hero {
     color: #ffffff;
 
+    @include respond(phone) {
+
+    }
+
+    @include respond(phone) {
+        // padding-top: 9rem;
+        // padding-bottom: 6rem;
+    }
+
     &__inner {
         position: relative;
         justify-content: space-between;
         align-items: center;
+
+        @include respond(phone) {
+            justify-content: space-between;
+            align-items: space-between;
+        }
     }
+    
     &__heading {
         line-height: 1.1;
         margin-top: 1rem;
@@ -16,6 +31,9 @@
             margin-top: 3.4rem;
             letter-spacing: 1px;
             word-spacing: 1px;
+            @include respond(phone) {
+                font-size: .8em;
+            }
         }
     }
 
@@ -28,12 +46,23 @@
         flex-flow: row wrap;
         justify-content: space-around;
         align-items: center;
+
+        @include respond(phone) {
+            flex-flow: column nowrap;
+            width: auto;
+            padding: 1.5rem 1rem;
+        }
     }
 
     .hero__block-text {
         margin-bottom: 2rem;
         flex-basis: 100%;
         flex-shrink: 0;
+
+        @include respond(phone) {
+            font-size: 1.3rem;
+            margin-bottom: 3rem;
+        }
     }
 
     &__icon-container,
@@ -44,5 +73,19 @@
     &__icon-container {
         width: 17.5rem;
         height: 8.5rem;
+
+        @include respond(phone) {
+            width: 15rem;
+            height: 7.9rem;
+        }
+    }
+
+    @include respond(tab-land) {
+        text-align: center;
+    }
+
+    &__address {
+        padding-bottom: 4rem;
+        font-size: 1.3rem;
     }
 }

@@ -1,16 +1,49 @@
 .matras {
     background-image: url("../img/bg-3.jpg");
 
+    @include respond(phone) {
+        font-size: 1.5rem;
+    }
+
     .std-blck__inner {
         align-items: center;
     }
 
     .heading {
         margin-bottom: 3rem;
+
+    }
+
+    &__image-container {
+        @include respond(tab-land) {
+
+            width: 50rem;
+            height: 23rem;
+            margin: 0 auto;
+        }
+
+        @include respond(phone) {
+            width: 25rem;
+            height: 12rem;
+        }
     }
 
     &__par:not(:last-child) {
         font-family: "DIN Pro Light";
         margin-bottom: 3rem;
+
+        @include respond(phone) {
+            margin-bottom: 1rem;
+        }
+    }
+
+    .heading {
+        @include respond(tab-land) {
+            font-size: 3.7rem;
+        }
+
+        @include respond(phone) {
+            font-size: 1.9rem;
+        }
     }
 }

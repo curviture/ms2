@@ -1,0 +1,7 @@
+.features {
+    @include respond(tab-land) {
+        align-items: stretch;
+        justify-content: center;
+    }
+}
+

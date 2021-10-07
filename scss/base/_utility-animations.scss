@@ -1,4 +1,12 @@
+.a-std {
+    animation-delay: 0;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
 .a-rotate {
+
     animation-name: rotate;
 }
 

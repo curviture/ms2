@@ -1,11 +1,16 @@
 .gallery {
     width: 100%;
 
+    @include respond(phone) {
+        padding-top: 0;
+    }
+
     &__list-inner {
         display: flex;
         flex-flow: row wrap;
         margin: -4.5rem;        
         overflow: hidden;
+
     }
 
     &__header {
@@ -13,6 +18,14 @@
         align-items: flex-end;
         width: 100%;
         margin-bottom: 6.4rem;
+
+        @include respond(tab-land) {
+            flex-flow: column wrap;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            margin-bottom: 3rem;
+        }
     }
 
     .heading {
@@ -22,6 +35,16 @@
     &__type {
         display: flex;
         flex-flow: row nowrap;
+
+        @include respond(tab-land) {
+            margin-top: 3rem;
+        }
+
+        @include respond(phone) {
+            order: -1;
+            margin-bottom: 3rem;
+            margin-top: 0;
+        }
     }
 
     &__type-button {
@@ -34,11 +57,20 @@
             color: $text-highlight;
             border: 1px solid #A5A5A5;
         }
+
+        @include respond(phone) {
+            font-size: 1.5rem;
+            padding: 0.4rem 2rem;
+        }
     }
 
     &__list {
         display: flex;
         flex-flow: row wrap;
+
+        @include respond(phone) {
+            justify-content: center;
+        }
     }
 
     &__item {

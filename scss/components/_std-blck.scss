@@ -4,21 +4,45 @@
     font-size: 2.4rem;
     background-size: cover;
 
+    @include respond(tab-land) {
+        text-align: center;
+    }
+
+    @include respond(phone) {
+        padding: 3rem;
+    }
+
     &__inner {
         width: 112rem;
         display: flex;
         flex-flow: row wrap;
         margin: 0 auto;
+
+        @include respond(tab-land) {
+            width: 70rem;
+        }
+
+        @include respond(phone) {
+            width: 30rem;
+        }
     }
 
     &__left,
     &__right {
         flex-basis: 50%;
+
+        @include respond(tab-land) {
+            flex-basis: 100%;
+        }
     }
 
     &__full {
         flex-basis: 100%;
         margin-bottom: 5rem;
+
+        @include respond(phone) {
+            margin-bottom: 1rem;
+        }
     }
 
     &--fxbg {
@@ -29,5 +53,9 @@
 
     &__left {
         padding-right: 4rem;
+
+        @include respond(phone) {
+            padding-right: 0;
+        }
     }
 }

@@ -3,12 +3,22 @@
     font-size: 2.4rem;
     font-family: "DIN Pro Light";
 
+    @include respond(phone) {
+        padding: 3rem;
+        font-size: 1.7rem;
+    }
+
     .heading {
         margin-bottom: 2rem;
     }
 
     &__content {
         flex-basis: 380px;
+
+        @include respond(tab-land) {
+            flex-basis: auto;
+            margin-bottom: 2rem;
+        }
     }
 
     &__card-container {
@@ -18,9 +28,29 @@
         flex-grow: 2;
         font-size: 1.7rem;
         font-family: "Din Pro";
+
+        @include respond(tab-land) {
+            justify-content: space-around;
+        }
+
+        @include respond(phone) {
+            flex-wrap: wrap;
+            font-size: 1.3rem;
+            text-align: left;
+        }
     }
 
     &__image-box {
         margin-bottom: 1rem;
+
+        @include respond(tab-land) {
+            width: 15rem;
+            height: 15rem;
+        }
+
+        @include respond(phone) {
+            width: 12rem;
+            height: 12rem;
+        }
     }
 }

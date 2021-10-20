@@ -25,7 +25,7 @@
         <div class="main js-parallax"  data-parallax="scroll" data-image-src="./img/bg-1.jpg">
             <div class="header">
                 <div class="header__inner container">
-                    <a href="#" class="hidden--md menu__trigger u-hidden--tp">
+                    <a href="#" class="hidden--md menu__trigger">
                         <span class="line"></span>
                         <span class="line"></span>
                         <span class="line"></span>
@@ -305,13 +305,13 @@
             <div class="std-blck__inner u-jc--space-between">
                 <div class="std-blck__full">
                     <h2 class="heading heading--secondary looking-for__heading">
-                        Не нашли понравившуюся модель
-                        кровати в нашем каталоге?
+                        <span class="u-block u-block--p">Не нашли понравившуюся модель</span>
+                        <span class="u-block u-block--p"> кровати в нашем каталоге?</span>
                     </h2>
                 </div>
                 <div class="std-blck__left looking-for__content">
                     <p class="col-2 md-col-1 looking-for__text">Нечего страшного, мы изготовим для вас <br> кровать по вашему макету или просто фото.</p>
-                        <div class="looking-for__img-box u-hidden--p">
+                        <div class="looking-for__img-box u-hidden u-hidden--p">
                           <img class="col-2 md-col-1 looking-for__img" src="img/bed-icon.png" alt="">
                         </div>
                     <div class="input-container blink">
@@ -373,7 +373,7 @@
                 </div>
                 <div class="std-blck__right matras__text-content">
                     <h2 class="heading heading--secondary">Большой выбор матрасов по высоте  и жесткости со скидкой 10%</h2>
-                    <div class="matras__image-container u-hidden--p js-move" data-moveto="matras__image-container-2" data-screen="1200">
+                    <div class="matras__image-container u-hidden u-hidden--p js-move" data-moveto="matras__image-container-2" data-screen="1200">
                         <img class="" src="img/matras.png" alt="matras">
                     </div>
                     <p class="matras__par">
@@ -410,7 +410,7 @@
                         <a href="img/showroom5.jpg" data-fslightbox="gallery" class="js-showroom-modaal"><img class="showroom__img--thumbs js-showroom-modaal" src="img/showroom5.jpg" alt=""></a>
                     </div>
                 </div>
-                <div class="showroom__address u-hidden--p">
+                <div class="showroom__address u-hidden u-hidden--p">
                     <img class="showroom__address-icon" src="img/map.png" alt="" class="map-icon">
                     <p class="showroom__text showroom__text--small">Москва, ул. Тимирязевская, д.2/3 <br>
                         (ТЦ "Парк 11", 3 этаж)</p>
@@ -430,9 +430,9 @@
         </div>
         <div class="designer std-blck">
             <div class="container">
-                <h2 class="heading heading--secondary designer__heading u-hidden--p">Вы дизайнер?</h2>
+                <h2 class="heading heading--secondary designer__heading u-hidden u-hidden--p">Вы дизайнер?</h2>
                 <div class="std-blck__left">
-                    <img src="img/dizayn.png" alt="bed-design">
+                    <img class="designer__image" src="img/dizayn.png" alt="bed-design">
                 </div>
                 <div class="std-blck__right">
                     <h2 class="heading heading--secondary designer__heading u-visible--p">Вы дизайнер?</h2>
@@ -490,11 +490,11 @@
                     </div>
                     <div class="footer__info-line info-section--socials">
                         <a class="animated-underline footer__link" href="#">+7 (495) 142-93-80</a>
-                        <a href="#" class="icon footer__link--icon">
-                            <img src="img/viber.jpg" alt="viber">
-                        </a>
-                        <a href="" class="icon footer__link--icon">
-                            <img src="img/whatsapp.jpg" alt="whatsapp">
+                        <a href="#" class="footer__link--icon">
+                            <i class="icon viber"></i>
+                        </a>        
+                        <a href="" class="footer__link--icon">
+                            <i class="icon whatsapp"></i>
                         </a>
                     </div>
                     <div class="footer__info-line">
@@ -516,7 +516,7 @@
         <!--fixed header-->
         <div class="header header--fixed">
             <div class="header__inner container">
-                <a href="#" class="hidden--md menu__trigger u-hidden--tl">
+                <a href="#" class="hidden--md menu__trigger">
                     <span class="line"></span>
                     <span class="line"></span>
                     <span class="line"></span>
@@ -551,10 +551,15 @@
                     <a class="header__link header__link--secondary animated-underline" id="call-from-fixed-navbar" href="#">Заказать звонок</a>
                 </div>
                 <div class="header__contacts">
-
-                        <a href="#" class="u-visible--p"><img src="img/viber.jpg" alt="" class="icon header__contacts-icon"></a>
-                        <a href="#"><img src="img/whatsapp.jpg" alt="" class="icon header__contacts-icon"></a>
-                        <a href="#"><img src="img/insta1.png" alt="" class="icon header__contacts-icon"></a>
+                        <a class="header__link header__link--social u-visible--p" href="#">
+                            <img class="header__social-icon" src="img/viber.jpg" alt="">
+                        </a>
+                        <a class="header__link header__link--social" href="#">
+                            <img  class="header__social-icon" src="img/whatsapp.jpg" alt="">
+                        </a>
+                        <a class="header__link header__link--social" href="#">
+                            <img  class="header__social-icon" src="img/insta1.png" alt="">
+                        </a>
                 </div>
             </div>
         </div>

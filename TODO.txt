@@ -1,0 +1,5 @@
+TODO: fix slidedown button on big screen
+TODO: fix fixed navbar being too big
+TODO: fix small icon plus text being to close to paragraph above
+TODO: create shiny button animation
+TODO: create item show card for selling items

@@ -60,6 +60,33 @@ body {
     .container {
       width: 30rem; } }
 
+.icon {
+  display: inline-block;
+  background: url("../img/icons.png") no-repeat;
+  overflow: hidden;
+  text-indent: -9999px;
+  text-align: left; }
+  .icon.small-bed {
+    background-position: -3px -0px;
+    width: 46px;
+    height: 46px; }
+  .icon.insta1 {
+    background-position: -3px -49px;
+    width: 40px;
+    height: 40px; }
+  .icon.map {
+    background-position: -3px -92px;
+    width: 38px;
+    height: 38px; }
+  .icon.viber {
+    background-position: -3px -133px;
+    width: 35px;
+    height: 35px; }
+  .icon.whatsapp {
+    background-position: -3px -171px;
+    width: 35px;
+    height: 35px; }
+
 h1,
 h2,
 h3,
@@ -81,7 +108,7 @@ p {
     @media (max-width: 48rem) {
       .heading--primary span {
         font-size: 0.7em;
-        line-height: 2;
+        line-height: 1;
         margin-top: 2rem;
         font-family: "DIN Pro"; } }
   @media (max-width: 48rem) {
@@ -132,7 +159,7 @@ p {
       display: block; } }
 
 .u-hidden {
-  display: none !important; }
+  display: none; }
   @media (max-width: 56.25em) {
     .u-hidden--tp {
       display: block; } }
@@ -182,6 +209,12 @@ p {
     .u-map__container {
       width: 300px;
       height: 210px; } }
+
+.u-block {
+  display: block; }
+  @media (max-width: 48rem) {
+    .u-block--p {
+      display: unset; } }
 
 @keyframes bubble {
   0% {
@@ -665,10 +698,14 @@ p {
       min-height: auto;
       flex-basis: auto;
       margin-bottom: 1.5rem;
-      justify-content: space-around; } }
+      justify-content: space-around;
+      align-items: center; } }
   @media (max-width: 48rem) {
     .card {
       padding: 1.5rem .5rem 1.5rem 2rem; } }
+  @media (max-width: 48rem) {
+    .card p {
+      margin-bottom: 0; } }
   .card__header {
     margin-bottom: 1.5rem;
     font-size: 1.7rem; }
@@ -701,8 +738,9 @@ p {
     @media (max-width: 75em) {
       .card__image {
         margin: 0 auto; } }
-  .card__text {
-    flex-basis: 70%; }
+  @media (max-width: 48rem) {
+    .card__text {
+      flex-basis: 70%; } }
   .card:hover {
     box-shadow: 0 0 13px 3px #d1d1d1;
     transform: scale(1.02);
@@ -969,7 +1007,8 @@ input[type='password']:focus {
     margin-right: 3rem;
     line-height: 1.2;
     text-align: right;
-    font-size: 1.7rem; }
+    font-size: 1.7rem;
+    margin-left: auto; }
   .header__contacts {
     text-align: right; }
     @media (max-width: 48rem) {
@@ -979,6 +1018,8 @@ input[type='password']:focus {
       .header__contacts-icon {
         width: 2.5rem;
         height: 2.5rem; } }
+  .header__menu-wrapper {
+    margin-left: 4rem; }
   .header__link--primary {
     font-size: 1.9rem;
     font-family: "DIN Pro Medium";
@@ -1032,11 +1073,18 @@ input[type='password']:focus {
             font-size: 1.3rem;
             padding: 0.3rem 1rem;
             border-radius: .5rem; } }
+    @media (max-width: 48rem) {
+      .header--fixed .header__social-icon {
+        width: 2.5rem;
+        height: 2.5rem; } }
     .header--fixed .header__contacts {
       display: flex;
       flex-flow: row nowrap;
       align-items: center;
       justify-content: space-around; }
+      @media (max-width: 48rem) {
+        .header--fixed .header__contacts {
+          margin-left: 1rem; } }
       .header--fixed .header__contacts a:not(:last-child) {
         margin-right: 0.5rem; }
     @media (max-width: 75em) {
@@ -1090,12 +1138,15 @@ input[type='password']:focus {
     font-size: 1.7rem;
     padding: 1rem 0.2rem;
     color: #ffffff; }
-  @media (max-width: 75em) {
-    .menu__trigger {
-      padding: 1.5rem; } }
-  @media (max-width: 48rem) {
-    .menu__trigger {
-      padding: 1.4rem; } }
+  .menu__trigger {
+    visibility: collapse; }
+    @media (max-width: 75em) {
+      .menu__trigger {
+        visibility: visible;
+        padding: 1.5rem; } }
+    @media (max-width: 48rem) {
+      .menu__trigger {
+        padding: 1.4rem; } }
 
 .line {
   display: block;
@@ -1119,7 +1170,7 @@ input[type='password']:focus {
   z-index: 3; }
   @media (max-width: 48rem) {
     .main {
-      padding-top: 9rem;
+      padding-top: 8rem;
       height: auto; } }
 
 .hero {
@@ -1144,7 +1195,8 @@ input[type='password']:focus {
       word-spacing: 1px; }
       @media (max-width: 48rem) {
         .hero__heading span {
-          font-size: .8em; } }
+          font-size: .8em;
+          margin-top: 1rem; } }
   .hero__block {
     border-radius: 1rem;
     border: 1px solid rgba(255, 255, 255, 0.5);
@@ -1159,14 +1211,14 @@ input[type='password']:focus {
         flex-flow: column nowrap;
         width: auto;
         padding: 1.5rem 1rem; } }
-  .hero .hero__block-text {
+  .hero__block-text {
     margin-bottom: 2rem;
     flex-basis: 100%;
     flex-shrink: 0; }
     @media (max-width: 48rem) {
-      .hero .hero__block-text {
+      .hero__block-text {
         font-size: 1.3rem;
-        margin-bottom: 3rem; } }
+        margin-bottom: 2rem; } }
   .hero__icon-container, .hero__input-container {
     display: inline-block; }
   .hero__icon-container {
@@ -1180,7 +1232,7 @@ input[type='password']:focus {
     .hero {
       text-align: center; } }
   .hero__address {
-    padding-bottom: 4rem;
+    padding-bottom: 3rem;
     font-size: 1.3rem; }
 
 @media (max-width: 75em) {
@@ -1263,11 +1315,9 @@ input[type='password']:focus {
       .looking-for__img-box {
         width: 25rem;
         height: 11.9rem; } }
-  .looking-for__heading {
-    white-space: pre; }
-    @media (max-width: 48rem) {
-      .looking-for__heading {
-        white-space: initial; } }
+  @media (max-width: 48rem) {
+    .looking-for__heading {
+      white-space: initial; } }
 
 .your-choice {
   padding: 9rem 0;
@@ -1386,6 +1436,11 @@ input[type='password']:focus {
         display: flex;
         justify-content: center;
         align-items: center; } }
+    @media (max-width: 48rem) {
+      .showroom__address {
+        justify-content: start;
+        align-items: center;
+        flex-wrap: nowrap; } }
     @media (max-width: 75em) {
       .showroom__address .showroom__text {
         margin-bottom: 0; } }
@@ -1461,6 +1516,9 @@ input[type='password']:focus {
     .designer__footer .text-small {
       font-size: 1.3rem;
       text-align: left; } }
+  @media (max-width: 48rem) {
+    .designer__image {
+      width: 21.4rem; } }
 
 .contact-us {
   background-image: url("../img/bg-7.jpg");
@@ -1515,6 +1573,11 @@ input[type='password']:focus {
   .footer__copyright {
     flex-basis: 100%;
     text-align: left; }
+    @media (max-width: 48rem) {
+      .footer__copyright {
+        text-align: center;
+        padding-top: 1rem;
+        padding-bottom: 1rem; } }
   .footer__info-line {
     line-height: 3.5rem;
     margin-bottom: 1rem; }

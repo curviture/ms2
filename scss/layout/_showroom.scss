@@ -57,10 +57,17 @@
 
     &__address {
         font-size: 1.9rem;
+
         @include respond(tab-land) {
             display: flex;
             justify-content: center;
             align-items: center;
+        }
+
+        @include respond(phone) {
+            justify-content: start;
+            align-items: center;
+            flex-wrap: nowrap;
         }
 
         .showroom__text {

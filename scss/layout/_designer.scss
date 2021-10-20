@@ -39,4 +39,10 @@
             }
         }
     }
+
+    &__image {
+        @include respond(phone) {
+            width: 21.4rem;
+        }
+    }
 }

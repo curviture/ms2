@@ -1,0 +1,14 @@
+.icon {
+    display: inline-block; 
+    background: url('../img/icons.png') no-repeat;
+    overflow: hidden;
+    text-indent: -9999px;
+    text-align: left;
+        &.small-bed { background-position: -3px -0px; width: 46px; height: 46px; }
+        &.insta1 { background-position: -3px -49px; width: 40px; height: 40px; }
+        &.map { background-position: -3px -92px; width: 38px; height: 38px; }
+        &.viber { background-position: -3px -133px; width: 35px; height: 35px; }
+        &.whatsapp { background-position: -3px -171px; width: 35px; height: 35px; }
+}
+
+ 

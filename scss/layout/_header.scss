@@ -26,6 +26,7 @@
         line-height: 1.2;
         text-align: right;
         font-size: 1.7rem;
+        margin-left: auto;
     }
 
     &__contacts {
@@ -41,6 +42,10 @@
                 height: 2.5rem;
             }
         }
+    }
+
+    &__menu-wrapper {
+        margin-left: 4rem;
     }
 
     &__link--primary {
@@ -97,7 +102,6 @@
                 margin-top: 0;
             }
 
-
             &--secondary {
                 display: inline-block;
                 cursor: pointer;
@@ -113,11 +117,22 @@
             }
         }
 
+        .header__social-icon {
+            @include respond(phone) {
+                width: 2.5rem;
+                height: 2.5rem;
+            }
+        }
+
         .header__contacts {
             display: flex;
             flex-flow: row nowrap;
             align-items: center;
             justify-content: space-around;
+
+            @include respond(phone) {
+                margin-left: 1rem;
+            }
 
             a:not(:last-child) {
                 margin-right: 0.5rem;

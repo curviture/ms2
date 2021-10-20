@@ -30,8 +30,10 @@
     }
 
     &__trigger {
+        visibility: collapse;
 
         @include respond(tab-land) {
+            visibility: visible;
             padding: 1.5rem;
         }
 

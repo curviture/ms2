@@ -27,7 +27,6 @@
     }
 
     &__heading {
-        white-space: pre;
         @include respond(phone) {
             white-space: initial;
         }

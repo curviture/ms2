@@ -41,6 +41,12 @@
     &__copyright {
         flex-basis: 100%;
         text-align: left;
+
+        @include respond(phone) {
+            text-align: center;
+            padding-top: 1rem;
+            padding-bottom: 1rem;
+        }
     }
 
     &__info-line {

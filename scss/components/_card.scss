@@ -20,10 +20,17 @@
         flex-basis: auto;
         margin-bottom: 1.5rem;
         justify-content: space-around;
+        align-items: center;
     }
 
     @include respond(phone) {
         padding: 1.5rem .5rem 1.5rem 2rem;
+    }
+
+    p {
+        @include respond(phone) {
+            margin-bottom: 0;
+        }
     }
 
     &__header {
@@ -69,7 +76,9 @@
     }
 
     &__text {
-        flex-basis: 70%;
+        @include respond(phone) {
+            flex-basis: 70%;
+        }
     }
 
     &:hover {

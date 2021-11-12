@@ -12,3 +12,19 @@
         @media(max-width:112.5em) {@content};        
     }
 }
+
+@mixin respondmin($break) {
+
+    @if($break == phone) {
+        @media(min-width:48rem) {@content};
+    }    
+    @if($break == tab-port) {
+        @media(min-width:56.25em) {@content};        
+    }
+    @if($break == tab-land) {
+        @media(min-width:75em) {@content};        
+    }
+    @if($break == big-desktop) {
+        @media(min-width:112.5em) {@content};        
+    }
+}

@@ -57,6 +57,7 @@
 
     &__address {
         font-size: 1.9rem;
+        flex-basis: 100%;
 
         @include respond(tab-land) {
             display: flex;

@@ -1,50 +1,67 @@
-.u-hidden--tp {
-    display: none!important;
-    @include respond(tab-port) {
-        display: block;
-    }
-}
-
-.u-hidden--tl {
-    display: none;
-    @include respond(tab-land) {
-        display: block;
-    }
-}
-
-.u-hidden {
-    display: none;
+.u-visible {
 
     &--tp {
         @include respond(tab-port) {
-            display:  block;
+            display:  none!important;
         }
     }
 
     &--tl {
         @include respond(tab-land) {
-            display: block;
+            display: none!important;
         }
     }
 
     &--p {
         @include respond(phone) {
-            display: block;
+            display: none!important;
         }
     }
 }
 
-.u-visible--p {
-    display: block;
-    @include respond(phone) {
-        display: none!important;
+.u-hidden {
+
+    &--tl  {
+        @include respondmin(tab-land) {
+            display: none!important;
+        }
+    }
+
+    &--tp {
+        @include respondmin(tab-port) {
+            display: none!important;
+        }
+    }
+
+    &--p {
+        @include respondmin(phone) {
+            display: none!important;
+        }
     }
 }
+
+// .u-visible--p {
+//     display: block;
+//     @include respond(phone) {
+//         display: none!important;
+//     }
+// }
+
+// .u-visible--tp {
+//     display: block;
+//     @include respond(tab-land) {
+//         display: none;
+//     }
+// }
 
 .u-pt {
     padding-top: 4.5rem;
     &--large {
         padding-top: 11.5rem;
+
+        @include respond(tab-land) {
+            padding-top: 4rem;
+        }
 
         @include respond(phone) {
             padding-top: 4rem;

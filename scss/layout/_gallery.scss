@@ -37,13 +37,12 @@
         flex-flow: row nowrap;
 
         @include respond(tab-land) {
-            margin-top: 3rem;
-        }
-
-        @include respond(phone) {
             order: -1;
             margin-bottom: 3rem;
             margin-top: 0;
+        }
+
+        @include respond(phone) {
         }
     }
 

@@ -20,6 +20,10 @@
         height: 19rem;
         margin: 0 auto;
 
+        @include respond(tab-port) {
+            margin-bottom: 3rem;
+        }
+
         @include respond(phone) {
             width: 25rem;
             height: 11.9rem;

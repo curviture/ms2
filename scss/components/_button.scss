@@ -73,24 +73,23 @@
 
 .button--slidedown {
     position: absolute;
-    bottom: -4rem;
+    bottom: 0rem;
     left: 50%;
-    font-size: 2rem;
+    font-size: 1.8rem;
     color: #000000;
     border-radius: 50%;
-    border-color: rgba(255,255,255,0.5);
     margin-left: -2.5rem;
-    border-width: 2rem;
     display: block;
     background-color: #fff;
-    width: 5rem;
-    height: 5rem;
+    width: 4.5rem;
+    height: 4.5rem;
     text-align: center;
     transform: translateY(50%);
-    box-shadow: 0 0 0 10px rgba(255,255,255,0.5);
+    box-shadow: 0 0 0 8px rgba(250,250,250,0.4),
+                0 0 0 15px rgba(125,125,125,0.2);
     z-index: 100;
     animation: bubble 3s 3s infinite;
-    line-height: 5rem;
+    line-height: 4.5rem;
 
     @include respond(phone) {
         width: 4rem;

@@ -76,9 +76,13 @@
     }
 
     &__text {
-        @include respond(phone) {
+        @include respond(tab-land) {
             flex-basis: 70%;
         }
+
+        // @include respond(phone) {
+            // flex-basis: 70%;
+        // }
     }
 
     &:hover {

@@ -3,11 +3,14 @@
     padding-top: 4.5rem;
     padding-bottom: 4.5rem;
 
+    @include respond(tab-land) {
+        text-align: left;
+    }
+
     @include respond(phone) {
         width: 25rem;
         padding-top: 2rem;
         padding-bottom: 2rem;
-        text-align: left;
     }
 
     &__img {

@@ -158,15 +158,15 @@ p {
   .u-visible--p {
     display: none !important; } }
 
-@media (min-width: 75em) {
+@media (min-width: 75.01em) {
   .u-hidden--tl {
     display: none !important; } }
 
-@media (min-width: 56.25em) {
+@media (min-width: 56.26em) {
   .u-hidden--tp {
     display: none !important; } }
 
-@media (min-width: 48rem) {
+@media (min-width: 48.01rem) {
   .u-hidden--p {
     display: none !important; } }
 
@@ -1302,10 +1302,10 @@ input[type='password']:focus {
     flex-flow: column;
     justify-content: space-between; }
   .looking-for__img-box {
-    width: 40rem;
-    height: 19rem;
-    margin: 0 auto; }
-    @media (max-width: 56.25em) {
+    margin: 0 auto;
+    width: 54.8rem;
+    height: 26rem; }
+    @media (max-width: 75em) {
       .looking-for__img-box {
         margin-bottom: 3rem; } }
     @media (max-width: 48rem) {

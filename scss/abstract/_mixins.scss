@@ -16,15 +16,15 @@
 @mixin respondmin($break) {
 
     @if($break == phone) {
-        @media(min-width:48rem) {@content};
+        @media(min-width:48.01rem) {@content};
     }    
     @if($break == tab-port) {
-        @media(min-width:56.25em) {@content};        
+        @media(min-width:56.26em) {@content};        
     }
     @if($break == tab-land) {
-        @media(min-width:75em) {@content};        
+        @media(min-width:75.01em) {@content};        
     }
     @if($break == big-desktop) {
-        @media(min-width:112.5em) {@content};        
+        @media(min-width:112.51em) {@content};        
     }
 }

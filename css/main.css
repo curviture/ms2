@@ -1406,6 +1406,30 @@ input[type='password']:focus {
         width: 24rem;
         height: 18rem;
         margin-bottom: 2rem; } }
+  .showroom__img-link {
+    position: absolute;
+    display: block;
+    width: 30rem;
+    height: 22.5rem;
+    box-shadow: 10px 10px 10px rgba(51, 51, 51, 0.5);
+    border-radius: 2px;
+    transition: .2s; }
+    .showroom__img-link:hover {
+      outline: 1rem solid rgba(238, 25, 25, 0.8);
+      outline-offset: 1rem;
+      z-index: 100 !important;
+      transform: scale(1.05); }
+    .showroom__img-link:first-child {
+      left: 0px;
+      z-index: 1; }
+    .showroom__img-link:nth-child(2) {
+      left: 250px;
+      top: 75px;
+      z-index: 2; }
+    .showroom__img-link:nth-child(3) {
+      left: 125px;
+      top: 150px;
+      z-index: 3; }
   .showroom__thumbs {
     margin-left: 2rem;
     text-align: center; }
@@ -1456,10 +1480,23 @@ input[type='password']:focus {
   .showroom__img-content {
     display: flex;
     flex-flow: row nowrap; }
+    @media (max-width: 75em) {
+      .showroom__img-content {
+        height: 40rem;
+        display: flex; } }
     @media (max-width: 48rem) {
       .showroom__img-content {
         flex-flow: column nowrap;
         align-items: center; } }
+  .showroom__images {
+    position: relative; }
+    @media (max-width: 75em) {
+      .showroom__images {
+        margin-left: 5rem;
+        width: 100%;
+        height: 40rem; } }
+    .showroom__images:hover .showroom__img-link:not(:hover) {
+      transform: scale(0.95); }
 
 .manufacturer {
   background: #000 url("../img/bg-4.jpg") repeat;
@@ -1488,6 +1525,8 @@ input[type='password']:focus {
     @media (max-width: 48rem) {
       .manufacturer .heading {
         font-size: 1.9rem; } }
+  .manufacturer__par {
+    font-size: 2rem; }
 
 @media (max-width: 48rem) {
   .designer {

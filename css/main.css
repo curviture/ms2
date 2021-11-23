@@ -1540,9 +1540,12 @@ input[type='password']:focus {
     margin-bottom: 1rem; }
     @media (max-width: 48rem) {
       .manufacturer .heading {
-        font-size: 1.9rem; } }
+        font-size: 3rem; } }
   .manufacturer__par {
     font-size: 2rem; }
+    @media (max-width: 48rem) {
+      .manufacturer__par {
+        font-size: 1.5rem; } }
 
 @media (max-width: 48rem) {
   .designer {

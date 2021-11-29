@@ -69,13 +69,36 @@ lookingForCta.addEventListener('click', function() {
     modal2.open();
 })
 
-$('.js-parallax').parallax();
+// $('.js-parallax').parallax();
 const phoneInputs = document.getElementsByClassName('js-phone__input');
 Array.prototype.forEach.call(phoneInputs, (item) => {
     let maskItem = IMask(item,  {mask: '+{7}(000)000-00-00'})
 })
 
 // fsLightbox.open()
+//handling fake file input
+
+const fInputs = document.querySelectorAll('input[type="file"]');
+
+console.log('finputs are', fInputs);
+
+fInputs.forEach(fInput => fInput.addEventListener('change', function(event) {
+    console.log('next sibling', event.target.nextElementSibling.textContent);
+    event.target.nextElementSibling.textContent = "Макет прикреплен"
+}))
+
+//smooth scroll
+
+const galLink = document.getElementById('js-scrolltogallery')
+galLink.addEventListener('click', (event) => {
+    event.preventDefault();
+    const target = event.target.getAttribute("href");
+    const targetOffset = document.querySelector(target).offsetTop;
+    scroll({
+        top: targetOffset,
+        behavior: 'smooth'
+    })
+})
 
 
 

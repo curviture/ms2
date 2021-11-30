@@ -1,7 +1,7 @@
 .main {
     position: relative;
     background: #000 url("../img/bg-1.webp");
-    height: 85vh;
+    height: 80vh;
     background-size: cover;
     background-position: 50% 0;
     background-repeat: no-repeat;
@@ -9,7 +9,7 @@
     flex-flow: column nowrap;
     justify-content: space-between;
     padding-bottom: 6rem;
-    z-index: 3;
+    z-index: 6;
 
     @include respond(tab-land) {
         // min-height: 75rem;

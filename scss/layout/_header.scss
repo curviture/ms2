@@ -68,8 +68,8 @@
         box-shadow: 0px 0px 40px 0px rgba(0,0,0,0.15);
         overflow: visible;
         flex-wrap: wrap;
+        z-index: 5;
         @include respond(phone) {
-            z-index: 3;
             display: block;
         }
         

@@ -8,6 +8,8 @@
 
     @include respond(phone) {
         font-size: 1.3rem;
+        background-size: 300% 100%;
+        background-position: center center;
     }
 
     &__inner {
@@ -32,7 +34,7 @@
         margin-bottom: 1rem;
 
         @include respond(phone) {
-            font-size: 3rem;
+            font-size: 2rem;
         }
     }
 

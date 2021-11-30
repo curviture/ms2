@@ -7,7 +7,11 @@
 
     &__heading {
         margin-top: 3rem;
-        margin-bottom: 3rem;
+        margin-bottom: 1.5rem;
+
+        @include respond(tab-land) {
+            margin-top: 0rem;
+        }
     }
 
     &__img-link {
@@ -111,6 +115,7 @@
     &__address {
         font-size: 1.9rem;
         flex-basis: 100%;
+        margin-top: 5rem;
 
         @include respond(tab-land) {
             display: flex;
@@ -122,6 +127,7 @@
             justify-content: start;
             align-items: center;
             flex-wrap: nowrap;
+            margin-top: 0;
         }
 
         .showroom__text {
@@ -153,25 +159,24 @@
         min-height: 35rem;
 
         @include respond(tab-land) {
-            height: 40rem;
+            min-height: 40rem;
             display: flex;
         }
         
         @include respond(phone) {
             flex-flow: column nowrap;
             align-items: center;
-            height: 22rem;
+            min-height: 22rem;
         }
     }
 
     &__images {
         position: relative;
-        background-color: red;
 
         @include respond(tab-land) {
             margin-left: 5rem;
             width: 100%;
-            height: 40rem;
+            // height: 40rem;
         }
 
         @include respond(phone) {

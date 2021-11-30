@@ -1,0 +1,12 @@
+.bordered {
+    border: 1px solid rgba(#fff, .5);
+    padding: 1rem;
+    // display: inline-block;
+    justify-content: center;
+    align-items: center;
+    border-radius: 1rem;
+
+    &--dark {
+        border-color: rgba(#000, .5);
+    }
+}

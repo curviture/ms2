@@ -1,9 +1,10 @@
 .card {
     // background-color: #ffffff;
     background:radial-gradient(ellipse farthest-corner at 0% 65%,  rgba(255, 255, 0, 0) 80%, rgba($color-secondary, 1) 100%),
-               radial-gradient(ellipse farthest-corner at 100% 35%,  rgba(255, 255, 0, 0) 80%, rgba($color-secondary, 1) 100%);
+               radial-gradient(ellipse farthest-corner at 100% 35%,  rgba(255, 255, 0, 0) 80%, rgba($color-secondary, 1) 100%),
             //    radial-gradient(ellipse farthest-corner at 100% 35%,  rgba(255, 255, 0, 0) 65%, rgba($color-secondary, 1) 65%),
             //    radial-gradient(ellipse farthest-corner at 0% 65%,  rgba(255, 255, 0, 0) 85%, rgba(darken($color-secondary, 15%), 1) 100%);
+            #fff;
     border-radius: 10px;
     flex-basis: 300px;
     text-align: center;
@@ -13,6 +14,7 @@
     justify-content: flex-end;
     align-items: center;
     flex-flow: column wrap;
+    box-shadow: 0 0 60px 8px #d1d1d1;
     
     @include respond(tab-land) {
         text-align: left;

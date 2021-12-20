@@ -675,7 +675,7 @@ p {
   animation: bubble 0s 0s, pulse-shadow 1s 1s infinite; }
 
 .card {
-  background: radial-gradient(ellipse farthest-corner at 0% 65%, rgba(255, 255, 0, 0) 80%, #ee1919 100%), radial-gradient(ellipse farthest-corner at 100% 35%, rgba(255, 255, 0, 0) 80%, #ee1919 100%);
+  background: radial-gradient(ellipse farthest-corner at 0% 65%, rgba(255, 255, 0, 0) 80%, #ee1919 100%), radial-gradient(ellipse farthest-corner at 100% 35%, rgba(255, 255, 0, 0) 80%, #ee1919 100%), #fff;
   border-radius: 10px;
   flex-basis: 300px;
   text-align: center;
@@ -684,7 +684,8 @@ p {
   display: flex;
   justify-content: flex-end;
   align-items: center;
-  flex-flow: column wrap; }
+  flex-flow: column wrap;
+  box-shadow: 0 0 60px 8px #d1d1d1; }
   @media (max-width: 75em) {
     .card {
       text-align: left;

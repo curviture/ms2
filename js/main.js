@@ -70,10 +70,20 @@ lookingForCta.addEventListener('click', function() {
 })
 
 // $('.js-parallax').parallax();
+
+const maskOptions = {
+    mask: '+{7}(000)000-00-00',
+    lazy: false,
+    placeholder: {
+        // show: 'always',
+    }
+}
+
 const phoneInputs = document.getElementsByClassName('js-phone__input');
 Array.prototype.forEach.call(phoneInputs, (item) => {
-    let maskItem = IMask(item,  {mask: '+{7}(000)000-00-00'})
+    const mask = IMask(item, maskOptions);
 })
+
 
 // fsLightbox.open()
 //handling fake file input
@@ -87,10 +97,11 @@ fInputs.forEach(fInput => fInput.addEventListener('change', function(event) {
     event.target.nextElementSibling.textContent = "Макет прикреплен"
 }))
 
-//smooth scroll
+//smooth scroll handling
 
-const galLink = document.getElementById('js-scrolltogallery')
-galLink.addEventListener('click', (event) => {
+const anchors = document.getElementsByClassName('js-scrollto')
+Array.from(anchors).forEach(item => item.addEventListener('click', (event) => {
+    console.log('anchors')
     event.preventDefault();
     const target = event.target.getAttribute("href");
     const targetOffset = document.querySelector(target).offsetTop;
@@ -98,7 +109,7 @@ galLink.addEventListener('click', (event) => {
         top: targetOffset,
         behavior: 'smooth'
     })
-})
+}))
 
 
 

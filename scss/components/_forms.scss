@@ -10,6 +10,7 @@
 
         @include respond(phone) {
             padding-bottom: 3rem;
+            width: 100%;  
         }
 
         &_-container--small {

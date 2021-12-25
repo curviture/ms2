@@ -4,7 +4,7 @@ var modal = new tingle.modal({
     // footer: true,
     stickyFooter: false,
     closeMethods: ['overlay', 'button', 'escape'],
-    closeLabel: "Close",
+    closeLabel: "Закрыть",
     // cssClass: ['custom-class-1'],
     onOpen: function() {
         console.log('modal open');
@@ -90,8 +90,6 @@ Array.prototype.forEach.call(phoneInputs, (item) => {
 
 const fInputs = document.querySelectorAll('input[type="file"]');
 
-console.log('finputs are', fInputs);
-
 fInputs.forEach(fInput => fInput.addEventListener('change', function(event) {
     console.log('next sibling', event.target.nextElementSibling.textContent);
     event.target.nextElementSibling.textContent = "Макет прикреплен"
@@ -104,12 +102,19 @@ Array.from(anchors).forEach(item => item.addEventListener('click', (event) => {
     console.log('anchors')
     event.preventDefault();
     const target = event.target.getAttribute("href");
-    const targetOffset = document.querySelector(target).offsetTop;
-    scroll({
-        top: targetOffset,
-        behavior: 'smooth'
-    })
+    if(target != '#' || target != ' ') {
+        const targetOffset = document.querySelector(target).offsetTop;
+        scroll({
+            top: targetOffset,
+            behavior: 'smooth'
+        })
+    }
 }))
+
+
+//triggering fixed menu
+
+
 
 
 

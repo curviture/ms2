@@ -71,6 +71,7 @@
         z-index: 5;
         @include respond(phone) {
             display: block;
+            z-index: 6;
         }
         
 

@@ -878,7 +878,8 @@ p {
     width: 39rem; }
     @media (max-width: 48rem) {
       .form__container {
-        padding-bottom: 3rem; } }
+        padding-bottom: 3rem;
+        width: 100%; } }
     .form__container_-container--small {
       width: 33rem; }
   .form__legend {
@@ -1047,7 +1048,8 @@ input[type='password']:focus {
     z-index: 5; }
     @media (max-width: 48rem) {
       .header--fixed {
-        display: block; } }
+        display: block;
+        z-index: 6; } }
     .header--fixed .header__inner {
       padding-top: 1rem;
       padding-bottom: 1rem;

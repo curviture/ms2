@@ -19,6 +19,12 @@
 
     }
 
+    &__box.open {
+        @include respond(phone) {
+            
+        }
+    }
+
 //    &  &__item:not(:first-child) {
 //          margin-left: 1.8rem;
 //      }

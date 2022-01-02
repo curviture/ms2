@@ -1,6 +1,4 @@
-console.log('hello i am working');
-
-var modal = new tingle.modal({
+const modal = new tingle.modal({
     // footer: true,
     stickyFooter: false,
     closeMethods: ['overlay', 'button', 'escape'],
@@ -112,7 +110,22 @@ Array.from(anchors).forEach(item => item.addEventListener('click', (event) => {
 }))
 
 
-//triggering fixed menu
+//triggering fixed menu in phone tablet and phones
+
+const menuTrigger = document.getElementById("js-menu__trigger");
+const menuToTrigger = document.getElementById('js-menu__totrigger')
+
+menuTrigger.addEventListener('click', function(event) {
+    console.log(event.target, menuToTrigger);
+    event.preventDefault();
+    if(menuToTrigger.classList.contains('open')) {
+        menuToTrigger.classList.remove('open')
+        return true
+    }
+    menuToTrigger.classList.add('open')
+})
+
+
 
 
 

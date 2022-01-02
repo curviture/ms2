@@ -1,4 +1,4 @@
-.info-card {
+.gallery__item {
     width: 30rem;
     padding-top: 4.5rem;
     padding-bottom: 4.5rem;
@@ -23,7 +23,7 @@
         }
     }
 
-    &__content {
+    &-content {
         display: flex;
         flex-flow: row nowrap;
         justify-content: space-between;
@@ -31,7 +31,7 @@
         margin-bottom: 1rem;
     }
 
-    &__thumbs {
+    &-thumbs {
         a {
             display: inline-block;
         }
@@ -63,10 +63,11 @@
         }
     }
     
-    &__footer {
+    &-ordering {
         display: flex;
         flex-flow: row nowrap;
-        a {
+
+        input {
             padding: 1.4rem 3rem;
             border-radius: 1rem;
             font-family: "DIN Pro"!important;

@@ -743,52 +743,52 @@ p {
     transition: all 0.3s;
     perspective: 1000px; }
 
-.info-card {
+.gallery__item {
   width: 30rem;
   padding-top: 4.5rem;
   padding-bottom: 4.5rem; }
   @media (max-width: 75em) {
-    .info-card {
+    .gallery__item {
       text-align: left; } }
   @media (max-width: 48rem) {
-    .info-card {
+    .gallery__item {
       width: 25rem;
       padding-top: 2rem;
       padding-bottom: 2rem; } }
-  .info-card__img {
+  .gallery__item__img {
     width: 30rem;
     height: 30rem; }
     @media (max-width: 48rem) {
-      .info-card__img {
+      .gallery__item__img {
         width: 25rem;
         height: 25rem; } }
-  .info-card__content {
+  .gallery__item-content {
     display: flex;
     flex-flow: row nowrap;
     justify-content: space-between;
     align-items: center;
     margin-bottom: 1rem; }
-  .info-card__thumbs a {
+  .gallery__item-thumbs a {
     display: inline-block; }
-  .info-card__thumbs img {
+  .gallery__item-thumbs img {
     display: inline-block;
     width: 50px;
     height: 50px; }
     @media (max-width: 48rem) {
-      .info-card__thumbs img {
+      .gallery__item-thumbs img {
         width: 3.6rem;
         height: 3.6rem; } }
-  .info-card__button-more {
+  .gallery__item__button-more {
     border: 1px solid #000;
     border-radius: 1rem;
     font-family: "DIN Pro"; }
-    .info-card__button-more:hover {
+    .gallery__item__button-more:hover {
       background-color: #000;
       color: #ffffff; }
-  .info-card__footer {
+  .gallery__item-ordering {
     display: flex;
     flex-flow: row nowrap; }
-    .info-card__footer a {
+    .gallery__item-ordering input {
       padding: 1.4rem 3rem;
       border-radius: 1rem;
       font-family: "DIN Pro" !important;
@@ -798,18 +798,18 @@ p {
       font-size: 1.6rem;
       text-align: center; }
       @media (max-width: 48rem) {
-        .info-card__footer a {
+        .gallery__item-ordering input {
           padding: .9rem; } }
-  .info-card__type {
+  .gallery__item__type {
     font-family: "DIN Pro Light"; }
-  .info-card__name {
+  .gallery__item__name {
     font-family: "DIN Pro Bold";
     font-size: 2rem;
     text-transform: capitalize; }
-  .info-card__price {
+  .gallery__item__price {
     font-family: "DIN Pro Medium"; }
     @media (max-width: 48rem) {
-      .info-card__price {
+      .gallery__item__price {
         font-size: 1.5rem; } }
 
 .bordered {
@@ -1108,6 +1108,31 @@ input[type='password']:focus {
     @media (max-width: 75em) {
       .header--fixed .menu__box {
         display: none; } }
+    @media (max-width: 75em) {
+      .header--fixed .menu__box.open {
+        margin-left: 0;
+        position: fixed;
+        background-color: rgba(255, 255, 255, 0.8);
+        left: 0;
+        right: 0;
+        bottom: 0;
+        top: 0;
+        z-index: 10;
+        display: flex;
+        flex-flow: column nowrap;
+        justify-content: center;
+        align-items: stretch; } }
+    .header--fixed .menu__box.open .menu {
+      flex-flow: column nowrap;
+      align-items: stretch; }
+    .header--fixed .menu__box.open .menu__item {
+      margin: 0; }
+    .header--fixed .menu__box.open .menu__link {
+      font-size: 2rem;
+      font-family: 'DIN Pro Black'; }
+      .header--fixed .menu__box.open .menu__link.animated-underline:after {
+        transform: none;
+        transition: none !important; }
     @media (max-width: 48rem) {
       .header--fixed .menu__trigger {
         order: -3;

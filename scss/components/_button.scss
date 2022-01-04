@@ -49,6 +49,11 @@
     &.acitve {
         color: $text-highlight;
     }
+
+    &:hover {
+        background-color: #000;
+        color: $text-light;
+    }
 }
 
 .button--bordered {

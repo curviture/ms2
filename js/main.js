@@ -126,6 +126,29 @@ menuTrigger.addEventListener('click', function(event) {
 })
 
 
+//gallery
+
+const galleryItems = document.getElementsByClassName('gallery__item-img');
+
+Array.from(galleryItems).forEach((item) => {
+    item.addEventListener('click', function(event) {
+        console.log(event.target)
+        let thumb = Array.from(event.target.parentNode.nextElementSibling.children).
+                        filter(elm => elm.classList.contains('gallery__item-thumbs'))[0].children[0];
+        thumb.click()
+    })
+})
+
+const thumbs = document.getElementsByClassName('gallery__item-thumbs');
+Array.prototype.forEach.call(thumbs, item => {
+    item.addEventListener('click', function(event) {
+        event.preventDefault();
+        const lightbox = new FsLightbox() ;
+        // lightbox.props.sources = ['img/2-(1).jpg', 'img/2-(2).jpg']
+        // lightbox.open(0)
+    })
+})
+
 
 
 

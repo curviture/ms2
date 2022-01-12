@@ -53,6 +53,27 @@ const modal2 = new tingle.modal({
     }
 });
 
+const modal3 = new tingle.modal({
+    // footer: true,
+    stickyFooter: false,
+    closeMethods: ['overlay', 'button', 'escape'],
+    closeLabel: "Close",
+    // cssClass: [],
+    onOpen: function() {
+        console.log('modal open modal 3');
+    },
+    onClose: function() {
+        console.log('modal close modal 3');
+    },
+    beforeClose: function() {
+        // here's goes some logic
+        // e.g. save content before closing the modal
+        return true; // close the modal
+        return false; // nothing happens
+    }
+});
+
+
 modal2.setContent(document.getElementById('js-call-looking-for-modal'));
 
 const heroCta = document.getElementById('js-main__cta');
@@ -65,6 +86,18 @@ heroCta.addEventListener('click', function() {
 
 lookingForCta.addEventListener('click', function() {
     modal2.open();
+})
+
+modal3.setContent(document.getElementById('more'))
+
+const moreTriggers = document.getElementsByClassName('js-more-trigger');
+Array.from(moreTriggers).forEach(item => {
+    item.addEventListener('click', function() {
+        // console.log('hello kitty')
+        
+        
+        modal3.open()
+    })
 })
 
 // $('.js-parallax').parallax();

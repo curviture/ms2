@@ -1137,8 +1137,7 @@ input[type='password']:focus {
       font-size: 2rem;
       font-family: 'DIN Pro Black'; }
       .header--fixed .menu__box.open .menu__link.animated-underline:after {
-        transform: none;
-        transition: none !important; }
+        display: none; }
     @media (max-width: 48rem) {
       .header--fixed .menu__trigger {
         order: -3;
@@ -1709,3 +1708,76 @@ input[type='password']:focus {
     font-size: 12px; }
   .footer__text {
     line-height: 1.2; }
+
+.more {
+  font-size: 1.5rem; }
+  @media (max-width: 48rem) {
+    .more {
+      font-size: 1.2rem; } }
+  .more__inner {
+    display: flex;
+    flex-flow: row nowrap;
+    padding: 3rem;
+    max-width: 75rem; }
+    @media (max-width: 48rem) {
+      .more__inner {
+        max-width: 30rem;
+        display: block;
+        padding: 1rem; } }
+  @media (max-width: 48rem) {
+    .more .heading {
+      font-size: 2.4rem; } }
+  .more .heading span {
+    font-size: 1.3rem;
+    font-family: serif;
+    display: block; }
+    @media (max-width: 48rem) {
+      .more .heading span {
+        font-size: 1.2rem; } }
+  .more__img-box {
+    width: 25rem;
+    height: 25rem; }
+    @media (max-width: 48rem) {
+      .more__img-box {
+        width: 12rem;
+        height: 12rem;
+        float: left;
+        padding-right: 1rem; } }
+  .more__info-content {
+    padding: 1rem; }
+    @media (max-width: 48rem) {
+      .more__info-content {
+        padding-top: 0; } }
+  .more__par {
+    margin-bottom: 1rem; }
+    .more__par--important {
+      color: #EE1919; }
+  .more__list {
+    margin-bottom: 2rem;
+    list-style-type: disc; }
+    .more__list-item {
+      margin-left: 1.3rem; }
+  .more__table {
+    margin-bottom: 2rem; }
+    .more__table tr {
+      padding-bottom: 3rem; }
+    .more__table th {
+      text-align: left;
+      padding-right: .5rem;
+      font-family: "DIN Pro Light"; }
+    .more__table td {
+      font-family: "DIN Pro Medium";
+      padding: 0.5rem; }
+      @media (max-width: 48rem) {
+        .more__table td {
+          padding: 0;
+          font-size: 1rem; } }
+      .more__table td:nth-child(even) {
+        background-color: rgba(0, 0, 0, 0.1); }
+  .more .button--large {
+    padding-top: 1.7rem;
+    padding-bottom: 1.7rem;
+    padding-left: 4rem;
+    padding-right: 4rem;
+    margin-left: auto;
+    display: block; }

@@ -202,8 +202,9 @@
                 .menu__link {
 
                     &.animated-underline:after {
-                        transform: none;
-                        transition: none!important;
+                        display: none;
+                        // transform: none;
+                        // transition: none!important;
                     }
                     font-size: 2rem;
                     font-family: 'DIN Pro Black';

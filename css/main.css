@@ -674,9 +674,6 @@ p {
       box-shadow: 0 0 0 10px rgba(255, 255, 255, 0.5), 0 0 0 15px rgba(170, 170, 170, 0.2);
       bottom: 0rem; } }
 
-.button--slidedown:hover {
-  animation: bubble 0s 0s, pulse-shadow 1s 1s infinite; }
-
 .card {
   background: radial-gradient(ellipse farthest-corner at 0% 65%, rgba(255, 255, 0, 0) 80%, #ee1919 100%), radial-gradient(ellipse farthest-corner at 100% 35%, rgba(255, 255, 0, 0) 80%, #ee1919 100%), #fff;
   border-radius: 10px;

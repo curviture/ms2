@@ -182,6 +182,26 @@ Array.prototype.forEach.call(thumbs, item => {
     })
 })
 
+const orderButtons = Array.from(document.getElementsByClassName('js-order'));
+const orderData =  {
+
+}
+
+orderButtons.forEach(button => {
+    button.addEventListener('click', function(event) {
+        const {target} = event;
+        const {dataset} = target;
+        console.log(dataset)
+        orderData.type = dataset.type;
+        orderData.model = dataset.ordername;
+        orderData.price = dataset.price;
+        console.log(orderData);
+        
+    })
+})
+
+
+
 
 
 

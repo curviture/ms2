@@ -1720,26 +1720,40 @@ input[type='password']:focus {
       .more__inner {
         max-width: 30rem;
         display: block;
-        padding: 1rem; } }
+        padding: 1rem;
+        margin: 0 auto; } }
+  @media (max-width: 48rem) {
+    .more .heading:after {
+      content: '';
+      display: block;
+      margin: 0 auto;
+      width: 10rem;
+      height: 2px;
+      background-color: #EE1919;
+      margin-top: .7rem; } }
   @media (max-width: 48rem) {
     .more .heading {
-      font-size: 2.4rem; } }
+      font-size: 2.4rem;
+      text-align: center;
+      line-height: 2.4rem;
+      margin-bottom: 1rem; } }
   .more .heading span {
     font-size: 1.3rem;
     font-family: serif;
     display: block; }
     @media (max-width: 48rem) {
       .more .heading span {
-        font-size: 1.2rem; } }
+        font-size: 1.2rem;
+        display: inline-block;
+        vertical-align: middle; } }
   .more__img-box {
     width: 25rem;
     height: 25rem; }
     @media (max-width: 48rem) {
       .more__img-box {
-        width: 12rem;
-        height: 12rem;
-        float: left;
-        padding-right: 1rem; } }
+        width: 22rem;
+        height: 22rem;
+        margin: 0 auto; } }
   .more__info-content {
     padding: 1rem; }
     @media (max-width: 48rem) {
@@ -1756,6 +1770,12 @@ input[type='password']:focus {
       margin-left: 1.3rem; }
   .more__table {
     margin-bottom: 2rem; }
+    @media (max-width: 48rem) {
+      .more__table {
+        padding-top: 1rem;
+        padding-bottom: 1rem;
+        border-top: 1px solid #EE1919;
+        border-bottom: 1px solid #EE1919; } }
     .more__table tr {
       padding-bottom: 3rem; }
     .more__table th {
@@ -1767,7 +1787,7 @@ input[type='password']:focus {
       padding: 0.5rem; }
       @media (max-width: 48rem) {
         .more__table td {
-          padding: 0;
+          padding: .5rem;
           font-size: 1rem; } }
       .more__table td:nth-child(even) {
         background-color: rgba(0, 0, 0, 0.1); }
@@ -1777,4 +1797,5 @@ input[type='password']:focus {
     padding-left: 4rem;
     padding-right: 4rem;
     margin-left: auto;
-    display: block; }
+    display: block;
+    width: 100%; }

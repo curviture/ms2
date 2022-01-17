@@ -193,7 +193,7 @@ orderButtons.forEach(button => {
         const {dataset} = target;
         console.log(dataset)
         orderData.type = dataset.type;
-        orderData.model = dataset.ordername;
+    orderData.model = dataset.ordername;
         orderData.price = dataset.price;
         console.log(orderData);
         

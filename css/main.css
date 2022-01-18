@@ -1183,6 +1183,16 @@ input[type='password']:focus {
     @media (max-width: 48rem) {
       .menu__trigger {
         padding: 1.4rem; } }
+  .menu__closer {
+    position: absolute;
+    top: 3rem;
+    right: 4rem;
+    font-size: 4rem;
+    color: #000000;
+    padding: 1rem 1.5rem 1rem 1.5rem;
+    background-color: #fff;
+    border-radius: 50%;
+    line-height: 1; }
 
 .line {
   display: block;

@@ -146,16 +146,17 @@ Array.from(anchors).forEach(item => item.addEventListener('click', (event) => {
 //triggering fixed menu in phone tablet and phones
 
 const menuTrigger = document.getElementById("js-menu__trigger");
-const menuToTrigger = document.getElementById('js-menu__totrigger')
+const menuToTrigger = document.getElementById('js-menu__totrigger');
 
 menuTrigger.addEventListener('click', function(event) {
-    console.log(event.target, menuToTrigger);
     event.preventDefault();
+    
     if(menuToTrigger.classList.contains('open')) {
-        menuToTrigger.classList.remove('open')
+        menuToTrigger.classList.remove('open');
         return true
     }
-    menuToTrigger.classList.add('open')
+    menuToTrigger.classList.add('open');
+
 })
 
 
@@ -193,10 +194,36 @@ orderButtons.forEach(button => {
         const {dataset} = target;
         console.log(dataset)
         orderData.type = dataset.type;
-    orderData.model = dataset.ordername;
+        orderData.model = dataset.ordername;
         orderData.price = dataset.price;
-        console.log(orderData);
-        
+
+    })
+})
+
+
+const closerTrigger = document.getElementById('js-menu__closer').addEventListener('click', function(event) {
+    event.target.parentNode.classList.remove('open')
+})
+
+const fixedMenuItems = Array.from(document.getElementsByClassName('js-f-menuitem'));
+fixedMenuItems.forEach(item => {
+    item.addEventListener('click', function(event) {
+        console.log('click');
+        const pNode = event.target.parentNode.parentNode.parentNode;
+        if(pNode.classList.contains('menu__box') && pNode.classList.contains('open')) {
+            pNode.classList.remove('open');
+        }
+    })
+})
+
+//form submitting
+
+const forms = Array.from(document.getElementsByTagName('form'))
+
+forms.forEach(form => {
+    form.addEventListener('submit', function(event) {
+        // event.preventDefault();
+        console.log('succesfull')
     })
 })
 

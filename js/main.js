@@ -188,15 +188,36 @@ const orderData =  {
 
 }
 
+const modal4 = new tingle.modal({
+    // footer: true,
+    stickyFooter: false,
+    closeMethods: ['overlay', 'button', 'escape'],
+    closeLabel: "Закрыть",
+    // cssClass: [],
+    onOpen: function() {
+        console.log('modal open modal 4');
+    },
+    onClose: function() {
+        console.log('modal close modal 4');
+    },
+    beforeClose: function() {
+        // here's goes some logic
+        // e.g. save content before closing the modal
+        return true; // close the modal
+        return false; // nothing happens
+    }
+});
+
+modal4.setContent(document.getElementById('order'))
+
 orderButtons.forEach(button => {
     button.addEventListener('click', function(event) {
         const {target} = event;
         const {dataset} = target;
-        console.log(dataset)
-        orderData.type = dataset.type;
-        orderData.model = dataset.ordername;
-        orderData.price = dataset.price;
-
+        document.getElementById('order-type').value = dataset.type;
+        document.getElementById('order-model').value = dataset.model;
+        document.getElementById('order-price').value = dataset.price;
+        modal4.open()
     })
 })
 

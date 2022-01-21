@@ -17,6 +17,10 @@
         
     }
 
+    @media screen and (max-height: 770px) {
+        height: 65rem
+    }
+
     @include respond(phone) {
         padding-top: 8rem;
         height: auto;

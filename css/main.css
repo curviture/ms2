@@ -1110,7 +1110,8 @@ input[type='password']:focus {
       color: #000000; }
     @media (max-width: 75em) {
       .header--fixed .menu__box {
-        display: none; } }
+        display: none;
+        transition: all .3s 1s; } }
     @media (max-width: 75em) {
       .header--fixed .menu__box.open {
         margin-left: 0;
@@ -1124,7 +1125,8 @@ input[type='password']:focus {
         display: flex;
         flex-flow: column nowrap;
         justify-content: center;
-        align-items: stretch; } }
+        align-items: stretch;
+        transform: scaleX(1); } }
     .header--fixed .menu__box.open .menu {
       flex-flow: column nowrap;
       align-items: stretch; }
@@ -1214,6 +1216,9 @@ input[type='password']:focus {
   justify-content: space-between;
   padding-bottom: 6rem;
   z-index: 6; }
+  @media screen and (max-height: 770px) {
+    .main {
+      height: 65rem; } }
   @media (max-width: 48rem) {
     .main {
       padding-top: 8rem;
@@ -1725,7 +1730,8 @@ input[type='password']:focus {
     display: flex;
     flex-flow: row nowrap;
     padding: 3rem;
-    max-width: 75rem; }
+    max-width: 75rem;
+    position: relative; }
     @media (max-width: 48rem) {
       .more__inner {
         max-width: 30rem;
@@ -1809,3 +1815,19 @@ input[type='password']:focus {
     margin-left: auto;
     display: block;
     width: 100%; }
+  @media screen and (max-height: 650px) {
+    .more .heading {
+      position: absolute;
+      top: 0;
+      left: 40px;
+      text-shadow: 0 0 10px rgba(255, 255, 255, 0.8); }
+      .more .heading:after {
+        display: none; }
+    .more__img-box {
+      height: 16rem;
+      width: 16rem; }
+    .more__table {
+      margin-top: 0.5rem;
+      margin-bottom: 0.5rem; }
+    .more_-par {
+      margin-bottom: 0.5rem; } }

@@ -8,6 +8,7 @@
         flex-flow: row nowrap;
         padding: 3rem;
         max-width: 75rem;
+        position: relative;
 
         @include respond(phone) {
             max-width: 30rem;
@@ -127,5 +128,32 @@
         margin-left: auto;
         display: block;
         width: 100%;
+    }
+
+    @media screen and (max-height: 650px) {
+        .heading {
+            // display: none;
+            position: absolute;
+            top: 0;
+            left: 40px;
+            text-shadow: 0 0 10px rgba(255,255,255, .8);
+
+            &:after {
+                display: none;
+            }
+        }
+        &__img-box {
+            height: 16rem;
+            width: 16rem;
+        }
+
+        &__table {
+            margin-top: 0.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        &_-par {
+            margin-bottom: 0.5rem;
+        }
     }
 }

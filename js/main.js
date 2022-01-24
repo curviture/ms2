@@ -5,10 +5,10 @@ const modal = new tingle.modal({
     closeLabel: "Закрыть",
     // cssClass: ['custom-class-1'],
     onOpen: function() {
-        console.log('modal open');
+        // console.log('modal open');
     },
     onClose: function() {
-        console.log('modal closed');
+        // console.log('modal closed');
     },
     beforeClose: function() {
         // here's goes some logic
@@ -25,7 +25,8 @@ modal.setContent(document.getElementById('js-navbar-order-modal'))
 const cB = document.getElementById('call-from-navbar');
 const cfB = document.getElementById('call-from-fixed-navbar');
 
-cB.addEventListener('click', function() {
+cB.addEventListener('click', function(event) {
+    event.preventDefault()
     modal.open()
 });
 cfB.addEventListener('click', function(event) {
@@ -33,17 +34,18 @@ cfB.addEventListener('click', function(event) {
     modal.open()
 })
 
+
 const modal2 = new tingle.modal({
     // footer: true,
     stickyFooter: false,
     closeMethods: ['overlay', 'button', 'escape'],
-    closeLabel: "Close",
+    closeLabel: "Закрыть",
     // cssClass: [],
     onOpen: function() {
-        console.log('modal open modal 2');
+        // console.log('modal open modal 2');
     },
     onClose: function() {
-        console.log('modal close modal 2');
+        // console.log('modal close modal 2');
     },
     beforeClose: function() {
         // here's goes some logic
@@ -53,11 +55,25 @@ const modal2 = new tingle.modal({
     }
 });
 
+modal2.setContent(document.getElementById('js-call-looking-for-modal'));
+
+const heroCta = document.getElementById('js-main__cta');
+const lookingForCta = document.getElementById('js-looking-for__cta')
+
+heroCta.addEventListener('click', function() {
+    modal2.open();
+})
+
+
+lookingForCta.addEventListener('click', function() {
+    modal2.open();
+})
+
 const modal3 = new tingle.modal({
     // footer: true,
     stickyFooter: false,
     closeMethods: ['overlay', 'button', 'escape'],
-    closeLabel: "Close",
+    closeLabel: "Закрыть",
     // cssClass: [],
     onOpen: function() {
         console.log('modal open modal 3');
@@ -74,33 +90,73 @@ const modal3 = new tingle.modal({
 });
 
 
-modal2.setContent(document.getElementById('js-call-looking-for-modal'));
-
-const heroCta = document.getElementById('js-main__cta');
-const lookingForCta = document.getElementById('js-looking-for__cta')
-
-heroCta.addEventListener('click', function() {
-    modal2.open();
-})
-
-
-lookingForCta.addEventListener('click', function() {
-    modal2.open();
-})
 
 modal3.setContent(document.getElementById('more'))
 
+function transform(imgSrc, itemName, itemType, itemPrice) {
+    const moreModal = document.getElementById('more');
+    moreModal.removeChild(moreModal.firstChild) 
+
+    const domStr =
+            `<div class="more__inner">
+                <div class="more__img-cont">
+                    <h3 class="heading heading--tertiary heading--more">
+                        <span>${itemType}</span>
+                        ${itemName}
+                    </h3>
+                    <div class="more__img-box">
+                        <img src=${imgSrc} alt="" class="more__img">
+                    </div>
+                </div>
+                <div class="more__info-content">
+                    <p class="more__par">
+                        Огромный выбор обивочных материалов: бархат; велюр; велюр люкс; микровелюр; рогожка, жаккард; шенилл; эко кожа высшего сорта; кожа                        
+                    </p>
+                    <p class="more__par more__par--important">
+                        Возможно изготовление кроватей нестандартного размера и вариантов обивки!                        
+                    </p>
+                    <span> Дополнительно возможно: </span>
+                    <ul class="more__list">
+                        <li class="more__list-item">Усиленное ортопедическое основание</li>
+                        <li class="more__list-item">Подъемный механизм с бельевыми ящиками</li>
+                    </ul>
+                    <table class="more__table">
+                        <tr>
+                            <th>Спальное место(см)</td>
+                            <td>120/200</td>
+                            <td>140/200</td>
+                            <td>160/200</td>
+                            <td>180/200</td>
+                        </tr>
+                        <tr>
+                            <th>Габариты кровати(см)</th>
+                            <td>260/220</td>
+                            <td>280/220</td>
+                            <td>300/220</td>
+                            <td>320/220</td>
+                        </tr>
+                    </table>
+                    <div class="input-group">
+                        <input id="more-order" type="button" class="button button--attention button--large" value="Заказать" data-type="${itemType}" data-name="${itemName}" data-price="${itemPrice}">
+                    </div> 
+                </div>
+            </div>`
+            let p = new DOMParser();    
+            moreModal.innerHTML = domStr;
+
+}
+
 const moreTriggers = document.getElementsByClassName('js-more-trigger');
 Array.from(moreTriggers).forEach(item => {
-    item.addEventListener('click', function() {
+    item.addEventListener('click', function(event) {
         // console.log('hello kitty')
-        
-        
+       const {dataset} = event.target
+        transform(dataset.img, dataset.ordername, dataset.type, dataset.price);
         modal3.open()
     })
 })
 
-// $('.js-parallax').parallax();
+//masks, for phone inputs
 
 const maskOptions = {
     mask: '+{7}(000)000-00-00',
@@ -115,8 +171,6 @@ Array.prototype.forEach.call(phoneInputs, (item) => {
     const mask = IMask(item, maskOptions);
 })
 
-
-// fsLightbox.open()
 //handling fake file input
 
 const fInputs = document.querySelectorAll('input[type="file"]');
@@ -183,10 +237,6 @@ Array.prototype.forEach.call(thumbs, item => {
     })
 })
 
-const orderButtons = Array.from(document.getElementsByClassName('js-order'));
-const orderData =  {
-
-}
 
 const modal4 = new tingle.modal({
     // footer: true,
@@ -208,7 +258,7 @@ const modal4 = new tingle.modal({
     }
 });
 
-modal4.setContent(document.getElementById('order'))
+modal4.setContent(document.getElementById('js-order-gallery-modal'))
 
 orderButtons.forEach(button => {
     button.addEventListener('click', function(event) {
@@ -222,11 +272,18 @@ orderButtons.forEach(button => {
 })
 
 
+const orderButtons = Array.from(document.getElementsByClassName('js-order'));
+const orderData =  {
+
+}
 const closerTrigger = document.getElementById('js-menu__closer').addEventListener('click', function(event) {
     event.target.parentNode.classList.remove('open')
 })
 
 const fixedMenuItems = Array.from(document.getElementsByClassName('js-f-menuitem'));
+
+//fixed menu management
+
 fixedMenuItems.forEach(item => {
     item.addEventListener('click', function(event) {
         console.log('click');
@@ -243,7 +300,9 @@ const forms = Array.from(document.getElementsByTagName('form'))
 
 forms.forEach(form => {
     form.addEventListener('submit', function(event) {
-        // event.preventDefault();
+        event.preventDefault();
+        console.log(event.target)
+        console.log(new FormData(event.target))
         console.log('succesfull')
     })
 })

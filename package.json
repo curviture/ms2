@@ -6,6 +6,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "compile:scss": "node-sass scss/main.scss css/main.css -w",
+    "compile:scss2":  "node-sass scss/divany.scss css/divany.css -w",
     "criticalcss": "node criticalcss.mjs"
   },
   "repository": {

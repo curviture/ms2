@@ -85,6 +85,15 @@
         &-item {
             margin-left: 1.3rem;
         }
+
+        &--sizes {
+            font-size: 1.8rem;
+            margin-bottom: 2rem;
+
+            @include respond(phone) {
+                font-size: 1.4rem;
+            }
+        }
     }
 
     &__table {

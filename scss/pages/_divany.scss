@@ -1,8 +1,41 @@
+
 .main {
     background:#000 url("../img/divany/bg10.jpg")!important;
 }
 
 .looking-for {
-
     background:#000 url("../img/divany/bg14.jpg");
+}
+
+.manufacturer {
+    background:#000 url("../img/divany/bg15.webp");
+    z-index: 0;
+    position: relative;
+    // &:before {
+    //     content: '';
+    //     position: absolute;
+    //     left: 0;
+    //     right: 0;
+    //     top: 0;
+    //     bottom: 0;
+    //     background-color: rgba(#000, 0.5);
+    // }
+}
+
+.your-choice {
+
+    .container {
+        align-items: center;
+    }
+    &__content {
+        flex-basis: 540px;
+
+        @include respond(phone) {
+            flex-basis: auto;
+        }
+    }
+}
+
+.contact-us {
+    background: #000 url("../img/divany/bg10.jpg");
 }

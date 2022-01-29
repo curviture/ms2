@@ -37,7 +37,7 @@
                         </a> -->
                         <ul class="menu menu--header">
                             <li class="menu__item"><a class="menu__link animated-underline js-scrollto" href="#gallery">Кровати</a></li>
-                            <li class="menu__item hidden--md visible--lg"><a class="menu__link animated-underline js-scrollto" href="#">Диваны</a></li>
+                            <li class="menu__item hidden--md visible--lg"><a class="menu__link animated-underline" href="/divany.html">Диваны</a></li>
                             <li class="menu__item"><a class="menu__link animated-underline js-scrollto" href="#looking-for">На заказ</a></li>
                             <li class="menu__item"><a class="menu__link animated-underline js-scrollto" href="#showroom">Шоурум</a></li>
                         </ul>
@@ -695,7 +695,7 @@
                 </div>
             </div>
         </div>
-        <div data-jarallax data-speed="0.5" class="jarallax std-blck std-blck--fxbg contact-us js-parallax" data-parallax="scroll" data-image-src="./img/bg-7.jpg">
+        <div data-jarallax data-speed="0.5" class="jarallax std-blck std-blck--fxbg contact-us js-parallax" data-parallax="scroll" data-image-src="./img/bg10.jpg">
             <div class="container contact-us__inner u-jc--space-around">
                 <div class="contact-us__text-content">
                     <h2 class="heading heading--primary contact-us__heading">Свяжитесь с нами!</h2>
@@ -704,8 +704,8 @@
                     </p>
                 </div>
                 <div class="form__container">
-                    <form action="" class="form form--small">
-                        <input type="hidden" name="fromWhere" value="contact-us">
+                    <form action="" class="form form--small js-form">
+                        <input type="hidden" name="fromWhere" value="contact-us divany">
                         <legend class="form__legend">Введите свои данные и наш<br>
                             специалист свяжется с вами</legend>
                         <div class="input__group">
@@ -784,7 +784,7 @@
                     </a>
                     <ul class="menu menu--header">
                         <li class="menu__item js-f-menuitem"><a class="menu__link animated-underline" href="#gallery">Кровати</a></li>
-                        <li class="menu__item js-f-menuitem"><a class="menu__link animated-underline" href="#">Диваны</a></li>
+                        <li class="menu__item "><a class="menu__link animated-underline" href="/divany.html">Диваны</a></li>
                         <li class="menu__item js-f-menuitem u-hidden--tl"><a class="menu__link animated-underline u-hidden--tl" href="#">На заказ</a></li>
                         <li class="menu__item js-f-menuitem"><a class="menu__link animated-underline" href="#showroom">Шоурум</a></li>
                     </ul>
@@ -817,9 +817,9 @@
         </div>
         <!-- modals -->
         <div class="form__container" id="js-navbar-order-modal">
-            <form class="form" action="">
+            <form class="form js-form" action="">
                 <h2 class="modal__title heading heading--tertiary form__heading">Оставьте заявку <br> <span>чтобы мы перезвонили вам</span></h2>
-                <input type="hidden" name="fromWhere" value="Navbar button click">
+                <input type="hidden" name="fromWhere" value="Navbar button click divany">
                 <div class="input__group">
                     <input class="input" type="text" name="userName" placeholder="Введите свое имя" required>
                 </div>
@@ -839,8 +839,8 @@
         </div>
         <div class="form__container" tabindex="-1" id="js-call-looking-for-modal">
             <form class="form form--small" action="">
-                <h2 class="tingle-modal__title heading heading--tertiary form__heading">Оставьте заявку <br> <span>для рассчета стоимости вашей кровати</span></h2>
-                    <input type="hidden" name="fromWhere" id="hidden__call-looking-for-modal" value="looking-for">
+                <h2 class="tingle-modal__title heading heading--tertiary form__heading">Оставьте заявку <br> <span>для рассчета стоимости вашего дивана</span></h2>
+                    <input type="hidden" name="fromWhere" id="hidden__call-looking-for-modal" value="looking-for divany">
                     <div class="input__group">
                         <input class="input" type="text" name="userName" placeholder="Введите свое имя" required>
                     </div>
@@ -848,7 +848,6 @@
                         <input class="input js-phone__input" type="text" name="userPhone" placeholder="Введите свой телефон" pattern="\+7\([0-9]{3}\)[0-9]{3}-[0-9]{2}-[0-9]{2}" required>
                     </div>
                     <div class="input__group">
-
                         <label class="file-input__label">
                             <input class="input file-input" type="file" id="js-file-input" aria-label="input file" multiple="multiple" >
                             <span class="file-input__custom" id="js-file-input-fake">
@@ -872,8 +871,8 @@
         </div>
         <div class="form__container" id="js-order-gallery-modal">
             <form action="" class="form">
-                <h2 class="modal__title heading heading--tertiary form__heading">Оставьте заявку <br> <span> чтобы заказать кровать</span></h2>
-                <input type="hidden" value="Order from gallery" id="order__hidden" name="fromWhere">
+                <h2 class="modal__title heading heading--tertiary form__heading">Оставьте заявку <br> <span> чтобы заказать диван</span></h2>
+                <input type="hidden" value="Order from gallery divan" id="order__hidden" name="fromWhere">
                 <input type="hidden" value="Krovat" id="order-type" name="order_type">
                 <input type="hidden" value="" id="order-model" name="order_name">
                 <input type="hidden" value="" id="order-price" name="order_price">
@@ -908,6 +907,7 @@
         </div>
     <script src="js/jarallax.min.js"></script>        
     <script src="js/fslightbox.js"></script>    
+    <script src="js/krovat/gallery_krovat.js"></script>
     <script src="js/main.js"></script>    
     </body>
 </html

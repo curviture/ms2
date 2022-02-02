@@ -210,7 +210,7 @@ fixedMenuItems.forEach(item => {
 
 //form submitting
 
-const simpleForms = Array.from(document.getElementsByTagName('form'))
+const simpleForms = Array.from(document.getElementsByClassName('js-form'))
 
 forms.forEach(form => {
     form.addEventListener('submit', function(event) {

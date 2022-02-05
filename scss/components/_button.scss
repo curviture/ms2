@@ -104,6 +104,10 @@
     }
 }
 
+.button--disabled {
+    pointer-events:none    
+}
+
 // .button--slidedown:hover {
 //     animation: bubble 0s 0s, pulse-shadow 1s 1s infinite;
 // }

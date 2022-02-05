@@ -8,17 +8,8 @@
     <meta name="description" content="Arniko - кровати для крепкого сна с мягкой обивкой от производителя">
     <link href="favicon.ico" rel="shortcut icon" type="image/x-icon">
     <link rel="stylesheet" href="css/fonts.css">
-    <!-- <link rel="stylesheet" href="css/modaal.min.css">     -->
-    <!-- <link rel="stylesheet" href="css/tingle.css"> -->
-    <!-- <link rel="stylesheet" href="css/parallax-vanilla.css"> -->
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="css/divany.css">
-    <!-- <script src="js/jquery-1.7.2.min.js"></script> -->
-    <!-- <script src="js/jquery.maskedinput-1.3.min.js"></script> -->
-    <!-- <script src="js/util.min.js"></script>     -->
-    <!-- <script src="js/modaal.min.js"></script> -->
-    <!-- <script src="js/parallax.min.js"></script>         -->
-    <!-- <script src="js/wb.parallax.min.js"></script>     -->
     <script src="js/tingle.js"></script>
     <script src="js/imask.js"></script>
 </head>
@@ -138,9 +129,8 @@
                     <span>диванов с мягкой обивкой</span>
                 </h2>
                 <ul class="gallery__type">
-                    <li><a class="button button--transparent active gallery__type-button" href="#" disabled>Диваны</a>
-                    </li>
                     <li><a class="button button--transparent gallery__type-button" href="/index.html">Кровати</a></li>
+                    <li><a class="button button--transparent active gallery__type-button" href="#" disabled>Диваны</a></li>
                 </ul>
             </div>
             <div id="gallery">
@@ -900,7 +890,7 @@
                 </p>
             </div>
             <div class="form__container">
-                <form action="" class="form form--small">
+                <form action="/divany.php" method="post" enctype="multypart/form-data" accept-charset="UTF-8" class="form form--small">
                     <input type="hidden" name="fromWhere" value="contact-us">
                     <legend class="form__legend">Введите свои данные и наш<br>
                         специалист свяжется с вами</legend>
@@ -1001,10 +991,6 @@
                             href="#showroom">Шоурум</a></li>
                 </ul>
             </div>
-            <!-- <div class="header__socials u-hidden--tp">
-                    <a class="he/ader__link header__link--social" href=""><img class="header__icon header__icon--socials" src="img/insta1.png" alt=""></a>
-                    <a class="header__link header__link--social" href=""><img class="header__icon header__icon--socials" src="img/whatsapp.jpg" alt=""></a>
-                </div> -->
             <div class="header__aside header__address u-visible--p">
                 г. Москва, ул. Тимирязевская, д.2/3
                 <br />
@@ -1033,8 +1019,9 @@
         </div>
     </div>
     <!-- modals -->
+    <!-- modal for form, gets activated from navigation "заказать звонок" button -->
     <div class="form__container" id="js-navbar-order-modal">
-        <form class="form" action="">
+        <form class="form" action="/divany.php" mathod="post" enctype="multipart/form-data" accept-charset="utf-8">
             <h2 class="modal__title heading heading--tertiary form__heading">Оставьте заявку <br> <span>чтобы мы
                     перезвонили вам</span></h2>
             <input type="hidden" name="fromWhere" value="Navbar button click">
@@ -1059,7 +1046,7 @@
         </form>
     </div>
     <div class="form__container" tabindex="-1" id="js-call-looking-for-modal">
-        <form class="form form--small" action="">
+        <form class="form form--small" action="/divany.php" mathod="post" enctype="multipart/form-data" accept-charset="utf-8">
             <h2 class="tingle-modal__title heading heading--tertiary form__heading">Оставьте заявку <br> <span>для
                     рассчета стоимости вашей кровати</span></h2>
             <input type="hidden" name="fromWhere" id="hidden__call-looking-for-modal" value="looking-for">
@@ -1095,11 +1082,11 @@
         </form>
     </div>
     <div class="form__container" id="js-order-gallery-modal">
-        <form action="" class="form">
+        <form class="form" action="/divany.php" mathod="post" enctype="multipart/form-data" accept-charset="utf-8">
             <h2 class="modal__title heading heading--tertiary form__heading">Оставьте заявку <br> <span> чтобы заказать
                     кровать</span></h2>
             <input type="hidden" value="Order from gallery" id="order__hidden" name="fromWhere">
-            <input type="hidden" value="Krovat" id="order-type" name="order_type">
+            <input type="hidden" value="divan" id="order-type" name="order_type">
             <input type="hidden" value="" id="order-model" name="order_name">
             <input type="hidden" value="" id="order-price" name="order_price">
             <div class="input__group">
@@ -1107,7 +1094,7 @@
             </div>
             <div class="input__group">
                 <input class="input js-phone__input" type="text" name="userPhone" placeholder="Введите свой телефон"
-                    required pattern="\+7\([0-9]{3}\)[0-9]{3}-[0-9]{2}-[0-9]{2}" required>
+                    pattern="\+7\([0-9]{3}\)[0-9]{3}-[0-9]{2}-[0-9]{2}" required>
             </div>
             <div class="input__group">
                 <input class="button button--attention button--block" type="submit" value="Заказать">
@@ -1122,9 +1109,11 @@
             </div>
         </form>
     </div>
+    <!--div below will get filled by script, keep it-->
     <div class="more" id="more">
 
     </div>
+
     <div class="thank-you" id="thank-you" style="display: none;">
         <div class="thank-you__inner">
             <h2>Спасибо за заявку</h2>

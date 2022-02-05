@@ -192,19 +192,30 @@
 
 @media (max-width : 540px) {
   .tingle-modal {
-    top: -10px;
+    top: 0px;
     display: block;
     padding-top: 60px;
     width: 100%;
+    min-width:320px;
+    margin: auto;
+
+    &--visible {
+      background: rgba(0,0,0, .5);
+      display: flex;
+      padding-top: 0;
+    }
   }
 
   .tingle-modal-box {
     width: auto;
-    border-radius: 0;
-  }
 
+    padding-top: 0;
+  }
+  
   .tingle-modal-box__content {
     overflow-y: scroll;
+    border-radius: 1rem;
+    padding-top: 20px;
   }
 
   .tingle-modal--noClose {
@@ -233,6 +244,7 @@
     background-color: #2c3e50;
     box-shadow: none;
     color: #fff;
+    display: none;
   }
 
   .tingle-modal__closeLabel {
@@ -248,6 +260,14 @@
     width: 1.6rem;
     vertical-align: middle;
     font-size: 0;
+  }
+
+  .tingle-modal-box {
+    background-color: transparent;
+  }
+
+  .tingle-modal-box__content {
+    background-color: $color-primary;
   }
 }
 

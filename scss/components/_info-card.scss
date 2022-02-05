@@ -86,18 +86,20 @@
         }
     }
 
-    &__type {
+    &-type {
         font-family: "DIN Pro Light";
+        font-size: 1.4rem;
     }
 
-    &__name {
+    &-name {
         font-family: "DIN Pro Bold";
-        font-size: 2rem;
+        font-size: 1.8rem;
         text-transform: capitalize;
     }
 
-    &__price {
-        font-family: "DIN Pro Medium";
+    &-price {
+        font-family: "DIN Pro Light";
+        font-size: 1.6rem;
 
         @include respond(phone) {
             font-size: 1.5rem;

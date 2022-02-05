@@ -474,15 +474,23 @@ p {
 -------------------------------------------------------------- */
 @media (max-width: 540px) {
   .tingle-modal {
-    top: -10px;
+    top: 0px;
     display: block;
     padding-top: 60px;
-    width: 100%; }
+    width: 100%;
+    min-width: 320px;
+    margin: auto; }
+    .tingle-modal--visible {
+      background: rgba(0, 0, 0, 0.5);
+      display: flex;
+      padding-top: 0; }
   .tingle-modal-box {
     width: auto;
-    border-radius: 0; }
+    padding-top: 0; }
   .tingle-modal-box__content {
-    overflow-y: scroll; }
+    overflow-y: scroll;
+    border-radius: 1rem;
+    padding-top: 20px; }
   .tingle-modal--noClose {
     top: 0; }
   .tingle-modal--noOverlayClose {
@@ -502,7 +510,8 @@ p {
     border: none;
     background-color: #2c3e50;
     box-shadow: none;
-    color: #fff; }
+    color: #fff;
+    display: none; }
   .tingle-modal__closeLabel {
     display: inline-block;
     vertical-align: middle;
@@ -513,7 +522,11 @@ p {
     margin-right: .8rem;
     width: 1.6rem;
     vertical-align: middle;
-    font-size: 0; } }
+    font-size: 0; }
+  .tingle-modal-box {
+    background-color: transparent; }
+  .tingle-modal-box__content {
+    background-color: #ffffff; } }
 
 /* animations
 -------------------------------------------------------------- */
@@ -676,6 +689,9 @@ p {
       box-shadow: 0 0 0 10px rgba(255, 255, 255, 0.5), 0 0 0 15px rgba(170, 170, 170, 0.2);
       bottom: 0rem; } }
 
+.button--disabled {
+  pointer-events: none; }
+
 .card {
   background: radial-gradient(ellipse farthest-corner at 0% 65%, rgba(255, 255, 0, 0) 80%, #ee1919 100%), radial-gradient(ellipse farthest-corner at 100% 35%, rgba(255, 255, 0, 0) 80%, #ee1919 100%), #fff;
   border-radius: 10px;
@@ -805,16 +821,18 @@ p {
       @media (max-width: 48rem) {
         .gallery__item-ordering input {
           padding: .9rem; } }
-  .gallery__item__type {
-    font-family: "DIN Pro Light"; }
-  .gallery__item__name {
+  .gallery__item-type {
+    font-family: "DIN Pro Light";
+    font-size: 1.4rem; }
+  .gallery__item-name {
     font-family: "DIN Pro Bold";
-    font-size: 2rem;
+    font-size: 1.8rem;
     text-transform: capitalize; }
-  .gallery__item__price {
-    font-family: "DIN Pro Medium"; }
+  .gallery__item-price {
+    font-family: "DIN Pro Light";
+    font-size: 1.6rem; }
     @media (max-width: 48rem) {
-      .gallery__item__price {
+      .gallery__item-price {
         font-size: 1.5rem; } }
 
 .bordered {
@@ -1343,11 +1361,31 @@ input[type='password']:focus {
   .gallery__type-button {
     color: #000000;
     font-size: 2rem;
-    padding: .9rem 3rem;
-    border-radius: 10px; }
+    padding: .5rem 2rem;
+    border-radius: 8px 8px 0 0;
+    font-family: "Din Pro Black";
+    margin-left: 2px; }
+    .gallery__type-button:not(.active) {
+      border: 1px solid #aaa; }
+      .gallery__type-button:not(.active):hover {
+        border: 1px solid #ccc;
+        background-color: #fff;
+        color: #000000; }
     .gallery__type-button.active {
-      color: #EE1919;
-      border: 1px solid #A5A5A5; }
+      border: 1px solid #EE1919;
+      color: #ffffff;
+      background-color: #EE1919;
+      position: relative;
+      pointer-events: none; }
+      .gallery__type-button.active:after {
+        content: '';
+        height: 3px;
+        background-color: #EE1919;
+        display: block;
+        position: absolute;
+        bottom: -7px;
+        left: -1px;
+        right: -1px; }
     @media (max-width: 48rem) {
       .gallery__type-button {
         font-size: 1.5rem;

@@ -208,18 +208,16 @@ fixedMenuItems.forEach(item => {
     })
 })
 
-//form submitting
+//disabling background parallax for mobile devices
 
-const simpleForms = Array.from(document.getElementsByClassName('js-form'))
-
-forms.forEach(form => {
-    form.addEventListener('submit', function(event) {
-        event.preventDefault();
-        console.log(event.target)
-        console.log(new FormData(event.target))
-        console.log('succesfull')
-    })
-})
+jarallax(document.querySelectorAll('.jarallax'), {
+    disableParallax: function () {
+        return /iPad|iPhone|iPod|Android/.test(navigator.userAgent);
+    },
+    disableVideo: function () {
+        return /iPad|iPhone|iPod|Android/.test(navigator.userAgent);
+    }
+});
 
 
 

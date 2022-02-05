@@ -82,6 +82,11 @@
     &__list {
         margin-bottom: 2rem;
         list-style-type: disc;
+
+        @include respond(phone) {
+            margin-bottom: 1rem;
+        }
+
         &-item {
             margin-left: 1.3rem;
         }
@@ -139,13 +144,16 @@
         width: 100%;
     }
 
-    @media screen and (max-height: 770px) {
+    @media screen and (max-height: 720px) {
         .heading {
             // display: none;
             position: absolute;
+            width: 100%;
+            text-align: center;
             top: 0;
-            left: 40px;
+            left: 0px;
             text-shadow: 0 0 10px rgba(255,255,255, .8);
+            font-size: 1.7rem;
 
             &:after {
                 display: none;
@@ -154,6 +162,9 @@
         &__img-box {
             height: 16rem;
             width: 16rem;
+            padding-top: 1rem;
+            padding-bottom: 1rem;
+            margin-bottom: 1rem;
         }
 
         &__table {
@@ -161,8 +172,8 @@
             margin-bottom: 0.5rem;
         }
 
-        &_-par {
-            margin-bottom: 0.5rem;
+        &__par {
+            margin-bottom: 0.3rem;
         }
     }
 }

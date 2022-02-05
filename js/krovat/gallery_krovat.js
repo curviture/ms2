@@ -91,7 +91,7 @@ const modal3 = new tingle.modal({
     // footer: true,
     stickyFooter: false,
     closeMethods: ['overlay', 'button', 'escape'],
-    closeLabel: "Закрыть",
+    closeLabel: "",
     // cssClass: [],
     onOpen: function() {
         console.log('modal open modal 3');

@@ -120,7 +120,7 @@ const modal3 = new tingle.modal({
     // footer: true,
     stickyFooter: false,
     closeMethods: ['overlay', 'button', 'escape'],
-    closeLabel: "Закрыть",
+    closeLabel: "",
     // cssClass: [],
     onOpen: function() {
         console.log('modal open modal 3');
@@ -167,7 +167,7 @@ function transform(imgSrc, itemName, itemType, itemPrice) {
                 </div>
                 <div class="more__info-content">
                     <p class="more__par">
-                        Огромный выбор обивочных материалов: бархат; велюр; велюр люкс; микровелюр; рогожка, жаккард; шенилл; эко кожа высшего сорта; кожа                        
+                        Огромный выбор обивочных материалов<span class="u-visible--p">: бархат; велюр; велюр люкс; микровелюр; рогожка, жаккард; шенилл; эко кожа высшего сорта; кожа</span>                        
                     </p>
                     <p class="more__par more__par--important">
                         Возможно изготовление диванов нестандартного размера и вариантов обивки!                        

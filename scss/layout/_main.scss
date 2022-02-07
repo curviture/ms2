@@ -24,5 +24,7 @@
     @include respond(phone) {
         padding-top: 8rem;
         height: auto;
+        background-size: auto 80%;
+        background-position: center center;
     }
 }

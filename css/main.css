@@ -873,10 +873,10 @@ p {
     @media (max-width: 48rem) {
       .std-blck__full {
         margin-bottom: 1rem; } }
-  .std-blck--fxbg {
+  .std-blck--bg {
     color: #ffffff;
     background-color: #000;
-    background-attachment: fixed; }
+    background-position: 50% 50%; }
   .std-blck__left {
     padding-right: 4rem; }
     @media (max-width: 48rem) {
@@ -1253,7 +1253,9 @@ input[type='password']:focus {
   @media (max-width: 48rem) {
     .main {
       padding-top: 8rem;
-      height: auto; } }
+      height: auto;
+      background-size: auto 80%;
+      background-position: center center; } }
 
 .hero {
   color: #ffffff; }
@@ -1396,7 +1398,6 @@ input[type='password']:focus {
 .looking-for {
   background-image: url("../img/bg-2.jpg");
   font-size: 2.4rem;
-  background-attachment: fixed;
   font-family: "DIn Pro Light"; }
   @media (max-width: 48rem) {
     .looking-for {
@@ -1482,7 +1483,6 @@ input[type='password']:focus {
       width: 25rem;
       height: 12rem; } }
   .matras__par:not(:last-child) {
-    font-family: "DIN Pro Light";
     margin-bottom: 3rem; }
     @media (max-width: 48rem) {
       .matras__par:not(:last-child) {
@@ -1627,7 +1627,6 @@ input[type='password']:focus {
 
 .manufacturer {
   background: #000 url("../img/bg-4.jpg") repeat;
-  background-attachment: fixed;
   background-size: 100% auto;
   padding-top: 4rem;
   padding-bottom: 4rem; }
@@ -1699,7 +1698,9 @@ input[type='password']:focus {
   font-size: 2.9rem; }
   @media (max-width: 48rem) {
     .contact-us {
-      font-size: 1.5rem; } }
+      font-size: 1.5rem;
+      background-position: center center;
+      background-size: auto 100%; } }
   .contact-us__cta {
     margin-top: 1.2rem;
     margin-bottom: 2rem; }

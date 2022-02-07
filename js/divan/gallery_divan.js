@@ -119,7 +119,7 @@ let itemSizes = {
 const modal3 = new tingle.modal({
     // footer: true,
     stickyFooter: false,
-    closeMethods: ['overlay', 'button', 'escape'],
+    closeMethods: ['overlay', 'escape'],
     closeLabel: "",
     // cssClass: [],
     onOpen: function() {

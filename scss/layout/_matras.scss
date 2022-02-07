@@ -29,7 +29,7 @@
     }
 
     &__par:not(:last-child) {
-        font-family: "DIN Pro Light";
+        // font-family: "DIN Pro Light";
         margin-bottom: 3rem;
 
         @include respond(phone) {

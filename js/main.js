@@ -212,10 +212,8 @@ fixedMenuItems.forEach(item => {
 
 jarallax(document.querySelectorAll('.jarallax'), {
     disableParallax: function () {
-        return /iPad|iPhone|iPod|Android/.test(navigator.userAgent);
-    },
-    disableVideo: function () {
-        return /iPad|iPhone|iPod|Android/.test(navigator.userAgent);
+        console.log('iii', window.innerWidth)
+        return /iPad|iPhone|iPod|Android/.test(navigator.userAgent) || window.innerWidth <= 720;
     }
 });
 

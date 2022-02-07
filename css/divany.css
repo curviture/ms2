@@ -1,13 +1,27 @@
 .main {
-  background: #000 url("../img/divany/bg10.jpg") !important; }
+  background-color: #000;
+  background-image: url("../img/divany/bg10.jpg"); }
+  @media (max-width: 48rem) {
+    .main {
+      background-size: auto 90%;
+      background-position: bottom center; } }
 
 .looking-for {
-  background: #000 url("../img/divany/bg14.jpg"); }
+  background: #000;
+  background-image: url("../img/divany/bg14.jpg"); }
+  @media (max-width: 48rem) {
+    .looking-for {
+      background-position: top center;
+      background-size: auto 100%; } }
 
 .manufacturer {
   background: #000 url("../img/divany/bg15.webp");
   z-index: 0;
   position: relative; }
+  @media (max-width: 48rem) {
+    .manufacturer {
+      background-position: top center;
+      background-size: auto 90%; } }
 
 .your-choice .container {
   align-items: center; }
@@ -19,4 +33,6 @@
       flex-basis: auto; } }
 
 .contact-us {
-  background: #000 url("../img/divany/bg10.jpg"); }
+  background-color: #000;
+  background-image: url("../img/divany/bg10.jpg");
+  background-position: top center; }

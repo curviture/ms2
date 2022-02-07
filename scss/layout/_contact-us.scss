@@ -5,6 +5,8 @@
     
     @include respond(phone) {
         font-size: 1.5rem;
+        background-position: center center;
+        background-size: auto 100%;
     }
     
     &__cta {

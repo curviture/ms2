@@ -285,6 +285,22 @@ p {
   20% {
     transform: scaleX(0.8); } }
 
+@keyframes blink {
+  0% {
+    left: -100px; }
+  5% {
+    left: 0px; }
+  10% {
+    left: 100px; }
+  15% {
+    left: 200px; }
+  20% {
+    left: 300px; }
+  25% {
+    left: 400px; }
+  100% {
+    left: 400px; } }
+
 .a-std {
   animation-delay: 0;
   animation-duration: 3s;
@@ -299,6 +315,27 @@ p {
 
 .a-stretch {
   animation-name: stretch; }
+
+.a-blink {
+  overflow: hidden;
+  position: relative; }
+  .a-blink:after {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0px;
+    left: -120px;
+    transform: rotate(-45deg);
+    height: 35px;
+    width: 200px;
+    background-color: rgba(255, 255, 255, 0.4);
+    animation-delay: 0s;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    animation-name: blink;
+    animation-timing-function: linear;
+    animation-direction: normal;
+    animation-fill-mode: backwards; }
 
 .animated-underline {
   display: block;
@@ -480,6 +517,9 @@ p {
     width: 100%;
     min-width: 320px;
     margin: auto; }
+    .tingle-modal .form__container {
+      width: 300px;
+      min-width: 300px; }
     .tingle-modal--visible {
       background: rgba(0, 0, 0, 0.5);
       display: flex;
@@ -495,7 +535,8 @@ p {
   .tingle-modal-box__content {
     overflow-y: scroll;
     border-radius: 1rem;
-    padding-top: 10px; }
+    background-color: transparent;
+    padding-top: 0; }
   .tingle-modal--noClose {
     top: 0; }
   .tingle-modal--noOverlayClose {
@@ -1798,7 +1839,7 @@ input[type='password']:focus {
       width: 10rem;
       height: 2px;
       background-color: #EE1919;
-      margin-top: .7rem; } }
+      margin-top: .5rem; } }
   @media (max-width: 48rem) {
     .more .heading {
       font-size: 2.4rem;
@@ -1822,6 +1863,8 @@ input[type='password']:focus {
         width: 22rem;
         height: 22rem;
         margin: 0 auto; } }
+  .more__img {
+    box-shadow: 0 0 7px 0px rgba(0, 0, 0, 0.4); }
   .more__info-content {
     padding: 1rem; }
     @media (max-width: 48rem) {
@@ -1877,24 +1920,25 @@ input[type='password']:focus {
     display: block;
     width: 100%; }
   @media screen and (max-height: 720px) {
-    .more .heading {
-      position: absolute;
-      width: 100%;
-      text-align: center;
-      top: 0;
-      left: 0px;
-      text-shadow: 0 0 10px rgba(255, 255, 255, 0.8);
-      font-size: 1.7rem; }
-      .more .heading:after {
-        display: none; }
-    .more__img-box {
-      height: 16rem;
-      width: 16rem;
-      padding-top: 1rem;
-      padding-bottom: 1rem;
-      margin-bottom: 1rem; }
-    .more__table {
-      margin-top: 0.5rem;
-      margin-bottom: 0.5rem; }
-    .more__par {
-      margin-bottom: 0.3rem; } }
+    .more {
+      padding-top: 1rem; }
+      .more .heading {
+        position: absolute;
+        width: 100%;
+        text-align: center;
+        top: 0;
+        left: 0px;
+        text-shadow: 0 0 10px rgba(255, 255, 255, 0.8);
+        font-size: 1.7rem; }
+      .more__img-box {
+        height: 18rem;
+        width: 18rem;
+        padding-top: 1rem;
+        padding-bottom: 1rem;
+        margin-bottom: 2rem;
+        margin-top: 2.5rem; }
+      .more__table {
+        margin-top: 0.5rem;
+        margin-bottom: 0.5rem; }
+      .more__par {
+        margin-bottom: 0.3rem; } }

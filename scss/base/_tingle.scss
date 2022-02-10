@@ -198,6 +198,12 @@
     width: 100%;
     min-width:320px;
     margin: auto;
+    
+    .form__container {
+      width: 300px;
+      min-width: 300px;
+
+    }
 
     &--visible {
       background: rgba(0,0,0, .5);
@@ -223,7 +229,9 @@
   .tingle-modal-box__content {
     overflow-y: scroll;
     border-radius: 1rem;
-    padding-top: 10px;
+
+      background-color: transparent;
+      padding-top: 0;
   }
 
   .tingle-modal--noClose {

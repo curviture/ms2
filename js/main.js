@@ -2,7 +2,7 @@ const modal = new tingle.modal({
     // footer: true,
     stickyFooter: false,
     closeMethods: ['overlay', 'button', 'escape'],
-    closeLabel: "Закрыть",
+    closeLabel: " ",
     // cssClass: ['custom-class-1'],
     onOpen: function() {
         // console.log('modal open');
@@ -39,7 +39,7 @@ const modal2 = new tingle.modal({
     // footer: true,
     stickyFooter: false,
     closeMethods: ['overlay', 'button', 'escape'],
-    closeLabel: "Закрыть",
+    closeLabel: "",
     // cssClass: [],
     onOpen: function() {
         // console.log('modal open modal 2');
@@ -155,7 +155,7 @@ const modal4 = new tingle.modal({
     // footer: true,
     stickyFooter: false,
     closeMethods: ['overlay', 'button', 'escape'],
-    closeLabel: "Закрыть",
+    closeLabel: " ",
     // cssClass: [],
     onOpen: function() {
         console.log('modal open modal 4');
@@ -183,11 +183,15 @@ orderButtons.forEach(button => {
         const {target} = event;
         const {dataset} = target;
         document.getElementById('order-type').value = dataset.type;
-        document.getElementById('order-model').value = dataset.model;
+        document.getElementById('order-name').value = dataset.model;
         document.getElementById('order-price').value = dataset.price;
         modal4.open()
     })    
-})    
+})
+
+document.getElementById('more-order').addEventListener('click', function() {
+    modal4.open();
+})
 
 
 const closerTrigger = document.getElementById('js-menu__closer').addEventListener('click', function(event) {

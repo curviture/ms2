@@ -29,7 +29,7 @@
                 width: 10rem;
                 height: 2px;
                 background-color: $color-secondary;
-                margin-top: .7rem;
+                margin-top: .5rem;
             }
         }
         @include respond(phone) {
@@ -54,7 +54,7 @@
     &__img-box {
         width: 25rem;
         height: 25rem;
-
+        
         @include respond(phone) {
             width: 22rem;
             height: 22rem;
@@ -62,6 +62,10 @@
             // padding-right: 1rem;
             margin: 0 auto;
         }
+    }
+    
+    &__img {    
+        box-shadow: 0 0 7px 0px rgba(0,0,0, .4);
     }
 
     &__info-content {
@@ -145,6 +149,7 @@
     }
 
     @media screen and (max-height: 720px) {
+        padding-top: 1rem;
         .heading {
             // display: none;
             position: absolute;
@@ -156,15 +161,16 @@
             font-size: 1.7rem;
 
             &:after {
-                display: none;
+                // display: none;
             }
         }
         &__img-box {
-            height: 16rem;
-            width: 16rem;
+            height: 18rem;
+            width: 18rem;
             padding-top: 1rem;
             padding-bottom: 1rem;
-            margin-bottom: 1rem;
+            margin-bottom: 2rem;
+            margin-top: 2.5rem;
         }
 
         &__table {

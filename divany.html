@@ -34,8 +34,8 @@
                                 href="#gallery">Диваны</a></li>
                         <li class="menu__item hidden--md visible--lg"><a class="menu__link animated-underline"
                                 href="/index.html">Кровати</a></li>
-                        <li class="menu__item"><a class="menu__link animated-underline js-scrollto"
-                                href="#looking-for">На заказ</a></li>
+                        <!-- <li class="menu__item"><a class="menu__link animated-underline js-scrollto"
+                                href="#looking-for">На заказ</a></li> -->
                         <li class="menu__item"><a class="menu__link animated-underline js-scrollto"
                                 href="#showroom">Шоурум</a></li>
                     </ul>
@@ -81,7 +81,7 @@
                     <div class="hero__icon-container">
                         <img src="img/divany/eskiz-divan.png" alt="">
                     </div>
-                    <div class="hero__input-container blink">
+                    <div class="hero__input-container a-blink">
                         <input type="button" class="hero__cta button button--attention button--large" id="js-main__cta"
                             value="Подобрать и рассчитать" />
                     </div>
@@ -379,10 +379,10 @@
                             <input type="button" value="Подробнее"
                                 class="button button--transparent js-more-trigger button--bordered"
                                 data-target="modal-9" data-price="85.000 рублей" data-type="Диван"
-                                data-orderName=" Диван Данте" data-img="img/divany/models/dante.jpg">
+                                data-orderName="Данте" data-img="img/divany/models/dante.jpg">
                             <input type="button" value="Заказать" class="button button--attention js-order"
                                 data-target="modal-9" data-price="85.000 рублей" data-type="Диван"
-                                data-orderName=" Диван Данте" data-img="img/divany/models/dante.jpg">
+                                data-orderName="Данте" data-img="img/divany/models/dante.jpg">
                         </div>
                     </li>
                     <li class="gallery__item">
@@ -755,9 +755,9 @@
                 <div class="looking-for__img-box u-hidden--tl">
                     <img class="col-2 md-col-1 looking-for__img" src="img/divany/eskiz-divan2.png" alt="">
                 </div>
-                <div class="input-container blink">
-                    <input type="button" class="button button--attention button--large looking-for__cta"
-                        id="js-looking-for__cta" value="Отправить макет или фото">
+                <div class="input-container">
+                    <button type="button" class="button button--attention button--large looking-for__cta a-blink"
+                        id="js-looking-for__cta">Отправить макет или фото</button>
                 </div>
             </div>
             <div class="std-blck__right">
@@ -904,7 +904,7 @@
                             name="userPhone" placeholder="Введите свой телефон" required
                             pattern="\+7\([0-9]{3}\)[0-9]{3}-[0-9]{2}-[0-9]{2}">
                     </div>
-                    <div class="input__group blink">
+                    <div class="input__group a-blink">
                         <input type="submit" class="button button--attention button--block contact-us__cta"
                             value="Получить консультацию">
                     </div>

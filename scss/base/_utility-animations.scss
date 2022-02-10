@@ -17,3 +17,28 @@
 .a-stretch {
     animation-name: stretch;
 }
+
+.a-blink {
+    overflow: hidden;
+    position: relative;
+    &:after {
+        content: '';
+        display: block;
+        position: absolute;
+        top: 0px;
+        left: -120px;
+        transform: rotate(-45deg);;
+        height: 35px;
+        width: 200px;
+        background-color: rgba(255, 255, 255, .4);
+        animation-delay: 0s;
+        animation-duration: 3s;
+        animation-iteration-count: infinite;
+        animation-name: blink;
+        animation-timing-function: linear;
+        animation-direction: normal;
+        animation-fill-mode:backwards;
+    }
+
+
+}

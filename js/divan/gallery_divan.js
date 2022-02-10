@@ -35,7 +35,7 @@ let itemSizes = {
         "Глубина": "128"
     },
     "Вито": {
-        "Высота":"87",
+        "Высота": "87",
         "Ширина": "323",
         "Глубина": "118"
     },
@@ -119,16 +119,19 @@ let itemSizes = {
 const modal3 = new tingle.modal({
     // footer: true,
     stickyFooter: false,
-    closeMethods: ['overlay', 'escape'],
-    closeLabel: "",
+    closeMethods: ['overlay', 'button', 'escape'],
+    closeLabel: " ",
     // cssClass: [],
-    onOpen: function() {
-        console.log('modal open modal 3');
+    onOpen: function () {
+        document.getElementById('more-order').addEventListener('click', function () {
+            modal3.close();
+            modal4.open();
+        })
     },
-    onClose: function() {
+    onClose: function () {
         console.log('modal close modal 3');
     },
-    beforeClose: function() {
+    beforeClose: function () {
         // here's goes some logic
         // e.g. save content before closing the modal
         return true; // close the modal
@@ -136,26 +139,15 @@ const modal3 = new tingle.modal({
     }
 });
 
-modal3.setContent(document.getElementById('more'));
-
-const moreTriggers = document.getElementsByClassName('js-more-trigger');
-Array.from(moreTriggers).forEach(item => {
-    item.addEventListener('click', function(event) {
-        // console.log('hello kitty')
-       const {dataset} = event.target
-        transform(dataset.img, dataset.ordername, dataset.type, dataset.price);
-        modal3.open()
-    })
-})
 
 function transform(imgSrc, itemName, itemType, itemPrice) {
     const itemSize = itemSizes[itemName];
     const moreModal = document.getElementById('more');
 
-    moreModal.removeChild(moreModal.firstChild) 
+    moreModal.removeChild(moreModal.firstChild)
 
     const domStr =
-            `<div class="more__inner">
+        `<div class="more__inner">
                 <div class="more__img-cont">
                     <h3 class="heading heading--tertiary heading--more">
                         <span>${itemType}</span>
@@ -185,12 +177,23 @@ function transform(imgSrc, itemName, itemType, itemPrice) {
                         <li class="more__list-item">Ширина: ${itemSize["Ширина"]}см</li>
                         <li class="more__list-item">Высота: ${itemSize["Глубина"]}см</li>
                     </ul>
-                    <div class="input-group">
+                    <div class="input-group a-blink">
                         <input id="more-order" type="button" class="button button--attention button--large" value="Заказать" data-type="${itemType}" data-name="${itemName}" data-price="${itemPrice}">
                     </div> 
                 </div>
             </div>`
-            let p = new DOMParser();    
-            moreModal.innerHTML = domStr;
+    moreModal.innerHTML = domStr;
 
 }
+
+modal3.setContent(document.getElementById('more'));
+
+const moreTriggers = document.getElementsByClassName('js-more-trigger');
+Array.from(moreTriggers).forEach(item => {
+    item.addEventListener('click', function (event) {
+        // console.log('hello kitty')
+        const { dataset } = event.target
+        transform(dataset.img, dataset.ordername, dataset.type, dataset.price);
+        modal3.open()
+    })
+})

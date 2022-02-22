@@ -174,9 +174,6 @@ const modal4 = new tingle.modal({
 modal4.setContent(document.getElementById('js-order-gallery-modal'))
 
 const orderButtons = Array.from(document.getElementsByClassName('js-order'));
-const orderData =  {
-
-}
 
 orderButtons.forEach(button => {
     button.addEventListener('click', function(event) {
@@ -188,11 +185,6 @@ orderButtons.forEach(button => {
         modal4.open()
     })    
 })
-
-document.getElementById('more-order').addEventListener('click', function() {
-    modal4.open();
-})
-
 
 const closerTrigger = document.getElementById('js-menu__closer').addEventListener('click', function(event) {
     event.target.parentNode.classList.remove('open')
